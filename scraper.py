@@ -68,10 +68,3 @@ BUILDDF = BUILDDF1.set_index("Name", drop = True)
 
 #IDEA: SELECT BUILDS USING [1] TO [9] OR WHATEVER
 columntitles = list(BUILDDF.columns.values)
-imput = "Great AMD Gaming/Streaming Build"
-cpue = BUILDDF.loc[input, "CPU"]
-gpue = BUILDDF.loc[input, "GPU"]
-casee = BUILDDF.loc[input, "Case"]
-print(cpue)
-print(gpue)
-print(casee)

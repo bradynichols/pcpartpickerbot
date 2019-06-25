@@ -4,8 +4,7 @@ import random
 import requests
 import time
 from settings import TOKEN
-from scraper import builds_string
-from scraper import dict
+from scraper import BUILDDF
 
 BOT_PREFIX = ("?", "!")
 
@@ -55,10 +54,15 @@ async def buildinfo(ctx):
     input = str(ctx.message.content[11:])
     await ctx.send(input + " (This is just for troubleshooting)")
     try:
-        info = dict[input]
+        cpu = BUILDDF.loc[input, "CPU"]
+        gpu = BUILDDF.loc[input, "GPU"]
+        case = BUILDDF.loc[input, "Case"]
+        await ctx.send("```CPU: " + cpu +
+                       "GPU: " + gpu +
+                       "Case: " + case + "```")
     except:
         info = "Build not found, please try again! (Try copy/pasting!)"
-    await ctx.send(info)
+
 
 '''
 This doesn't work because i'm retarded or something
