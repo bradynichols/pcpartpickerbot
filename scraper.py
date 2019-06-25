@@ -13,14 +13,24 @@ all = soup.find_all("li", {"class": "guideGroup guideGroup__card"})
 names = []
 prices = []
 
+
+def round_nearest(x, num=50):
+    return int(round(float(x) / num) * num)
+
+
+
 for item in all:
     names.append(item.find("h1", {"class": "guide__title"}).text.replace("\n", "").strip())
     prices.append(item.find("p", {"class": "guide__price"}).text.replace("\n", "").strip())
 
-dict = {}
+rounded_prices = []
+for price in prices:
+    rounded_prices.append("$" + str(round_nearest(price[1:])))
 
-for name, price in zip(names, prices):
-    dict.update({name: price})
+builds_string = ""
+for name, price in zip(names, rounded_prices):
+    builds_string = builds_string + "\n" + name + " | **" + price + "**"
+
 
 components1 = []
 cpus = []
@@ -56,11 +66,24 @@ for cpu, gpu, case in zip(oldcpus, oldgpus, oldcases):
     gpus.append(str(gpu).replace("<li>", "").replace("</li>", ""))
     cases.append(str(case).replace("<li>", "").replace("</li>", ""))
 
-data = {'Name': names,
-        'Price': prices,
-        'CPU': cpus,
-        'GPU': gpus,
-        'Case': cases}
+oldlinks = []
+for item in all:
+    oldlink = item.find_all("a", {"class":"guideGroup__target"})
+    oldlinks.append(str(oldlink))
+links = []
+for item in oldlinks:
+    soupyeet = BeautifulSoup(item, "html.parser")
+    links.append(soupyeet.find("a").get("href"))
+newlinks = []
+for link in links:
+    newlinks.append("https://pcpartpicker.com" + str(link))
+
+data = {'Name':names,
+        'Price':rounded_prices,
+        'CPU':cpus,
+        'GPU':gpus,
+        'Case':cases,
+        'Link':newlinks}
 
 
 BUILDDF1 = pd.DataFrame(data)

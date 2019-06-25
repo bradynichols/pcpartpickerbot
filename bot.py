@@ -4,35 +4,11 @@ import random
 import requests
 import time
 from settings import TOKEN
-from scraper import BUILDDF
+from scraper import BUILDDF, builds_string
 
 BOT_PREFIX = ("?", "!")
 
 client = Bot(command_prefix=BOT_PREFIX)
-
-
-@client.command(name='8ball',
-                description = "Answers a yes/no question.",
-                brief = "Answers from the beyond.",
-                aliases = ['eight_ball', 'eightball'],
-                pass_context=True)
-async def eight_ball(ctx):
-    possible_responses = [
-        "This is a resounding no",
-        "It is not looking likely",
-        "It is quite possible",
-        "Definitely",
-        "Too hard to tell",
-    ]
-    await ctx.send(random.choice(possible_responses) + ", " + ctx.message.author.mention)
-
-@client.command(name='square')
-async def square(ctx, number):
-    try:
-        squared = int(number)**2
-        await ctx.send(str(number) + " squared is " + "**" + str(squared) + "**")
-    except:
-        await ctx.send("That's not a number, dummy")
 
 @client.event
 async def on_ready():
@@ -47,21 +23,28 @@ async def bitcoin(ctx):
 
 @client.command()
 async def builds(ctx):
-    await ctx.send("The available builds are: " + builds_string)
+    await ctx.send("**The available builds are: **")
+    await ctx.send(builds_string)
+
 
 @client.command()
 async def buildinfo(ctx):
     input = str(ctx.message.content[11:])
-    await ctx.send(input + " (This is just for troubleshooting)")
+    await ctx.send("**" + input + "**")
     try:
         cpu = BUILDDF.loc[input, "CPU"]
         gpu = BUILDDF.loc[input, "GPU"]
         case = BUILDDF.loc[input, "Case"]
-        await ctx.send("```CPU: " + cpu +
-                       "GPU: " + gpu +
-                       "Case: " + case + "```")
+        price = BUILDDF.loc[input, "Price"]
+        link = BUILDDF.loc[input, "Link"]
+        info = ("**Price: **" + price + "\n" +
+                       "**CPU: **" + cpu + "\n" +
+                       "**GPU: **" + gpu + "\n" +
+                       "**Case: **" + case + "\n" +
+                       "**Link: **" + link + "")
     except:
         info = "Build not found, please try again! (Try copy/pasting!)"
+    await ctx.send(info)
 
 
 '''
