@@ -57,13 +57,15 @@ async def cpu(ctx):
         cores = CPUDF.loc[input, "Cores"]
         basespeed = CPUDF.loc[input, "Base Speed"]
         ocspeed = CPUDF.loc[input, "Overclock Speed"]
+        thread = CPUDF.loc[input, "Threads"]
         tdp = CPUDF.loc[input, "Thermal Design Power"]
         ig = CPUDF.loc[input, "Integrated Graphics"]
+
         info = ("**Price: **" + price + "\n" +
                 "**Cores: **" + cores + "\n" +
-                "**Base Speed: **" + basespeed + "\n" +
-                "**Overclock Speed: **" + ocspeed + "\n" +
-                "**Thermal Design Power: **" + tdp + "\n" +
+                "**Threads: **" + thread + "\n" +
+                "**Base Clock: **" + basespeed + "\n" +
+                "**Boost Clock: **" + ocspeed + "\n" +
                 "**Integrated Graphics: **" + ig + "")
     except:
         info = "Processor not found, please try again! (Try copy/pasting!)"

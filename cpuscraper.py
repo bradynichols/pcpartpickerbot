@@ -24,7 +24,6 @@ oldnames = []
 for item in all:
     oldnames.append(item.find("div", {"class":"td__nameWrapper"}).text)
 
-
 names = []
 for name in oldnames:
     spl = name.split()
@@ -66,6 +65,22 @@ for price in CPUPrices:
         price = "No Price Listed"
         print("Ye")
 
+SMTs = []
+for item in all:
+    yesno = item.find("td", {"class": "td__spec td__spec--6"}).text[3:]
+    if yesno == "Yes":
+        SMTs.append(True)
+    else:
+        SMTs.append(False)
+
+
+threads = []
+for core, SMT in zip(cores, SMTs):
+    if SMT:
+        threads.append(str(int(core) * 2))
+    else:
+        threads.append(str(core))
+
 
 data = {'Name':names,
         'Price':CPUPrices,
@@ -73,7 +88,8 @@ data = {'Name':names,
         'Base Speed':basespeeds,
         'Overclock Speed':ocspeeds,
         'Thermal Design Power':TDPs,
-        'Integrated Graphics':IGs}
+        'Integrated Graphics':IGs,
+        'Threads':threads}
 
 CPUDF1 = pd.DataFrame(data)
 CPUDF = CPUDF1.set_index("Name", drop = True)
