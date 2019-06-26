@@ -66,7 +66,8 @@ async def cpu(ctx):
                 "**Threads: **" + thread + "\n" +
                 "**Base Clock: **" + basespeed + "\n" +
                 "**Boost Clock: **" + ocspeed + "\n" +
-                "**Integrated Graphics: **" + ig + "")
+                "**Integrated Graphics: **" + ig + "\n" +
+                "**Thermal Design Power: **" + tdp + "")
     except:
         info = "Processor not found, please try again! (Try copy/pasting!)"
     await ctx.send(info)
