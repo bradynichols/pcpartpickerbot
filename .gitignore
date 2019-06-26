@@ -3,3 +3,4 @@ __pycache__
 virtualenv
 settings.py
 .idea
+test.py
