@@ -5,6 +5,7 @@ import requests
 import time
 from settings import TOKEN
 from scraper import BUILDDF, builds_string
+from cpuscraper import CPUDF, CPUDF1
 
 BOT_PREFIX = ("?", "!")
 
@@ -46,6 +47,31 @@ async def buildinfo(ctx):
         info = "Build not found, please try again! (Try copy/pasting!)"
     await ctx.send(info)
 
+
+@client.command()
+async def cpu(ctx):
+    input = str(ctx.message.content[5:])
+    await ctx.send("**" + input + "**")
+    try:
+        price = CPUDF.loc[input, "Price"]
+        cores = CPUDF.loc[input, "Cores"]
+        basespeed = CPUDF.loc[input, "Base Speed"]
+        ocspeed = CPUDF.loc[input, "Overclock Speed"]
+        tdp = CPUDF.loc[input, "Thermal Design Power"]
+        ig = CPUDF.loc[input, "Integrated Graphics"]
+        info = ("**Price: **" + price + "\n" +
+                "**Cores: **" + cores + "\n" +
+                "**Base Speed: **" + basespeed + "\n" +
+                "**Overclock Speed: **" + ocspeed + "\n" +
+                "**Thermal Design Power: **" + tdp + "\n" +
+                "**Integrated Graphics: **" + ig + "")
+    except:
+        info = "Processor not found, please try again! (Try copy/pasting!)"
+    await ctx.send(info)
+
+@client.command()
+async def cpudf(ctx):
+    print(CPUDF1.loc[0, "Name"])
 
 '''
 This doesn't work because i'm retarded or something
