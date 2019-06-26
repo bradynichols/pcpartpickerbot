@@ -4,4 +4,3 @@ virtualenv
 settings.py
 .idea
 test.py
-geckodriver.log
