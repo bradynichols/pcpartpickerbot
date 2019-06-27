@@ -5,7 +5,7 @@ import numpy as np
 from selenium import webdriver
 from time import sleep
 
-#launch url
+# launch url
 url = "https://pcpartpicker.com/products/memory/"
 
 # create a new Firefox session
@@ -17,14 +17,13 @@ sleep(2)
 
 innerHTML = browser.execute_script("return document.getElementsByTagName('html')[0].innerHTML")
 
-soup=BeautifulSoup(innerHTML, 'html.parser')
+soup = BeautifulSoup(innerHTML, 'html.parser')
 
-all = soup.find_all("tr", {"class":"tr__product"})
-
+all = soup.find_all("tr", {"class": "tr__product"})
 
 oldnames = []
 for item in all:
-    oldnames.append(item.find("div", {"class":"td__nameWrapper"}).text)
+    oldnames.append(item.find("div", {"class": "td__nameWrapper"}).text)
 
 ramnames = []
 for name in oldnames:
@@ -62,6 +61,14 @@ for item in all:
 ramprices = []
 for item in all:
     ramprices.append(item.find("td", {"class": "td__price"}).text[:-3])
-print(ramprices)
 
-#Not Finished!!
+data = {'Name': ramnames,
+        'Price': ramprices,
+        'Speed': speeds,
+        'Type': types,
+        'Module': moduleslist,
+        'PPG': pricepergigs,
+        'CAS Latency': caslats}
+
+RAMDF1 = pd.DataFrame(data)
+RAMDF = RAMDF1.set_index("Name", drop=True)

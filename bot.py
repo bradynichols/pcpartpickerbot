@@ -6,6 +6,7 @@ import time
 from settings import TOKEN
 from scraper import BUILDDF, builds_string
 from cpuscraper import CPUDF, CPUDF1
+from ramscraper import RAMDF
 
 BOT_PREFIX = ("?", "!")
 
@@ -71,6 +72,33 @@ async def cpu(ctx):
     except:
         info = "Processor not found, please try again! (Try copy/pasting!)"
     await ctx.send(info)
+
+
+'''
+#The command is being really wack but imma leave it for now and write scraping for the rest
+@client.command()
+async def ram(ctx):
+    input = str(ctx.message.content[5:])
+    await ctx.send("**" + input + "**")
+    try:
+        price = RAMDF.loc[input, "Price"]
+        rtype = RAMDF.loc[input, "Type"]
+        speed = RAMDF.loc[input, "Speed"]
+        module = RAMDF.loc[input, "Module"]
+        ppg = RAMDF.loc[input, "PPG"]
+        caslat = RAMDF.loc[input, "CAS Latency"]
+
+        info = ("**Price: **" + price + "\n" +
+                "**Cores: **" + rtype + "\n" +
+                "**Threads: **" + module + "\n" +
+                "**Base Clock: **" + speed + "\n" +
+                "**Boost Clock: **" + ppg + "\n" +
+                "**Integrated Graphics: **" + caslat + "")
+    except:
+        info = "Processor not found, please try again! (Try copy/pasting!)"
+    await ctx.send(info)
+
+'''
 
 @client.command()
 async def cpudf(ctx):
