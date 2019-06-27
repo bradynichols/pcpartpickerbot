@@ -92,3 +92,5 @@ client.loop.create_task(list_servers())
 '''
 
 client.run(TOKEN)
+
+#TOTO: Do the scraping with RAM first, then the rest.

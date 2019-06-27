@@ -57,13 +57,11 @@ for item in all:
 
 CPUPrices = []
 for item in all:
-    CPUPrices.append(item.find("td", {"class": "td__price"}).text[:-3])
-for price in CPUPrices:
-    try:
-        len(price) == 3
-    except:
-        price = "No Price Listed"
-        print("Ye")
+    CPUPrice = item.find("td", {"class":"td__price"}).text[:-3]
+    if len(CPUPrice) != 0:
+         CPUPrices.append(CPUPrice)
+    else:
+         CPUPrices.append("No Price Listed")
 
 SMTs = []
 for item in all:
