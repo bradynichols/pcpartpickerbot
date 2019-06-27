@@ -1,4 +1,4 @@
-# pcpartpickerbot
+# PCPartPickerBot
 Hello! I'll update this readme later with more information, but this is a bot created for Discord's Hack Week.
 The goal is to create a bot that allows you to access pcpartpicker stats, prices, builds, etc. all from discord!
 
