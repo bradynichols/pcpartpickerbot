@@ -1,4 +1,7 @@
 # PCPartPickerBot
+![PCPartPicker Logo](http://u.cubeupload.com/bradyfish/PCPartPickerLogo.png)
+
+
 Hello! I'll update this readme later with more information, but this is a bot created for Discord's Hack Week.
 The goal is to create a bot that allows you to access pcpartpicker stats, prices, builds, etc. all from discord!
 
@@ -8,4 +11,4 @@ Thanks for stopping by, and feel free to ask me any questions!
 
 Have an awesome day!
 
-![alt text](https://u.cubeupload.com/bradyfish/hackbadgeblack.png)
+![GitHub Hack Week Logo](https://u.cubeupload.com/bradyfish/hackbadgeblack.png)
