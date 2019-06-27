@@ -7,3 +7,5 @@ Some background about myself, I'm a 16-yo high school student who codes in his s
 Thanks for stopping by, and feel free to ask me any questions!
 
 Have an awesome day!
+
+![alt text](https://u.cubeupload.com/bradyfish/hackbadgeblack.png)
