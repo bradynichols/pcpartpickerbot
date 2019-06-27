@@ -1,11 +1,17 @@
 todolist
 
--Figure out webscraping with selenium - use chrome or firefox or what?
--Get webscraped data and get prices and stuff for all pages
--Figure out how to store the damn stuff
 -Auto-refresh? hmm
 
 -Create thingy to select build by typing in chat
 -HAGS
 
-~Brady
+
+UPDATED GOALS 6/27 2:15AM
+-help
+-add cooler scraper
+-clean up the god awful code in cpuscraper and comments!!!
+-add above
+-add commands for each component
+-fix ram command
+
+

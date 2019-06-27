@@ -7,6 +7,10 @@ from settings import TOKEN
 from scraper import BUILDDF, builds_string
 from cpuscraper import CPUDF, CPUDF1
 from ramscraper import RAMDF
+from mboardscraper import MBOARDDF
+from gpuscraper import GPUDF
+from casescraper import CASEDF
+
 
 BOT_PREFIX = ("?", "!")
 

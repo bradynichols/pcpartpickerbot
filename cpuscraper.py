@@ -21,56 +21,43 @@ soup=BeautifulSoup(innerHTML, 'html.parser')
 all = soup.find_all("tr", {"class":"tr__product"})
 
 oldnames = []
-for item in all:
-    oldnames.append(item.find("div", {"class":"td__nameWrapper"}).text)
-
 names = []
-for name in oldnames:
-    spl = name.split()
-    del spl[-1]
-    names.append(' '.join(spl))
-
-cores = []
-for item in all:
-    cores.append(item.find("td", {"class": "td__spec td__spec--1"}).text[10:])
-
-basespeeds = []
-for item in all:
-    basespeeds.append(item.find("td", {"class": "td__spec td__spec--2"}).text[10:])
-
+SMTs = []
+CPUPrices = []
+IGs = []
+TDPs = []
 ocspeeds = []
+basespeeds = []
+cores = []
+
 for item in all:
+    oldnames.append(item.find("div", {"class": "td__nameWrapper"}).text)
+    cores.append(item.find("td", {"class": "td__spec td__spec--1"}).text[10:])
+    basespeeds.append(item.find("td", {"class": "td__spec td__spec--2"}).text[10:])
     ocspeed = item.find("td", {"class": "td__spec td__spec--3"})
     try:  # I'm so sorry for this, i can't test if dtype == None lmao
         if len(ocspeed) != 0:
             ocspeeds.append(ocspeed.text[11:])
     except:
         ocspeeds.append("Cannot Overclock")
-
-TDPs = []
-for item in all:
     TDPs.append(item.find("td", {"class": "td__spec td__spec--4"}).text[3:])
-
-IGs = []
-for item in all:
     IGs.append(item.find("td", {"class": "td__spec td__spec--5"}).text[19:])
-
-CPUPrices = []
-for item in all:
-    CPUPrice = item.find("td", {"class":"td__price"}).text[:-3]
+    CPUPrice = item.find("td", {"class": "td__price"}).text[:-3]
     if len(CPUPrice) != 0:
-         CPUPrices.append(CPUPrice)
+        CPUPrices.append(CPUPrice)
     else:
-         CPUPrices.append("No Price Listed")
+        CPUPrices.append("No Price Listed")
 
-SMTs = []
-for item in all:
     yesno = item.find("td", {"class": "td__spec td__spec--6"}).text[3:]
     if yesno == "Yes":
         SMTs.append(True)
     else:
         SMTs.append(False)
 
+for name in oldnames:
+    spl = name.split()
+    del spl[-1]
+    names.append(' '.join(spl))
 
 threads = []
 for core, SMT in zip(cores, SMTs):
@@ -79,17 +66,16 @@ for core, SMT in zip(cores, SMTs):
     else:
         threads.append(str(core))
 
-
-data = {'Name':names,
-        'Price':CPUPrices,
-        'Cores':cores,
-        'Base Speed':basespeeds,
-        'Overclock Speed':ocspeeds,
-        'Thermal Design Power':TDPs,
-        'Integrated Graphics':IGs,
-        'Threads':threads}
+data = {'Name': names,
+        'Price': CPUPrices,
+        'Cores': cores,
+        'Base Speed': basespeeds,
+        'Overclock Speed': ocspeeds,
+        'Thermal Design Power': TDPs,
+        'Integrated Graphics': IGs,
+        'Threads': threads}
 
 CPUDF1 = pd.DataFrame(data)
-CPUDF = CPUDF1.set_index("Name", drop = True)
+CPUDF = CPUDF1.set_index("Name", drop=True)
 
 
