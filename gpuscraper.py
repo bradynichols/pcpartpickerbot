@@ -1,14 +1,13 @@
-import requests
 from bs4 import BeautifulSoup
 import pandas as pd
-import numpy as np
 
-r = requests.get("https://www.techpowerup.com/gpu-specs/")
-c = r.content
 
-soup = BeautifulSoup(c, "html.parser")
+with open(r'.\storeddata\gpudata.txt', 'r') as f:
+    text = f.read()
+data = BeautifulSoup(text, "html.parser")
+ball = data.find_all("li", {"class": "guideGroup guideGroup__card"})
 
-ball = soup.find("table", {"class": "processors"})
+ball = data.find("table", {"class": "processors"})
 all = ball.find_all("tr")
 
 tds = []

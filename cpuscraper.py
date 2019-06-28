@@ -1,24 +1,12 @@
-import requests
 from bs4 import BeautifulSoup
 import pandas as pd
-import numpy as np
-from selenium import webdriver
-from time import sleep
 
-#launch url
-url = "https://pcpartpicker.com/products/cpu/"
 
-# create a new Firefox session
-browser = webdriver.Firefox()
+with open(r'.\storeddata\cpudata.txt', 'r') as f:
+    text = f.read()
+data = BeautifulSoup(text, "html.parser")
+all = data.find_all("tr", {"class":"tr__product"})
 
-browser.get(url)
-sleep(2)
-
-innerHTML = browser.execute_script("return document.getElementsByTagName('html')[0].innerHTML")
-
-soup=BeautifulSoup(innerHTML, 'html.parser')
-
-all = soup.find_all("tr", {"class":"tr__product"})
 
 oldnames = []
 names = []
@@ -81,5 +69,3 @@ data = {'Name': lowernames,
 
 CPUDF1 = pd.DataFrame(data)
 CPUDF = CPUDF1.set_index("Name", drop=True)
-
-

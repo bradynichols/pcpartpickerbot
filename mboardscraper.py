@@ -1,25 +1,12 @@
-import requests
 from bs4 import BeautifulSoup
 import pandas as pd
-import numpy as np
-from selenium import webdriver
-from time import sleep
 
-#launch url
-url = "https://pcpartpicker.com/products/motherboard/"
 
-# create a new Firefox session
-browser = webdriver.Firefox()
-print("Connected")
+with open(r'.\storeddata\mboarddata.txt', 'r') as f:
+    text = f.read()
+data = BeautifulSoup(text, "html.parser")
 
-browser.get(url)
-sleep(2)
-
-innerHTML = browser.execute_script("return document.getElementsByTagName('html')[0].innerHTML")
-
-soup=BeautifulSoup(innerHTML, 'html.parser')
-
-all = soup.find_all("tr", {"class":"tr__product"})
+all = data.find_all("tr", {"class":"tr__product"})
 oldnames = []
 mbnames = []
 sockets = []

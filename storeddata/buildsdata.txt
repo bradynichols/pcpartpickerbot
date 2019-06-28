@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+
+<html class="test-overflow">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1123.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","queueTime":0,"licenseKey":"e2df38885d","agent":"","transactionName":"Y1NWYkRSXUBRAkIMWVoZckNYUEdaXw8ZFUZrVVtEUx1AR1EHUAJDXVJRGEBaVkRDW0URV1JQa1FDWldWbwhYAVNM","applicationID":"285320","errorBeacon":"bam.nr-data.net","applicationTime":79}</script>
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+<meta content="" name="description"/>
+<meta content="PCPartPicker" name="application-name">
+<meta content="#FFFFFF" name="msapplication-TileColor">
+<meta content="/mstile-144x144.png" name="msapplication-TileImage">
+<meta content="telephone=no" name="format-detection"/>
+<link href="/apple-touch-icon-57x57.png" rel="apple-touch-icon-precomposed" sizes="57x57"/>
+<link href="/apple-touch-icon-72x72.png" rel="apple-touch-icon-precomposed" sizes="72x72"/>
+<link href="/apple-touch-icon-114x114.png" rel="apple-touch-icon-precomposed" sizes="114x114"/>
+<link href="/apple-touch-icon-120x120.png" rel="apple-touch-icon-precomposed" sizes="120x120"/>
+<link href="/apple-touch-icon-144x144.png" rel="apple-touch-icon-precomposed" sizes="144x144"/>
+<link href="/apple-touch-icon-152x152.png" rel="apple-touch-icon-precomposed" sizes="152x152"/>
+<link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<title>Build Guides - PCPartPicker</title>
+<link href="//cdn.pcpartpicker.com/static/forever/hash/site-dbac9c261a0227ca3cf7251a95aa274f.css" rel="stylesheet" type="text/css"/>
+<!--[if lt IE 9]><script src="/static/core/excanvas.min.js"></script><![endif]-->
+<script src="//cdn.pcpartpicker.com/static/forever/hash/site-ed632057104df7adb20a36818801f7b5.js" type="text/javascript"></script>
+<script type="text/javascript">
+    var global_country_sign = '$';
+    $(document).ready(function(){
+        init_consent('.pcpartpicker.com', false, false);
+        init_country_selector('us');
+        init_live_search(undefined, 'div.search_results', true);
+        init_common_buttons();
+        r_init_dialogs();
+        make_drop_nav('.nav-parts', '.browse-parts-tray');
+        make_drop_nav('.search-parts', '.search-tray', function() {
+            $('#search_q').focus();
+        });
+        
+        
+    });
+
+    
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-16428016-1', 'auto');
+    ga('send', 'pageview');
+    
+</script>
+<script type="text/javascript">
+</script>
+</meta></meta></meta></head>
+<body class="js-triggers" id="buildguide-index">
+<svg style="display: none;"><symbol id="shape-add" viewbox="0 0 16 16"><title>add</title> <polygon points="15,7 15,9 9,9 9,15 7,15 7,9 1,9 1,7 7,7 7,1 9,1 9,7 "></polygon> </symbol><symbol id="shape-arrow-down" viewbox="0 0 16 16"><title>arrow-down</title> <polygon points="13.7,10.3 8,16 2.3,10.3 3.7,8.9 7,12.2 7,0 9,0 9,12.2 12.3,8.9 "></polygon> </symbol><symbol id="shape-arrow-left" viewbox="0 0 16 16"><title>arrow-left</title> <polygon points="5.7,13.7 0,8 5.7,2.3 7.1,3.7 3.8,7 16,7 16,9 3.8,9 7.1,12.3 "></polygon> </symbol><symbol id="shape-arrow-right" viewbox="0 0 16 16"><title>arrow-right</title> <polygon points="10.3,13.7 16,8 10.3,2.3 8.9,3.7 12.2,7 0,7 0,9 12.2,9 8.9,12.3 "></polygon> </symbol><symbol id="shape-arrow-up" viewbox="0 0 16 16"><title>arrow-up</title> <polygon points="2.3,5.7 8,0 13.7,5.7 12.3,7.1 9,3.8 9,16 7,16 7,3.8 3.7,7.1 "></polygon> </symbol><symbol id="shape-author" viewbox="0 0 16 15.99"><title>author</title><path d="M15.88,4a11,11,0,0,0-1.72-2.14A12.72,12.72,0,0,0,11.9.11a.83.83,0,0,0-1,.12L9.16,2a13.37,13.37,0,0,1,2.76,2.16,15.5,15.5,0,0,1,2,2.64L15.76,5A.77.77,0,0,0,15.88,4Zm-4.68.85A13.1,13.1,0,0,0,8.43,2.73L2.1,9.1a.62.62,0,0,0-.2.31C1.28,11.31.7,13.18.07,15a.59.59,0,0,0,.13.73A.67.67,0,0,0,.7,16,.62.62,0,0,0,1,15.94c1.85-.65,3.76-1.28,5.66-1.89a1.73,1.73,0,0,0,.32-.2l6.29-6.33A16.38,16.38,0,0,0,11.2,4.85ZM5.73,12.24l-2-1.92,5-5.05a9.56,9.56,0,0,1,1.11.93,8.57,8.57,0,0,1,.89,1Z" transform="translate(0 0)"></path></symbol><symbol id="shape-checkmark" viewbox="0 0 16 16"><title>checkmark</title> <polygon points="6.5,12.7 2.1,8.5 3.5,7.1 6.5,10 12.5,4.1 13.9,5.5 "></polygon> </symbol><symbol id="shape-clipboard" viewbox="0 0 16 16"><title>clipboard</title> <path clip-rule="evenodd" d="M12,2v3H4V2H1v14h14V2H12z M4,9h6v1H4V9z M10,14H4v-1h6
+	V14z M12,12H4v-1h8V12z M12,8H4V7h8V8z M10,1H9c0-1-0.5-1-1-1S7,0,7,1H6C5.3,1,5,1.5,5,2v2h6V2C11,1.5,10.7,1,10,1z" fill-rule="evenodd" id="svgstoree6504bd1c55184341284ec8f5303104aAdd_to_Clipboard_1"></path> </symbol><symbol id="shape-combo" viewbox="0 0 16 16"><title>combo</title> <path d="M8,0L8,0L8,0L0,4.6v6.8L8,16l8-4.6V4.6L8,0z M3.7,11.2l-1.7-1V7.1l1.7,1V11.2z M2.8,5.3l5.2-3l1.8,1l-5.2,3L2.8,5.3z
+	 M7,13.1l-1.7-0.9V9.1L7,10V13.1z M6.2,7.2l5.2-3l1.8,1.1L8,8.3L6.2,7.2z M14,10.2l-5,2.9V10l5-2.9V10.2z"></path> <polygon points="8,8 8,8 8,8 "></polygon> </symbol><symbol id="shape-comment" viewbox="0 0 16 16"><title>comment</title> <g> <path clip-rule="evenodd" d="M0,0v13h2v2.4C2,15.7,2.3,16,2.6,16h1.1c0.2,0,0.3,0,0.5-0.1l5-2.9H16V0H0z
+		 M14,11H8.8L4,13.8V11H2V2h12V11z" fill-rule="evenodd"></path> <rect clip-rule="evenodd" fill-rule="evenodd" height="2" width="8" x="4" y="4"></rect> <rect clip-rule="evenodd" fill-rule="evenodd" height="2" width="5" x="4" y="7"></rect> </g> </symbol><symbol id="shape-delete" viewbox="0 0 16 16"><title>delete</title> <polygon points="12.6,2 14,3.4 9.4,8 14,12.6 12.6,14 8,9.4 3.4,14 2,12.6 6.6,8 2,3.4 3.4,2 8,6.6 "></polygon> </symbol><symbol id="shape-discord" viewbox="0 0 14 16"><title>discord</title> <g data-name="Layer 2" id="a7b7be95-aee6-4bf3-97d8-e227fdcf9a29"><g data-name="Layer 1" id="ac203262-690b-4e2c-8320-e664a395a8d8"><path d="M5.55,6.71a.85.85,0,0,0-.81.89.85.85,0,0,0,.81.89.85.85,0,0,0,.82-.89A.85.85,0,0,0,5.55,6.71Z"></path><path d="M8.47,6.71a.85.85,0,0,0-.81.89.82.82,0,1,0,1.63,0A.85.85,0,0,0,8.47,6.71Z"></path><path d="M12.36,0H1.64A1.65,1.65,0,0,0,0,1.65v10.7A1.65,1.65,0,0,0,1.64,14h9.07l-.42-1.37,1,.95,1,.9L14,16V1.65A1.65,1.65,0,0,0,12.36,0ZM9.27,10.45,8.74,9.8a2.55,2.55,0,0,0,1.45-1,4.72,4.72,0,0,1-.92.47,4.89,4.89,0,0,1-1.16.34A5.52,5.52,0,0,1,6,9.66a6.69,6.69,0,0,1-1.18-.35A4.9,4.9,0,0,1,4.28,9L4.21,9l0,0A2,2,0,0,1,4,8.84a2.5,2.5,0,0,0,1.4.94l-.53.67A2.9,2.9,0,0,1,2.38,9.23,10.73,10.73,0,0,1,3.53,4.57a3.9,3.9,0,0,1,2.25-.84l.08.09A5.51,5.51,0,0,0,3.75,4.87l.47-.23A5.76,5.76,0,0,1,6,4.14l.14,0a7.15,7.15,0,0,1,1.61,0,6.68,6.68,0,0,1,2.41.77,5.25,5.25,0,0,0-2-1l.11-.13a3.9,3.9,0,0,1,2.25.84,10.73,10.73,0,0,1,1.15,4.66A2.93,2.93,0,0,1,9.27,10.45Z"></path></g></g> </symbol><symbol id="shape-dots" viewbox="0 0 16 16"><title>dots</title> <g> <circle cx="8" cy="8" r="2"></circle> <circle cx="14" cy="8" r="2"></circle> <circle cx="2" cy="8" r="2"></circle> </g> </symbol><symbol id="shape-drag-handle" viewbox="0 0 16 16"><title>drag-handle</title> <g> <rect height="2" width="12" x="2" y="3"></rect> <rect height="2" width="12" x="2" y="11"></rect> <rect height="2" width="12" x="2" y="7"></rect> </g> </symbol><symbol id="shape-dropdown-arrow" viewbox="0 0 16 16"><title>dropdown-arrow</title> <polygon points="2.1,5.5 3.5,4.1 8,8.6 12.5,4.1 13.9,5.5 8,11.4 "></polygon> </symbol><symbol id="shape-error" viewbox="0 0 16 16"><title>error</title><g id="b1e7ca39-4f25-4c40-88bf-2e754b4cb735"><g id="a15822b5-ef0b-4bc7-b836-44218ba5f682"><path d="M12.89,4.53A6,6,0,0,1,8,14a5.61,5.61,0,0,1-1.54-.21L4.89,15.37A7.89,7.89,0,0,0,8,16,8,8,0,0,0,12.9,1.67l-9.79,9.8A6,6,0,0,1,8,2a6,6,0,0,1,1.54.2L11.11.63A7.89,7.89,0,0,0,8,0,8,8,0,0,0,3.1,14.33Z"></path></g></g></symbol><symbol id="shape-facebook" viewbox="0 0 16 16"><title>facebook</title> <g id="svgstorebfcc0a6663646a19f59dfe3651326ff3Facebook_4"> <path clip-rule="evenodd" d="M16,0H0v16h16V0z M11,5h-1C9.2,5,9,5,9,7h2v2H9v4H7V9H5V7h2c0-1.5,0-4,3-4h1V5z" fill-rule="evenodd"></path> </g> </symbol><symbol id="shape-history" viewbox="0 0 16 16"><title>history</title> <path d="M6,0v3H3v3H0v10h10v-3h3v-3h3V0H6z M8,14H2V8h1v5h5V14z M11,11H5V5h1v5h5V11z M14,8H8V2h6V8z"></path> </symbol><symbol id="shape-inbox" viewbox="0 0 16 16"><title>inbox</title> <path d="M0,2v12h16V2H0z M14,4v1L8,7.9L2,5V4H14z M2,12V7.3l6,2.9l6-2.9V12H2z"></path> </symbol><symbol id="shape-instagram" viewbox="0 0 16 16"><title>instagram</title> <g> <path d="M14,0H2C0.9,0,0,0.9,0,2v12c0,1.1,0.9,2,2,2h12c1.1,0,2-0.9,2-2V2C16,0.9,15.1,0,14,0z M14,12.5c0,0.8-0.7,1.5-1.5,1.5h-9
+		C2.7,14,2,13.3,2,12.5v-9C2,2.7,2.7,2,3.5,2h9C13.3,2,14,2.7,14,3.5V12.5z"></path> <path d="M8,4C5.8,4,4,5.8,4,8c0,2.2,1.8,4,4,4c2.2,0,4-1.8,4-4C12,5.8,10.2,4,8,4z M8,10c-1.1,0-2-0.9-2-2s0.9-2,2-2s2,0.9,2,2
+		S9.1,10,8,10z"></path> <circle cx="12" cy="4" r="1"></circle> </g> </symbol><symbol id="shape-issue" viewbox="0 0 16 16"><title>issue</title><g id="b17657e8-fb00-494b-ba1a-ab46e98d888e"><g id="aa96ab17-cbed-4f13-a09d-359b11c7fee6"><rect height="2" width="2" x="7" y="9"></rect><path d="M8,0A8.26,8.26,0,0,0,7,.06V7H9V2.09a6,6,0,1,1-4,.72V.58A8,8,0,1,0,8,0Z"></path></g></g></symbol><symbol id="shape-link" viewbox="0 0 16 16"><title>link</title> <g id="svgstore48954c9016fceb631f896eb70fde0d88Link_4"> <path d="M7.6,12.1C7.3,12,7.1,11.9,7,12c-0.1,0.1-1.2,1.2-1.2,1.2c-0.8,0.8-2.2,0.8-3,0c-0.8-0.8-0.8-2.2,0-3l3-3
+		c0.8-0.8,2.2-0.8,3,0c0.4,0.4,1.1,0.4,1.5,0c0.4-0.4,0.4-1.1,0-1.5C10,5.5,9.7,5.3,9.4,5.1C9.2,5,9.1,4.9,8.9,4.8c0,0,0,0,0,0
+		c-0.5-0.2-1-0.3-1.6-0.3c0,0,0,0-0.1,0c-0.7,0-1.4,0.2-2,0.5c-0.4,0.2-0.7,0.4-1,0.8l-3,3c-1.7,1.7-1.7,4.3,0,6
+		c1.7,1.7,4.3,1.7,6,0l2.2-2.2c0.2-0.2,0.1-0.3-0.2-0.3C8.7,12.3,8.2,12.2,7.6,12.1z"></path> <path d="M8.8,1.2L6.5,3.5C6.3,3.7,6.4,3.8,6.7,3.8c0.6,0,1.1,0,1.7,0.2C8.6,4.1,8.9,4.1,9,4c0.1-0.1,1.3-1.3,1.3-1.3
+		c0.8-0.8,2.2-0.8,3,0c0.8,0.8,0.8,2.2,0,3l-3,3c-0.8,0.8-2.2,0.8-3,0c-0.4-0.4-1.1-0.4-1.5,0c-0.4,0.4-0.4,1.1,0,1.5
+		c0.5,0.5,1.1,0.9,1.8,1.1c0.1,0,0.3,0.1,0.4,0.1c0.2,0,0.3,0,0.4,0.1c0.2,0,0.3,0,0.5,0c0.2,0,0.3,0,0.5,0c0.1,0,0.2,0,0.3,0
+		c0.8-0.2,1.6-0.5,2.2-1.2l3-3c1.7-1.7,1.7-4.3,0-6C13.1-0.4,10.4-0.4,8.8,1.2z"></path> </g> </symbol><symbol id="shape-lock" viewbox="0 0 16 16"><title>lock</title> <path d="M12,7V5c0-2.2-1.8-4-4-4S4,2.8,4,5v2H2v8h12V7H12z M6,7V5c0-1.1,0.9-2,2-2s2,0.9,2,2v2H6z"></path> </symbol><symbol id="shape-markup-bbcode" viewbox="0 0 16 16"><title>markup-bbcode</title> <g> <path d="M7,5.3C7,3.4,6,2,3.5,2H0v12h3c2.3,0,4-0.7,4-3.2C7,9.2,6.2,8.4,5,8C6,7.6,7,7.2,7,5.3z M3.1,12H2V9h1c1.3,0,2,0.5,2,1.5
+		C5,11.5,4.3,12,3.1,12z M3,7H2V4h1.1C4.4,4,5,4.6,5,5.5C5,6.4,4.3,7,3,7z"></path> <path d="M14,8c1-0.4,2-0.8,2-2.7C16,3.4,15,2,12.5,2H9v12h3c2.3,0,4-0.7,4-3.2C16,9.2,15.2,8.4,14,8z M11,4h1.1
+		C13.4,4,14,4.6,14,5.5c0,1-0.7,1.6-2,1.6h-1V4z M12.1,12h-1V9h1c1.3,0,2,0.5,2,1.5C14,11.5,13.3,12,12.1,12z"></path> </g> </symbol><symbol id="shape-markup-html" viewbox="0 0 16 16"><title>markup-html</title> <g> <polygon points="2.8,8 5.3,4.6 3.7,3.4 0.2,8 3.7,12.6 5.3,11.4 	"></polygon> <polygon points="12.3,3.4 10.7,4.6 13.2,8 10.7,11.4 12.3,12.6 15.8,8 	"></polygon> <rect height="2" transform="matrix(0.3162 -0.9487 0.9487 0.3162 -2.1193 13.0596)" width="12.6" x="1.7" y="7"></rect> </g> </symbol><symbol id="shape-markup-pcpp" viewbox="0 0 14 16"><title>markup-pcpp</title> <g><g><path d="M7,0,2,3V5.14L0,4v8l7,4V14l2,1,5-3V3.94ZM7,1.73l4.69,2.64-2,1.23L5,3ZM5.5,13.42l-4-2.29V6.58l4,2.29ZM7,11.8V8L4,6.31,5.8,5.14,9,6.94V10.6Zm5.5-.65-2,1.2V7.2l2-1.2Z"></path></g></g> </symbol><symbol id="shape-markup-cyclingbuilder" viewbox="0 0 20 20"><title>markup-cyclingbuilder</title> <g> <path d="M8.1,17.9l-3-3l0,0l0,0c-1.3-1.3-2-3-2-4.9c0-3.8,3.1-7,7-7h4.3h-0.2h3c0.5,0.5,1,1.2,1.4,1.8h-2.4h0h-1.7h0.2H10
+		c-2.8,0-5.1,2.3-5.1,5.1c0,1.4,0.6,2.7,1.5,3.6l0,0l0,0l4.5,4.5l0.4,0.4l1.2,1.2c-0.7,0.2-1.5,0.3-2.3,0.3L8.1,17.9z"></path> <path d="M19.2,6.1h-2c0.6,1.2,1,2.5,1,3.9c0,3.7-2.5,6.9-5.9,7.8l1.4,1.4c3.7-1.5,6.3-5.1,6.3-9.3C20,8.6,19.7,7.3,19.2,6.1z"></path> <path d="M15.7,6.1h-2.4c1.1,0.9,1.8,2.4,1.8,3.9c0,2.8-2.3,5.1-5.1,5.1c-0.1,0-0.3,0-0.4,0l1.7,1.7c3.2-0.6,5.7-3.4,5.7-6.8
+		C17,8.5,16.5,7.2,15.7,6.1z"></path> <path d="M10,1.8h5.7C14.1,0.7,12.1,0,10,0C4.5,0,0,4.5,0,10c0,4.9,3.6,9,8.3,9.8l-4.1-4.1l0,0c-1.5-1.5-2.4-3.5-2.4-5.8
+		C1.8,5.5,5.5,1.8,10,1.8z"></path> <path d="M10,6.1c-2.2,0-3.9,1.8-3.9,3.9s1.8,3.9,3.9,3.9s3.9-1.8,3.9-3.9S12.2,6.1,10,6.1z M10,12.1c-1.2,0-2.1-1-2.1-2.1
+		s1-2.1,2.1-2.1s2.1,1,2.1,2.1S11.2,12.1,10,12.1z"></path> </g> </symbol><symbol id="shape-markup-plain-text" viewbox="0 0 16 16"><title>markup-plain-text</title> <polygon points="3,2 3,4 3,6 4,6 5,4 7,4 7,12 5,13 5,14 11,14 11,13 9,12 9,4 11,4 12,6 13,6 13,4 13,2 "></polygon> </symbol><symbol id="shape-markup-reddit" viewbox="0 0 16 16"><title>markup-reddit</title> <g> <path d="M16,6.9c0-1-0.8-1.8-1.8-1.8c-0.5,0-1,0.2-1.3,0.6c-1.1-0.8-2.5-1.3-4.1-1.4L10,1.2l2.6,0.5c0.1,0.8,0.7,1.4,1.5,1.4
+		c0.9,0,1.6-0.7,1.6-1.6c0-0.9-0.7-1.6-1.6-1.6c-0.6,0-1.1,0.3-1.4,0.8L9.5,0.2L7.9,4.2C6,4.2,4.3,4.8,3.1,5.7
+		C2.8,5.3,2.3,5.1,1.8,5.1C0.8,5.1,0,5.9,0,6.9c0,0.7,0.4,1.3,1,1.6C0.9,8.8,0.9,9.2,0.9,9.5c0,2.9,3.2,5.3,7.1,5.3s7.1-2.4,7.1-5.3
+		c0-0.4-0.1-0.7-0.1-1.1C15.5,8.2,16,7.6,16,6.9z M3.5,8.2c0-0.7,0.6-1.3,1.3-1.3s1.3,0.6,1.3,1.3c0,0.7-0.6,1.3-1.3,1.3
+		S3.5,8.9,3.5,8.2z M11,12.1c0,0-1.1,1.1-3.1,1.1s-3-1-3.1-1.1c-0.2-0.2-0.2-0.6,0-0.8c0.2-0.2,0.6-0.2,0.8,0c0,0,0.8,0.7,2.3,0.7
+		c1.5,0,2.2-0.7,2.3-0.7c0.2-0.2,0.6-0.2,0.8,0C11.3,11.6,11.3,11.9,11,12.1z M11.1,9.5c-0.7,0-1.3-0.6-1.3-1.3
+		c0-0.7,0.6-1.3,1.3-1.3c0.7,0,1.3,0.6,1.3,1.3C12.4,8.9,11.8,9.5,11.1,9.5z"></path> </g> </symbol><symbol id="shape-menu" viewbox="0 0 16 16"><title>menu</title> <g> <rect height="2" width="16" y="2"></rect> <rect height="2" width="16" y="12"></rect> <rect height="2" width="16" y="7"></rect> </g> </symbol><symbol id="shape-pin" viewbox="0 0 16 16"><title>pin</title> <path d="M10,3L4.9,6.4L4.4,6.1C3.9,5.9,3.4,6,3,6.3L2.5,6.8L5,9.5l-4.5,6L6.6,11l2.6,2.4l0.5-0.5c0.4-0.4,0.5-0.9,0.2-1.4L9.6,11
+	L13,6l2,0V5l-4-4h-1V3z"></path> </symbol><symbol id="shape-radio-button" viewbox="0 0 16 16"><title>radio-button</title> <circle cx="8" cy="8" r="3"></circle> </symbol><symbol id="shape-save" viewbox="0 0 16 16"><title>save</title> <g id="svgstoree6b8220da756aa9445d8dc7475de2d4aDownload_1"> <path clip-rule="evenodd" d="M10.7,5H9V0H7v5H5.3C5,5,4.9,5.3,5.1,5.5l2.6,3.3c0.2,0.2,0.5,0.2,0.6,0l2.6-3.3
+		C11.1,5.3,11,5,10.7,5z" fill-rule="evenodd"></path> <polygon clip-rule="evenodd" fill-rule="evenodd" points="11,7 11,9 14,9 14,12 2,12 2,9 5,9 5,7 0,7 0,16 16,16 16,7 	"></polygon> </g> </symbol><symbol id="shape-search" viewbox="0 0 16 16"><title>search</title> <path d="M10.9,9.5C11.6,8.5,12,7.3,12,6c0-3.3-2.7-6-6-6S0,2.7,0,6s2.7,6,6,6c1.3,0,2.5-0.4,3.5-1.1l5.1,5.1l1.4-1.4L10.9,9.5z M2,6
+	c0-2.2,1.8-4,4-4s4,1.8,4,4c0,2.2-1.8,4-4,4S2,8.2,2,6z"></path> </symbol><symbol id="shape-settings" viewbox="0 0 16 16"><title>settings</title> <path d="M16,9V7l-2.2-0.6c-0.1-0.5-0.3-0.9-0.5-1.3l1.1-2L13,1.7l-2,1.1c-0.4-0.2-0.8-0.4-1.3-0.5L9,0H7L6.4,2.2
+	C5.9,2.4,5.5,2.5,5.1,2.8l-2-1.1L1.6,3.1l1.1,2C2.5,5.5,2.4,5.9,2.2,6.4L0,7v2l2.2,0.6c0.1,0.5,0.3,0.9,0.5,1.3l-1.1,2L3,14.3l2-1.1
+	c0.4,0.2,0.8,0.4,1.3,0.5L7,16h2l0.6-2.2c0.5-0.1,0.9-0.3,1.3-0.5l2,1.1l1.4-1.4l-1.1-2c0.2-0.4,0.4-0.8,0.5-1.3L16,9z M12,8
+	c0,2.2-1.8,4-4,4s-4-1.8-4-4s1.8-4,4-4S12,5.8,12,8z"></path> </symbol><symbol id="shape-share" viewbox="0 0 16 16"><title>share</title> <path d="M8,1.9C8,1,8.5,0.7,9.2,1.3l5.6,5.2c0.3,0.3,0.3,0.7,0,1l-5.6,5.2C8.5,13.3,8,13,8,12.1V10H6.6
+	c-2.5,0.4-3.9,2.2-4.9,4.5c-0.1,0.4-0.4,0.4-0.5,0C1.1,13.8,1,13.1,1,12.4C1,8.2,4,4.7,8,4V1.9z" id="svgstore99ba9f2d10b202bfa2229f00092dfdc9Reply_1_1_"></path> </symbol><symbol id="shape-star-empty" viewbox="0 0 16 16"><title>star-empty</title> <path d="M8,3.9L8.9,6L9.2,7l1,0.1l2.3,0.2l-1.7,1.6L10,9.4l0.2,0.9l0.5,2.5l-1.9-1.2L8,11.2l-0.9,0.5l-1.9,1.2l0.5-2.5L6,9.4
+	L5.2,8.8L3.5,7.3l2.3-0.2l1-0.1L7.1,6L8,3.9 M8,0C7.9,0,7.8,0.1,7.7,0.2L5.6,5.4L0.3,5.9C0,5.9-0.1,6.3,0.1,6.5l4,3.6l-1.2,5.6
+	c0,0.2,0.1,0.4,0.3,0.4c0.1,0,0.1,0,0.2-0.1L8,13.1l4.6,2.8c0.1,0,0.1,0.1,0.2,0.1c0.2,0,0.4-0.2,0.3-0.4L11.9,10l4-3.6
+	c0.2-0.2,0.1-0.5-0.2-0.6l-5.3-0.5L8.3,0.2C8.2,0.1,8.1,0,8,0L8,0z"></path> </symbol><symbol id="shape-star-full" viewbox="0 0 16 16"><title>star-full</title> <path d="M8,13.1l4.6,2.8c0.2,0.2,0.6-0.1,0.5-0.3L11.9,10l4-3.6c0.2-0.2,0.1-0.5-0.2-0.6l-5.3-0.5L8.3,0.2c-0.1-0.3-0.5-0.3-0.6,0
+	L5.6,5.4L0.3,5.9C0,5.9-0.1,6.3,0.1,6.5l4,3.6l-1.2,5.6c-0.1,0.3,0.3,0.5,0.5,0.3L8,13.1z"></path> </symbol><symbol id="shape-star-half" viewbox="0 0 16 16"><title>star-half</title> <g id="svgstorec7a7267f60385e4654c887636181f842full"> <path d="M8,13.1l4.6,2.8c0.2,0.2,0.6-0.1,0.5-0.3L11.9,10l4-3.6c0.2-0.2,0.1-0.5-0.2-0.6l-5.3-0.5L8.3,0.2c-0.1-0.3-0.5-0.3-0.6,0
+		L5.6,5.4L0.3,5.9C0,5.9-0.1,6.3,0.1,6.5l4,3.6l-1.2,5.6c-0.1,0.3,0.3,0.5,0.5,0.3L8,13.1z"></path> </g> <g id="svgstorec7a7267f60385e4654c887636181f842half"> <path d="M8,0C7.9,0,7.8,0.1,7.7,0.2L5.6,5.4L0.3,5.9C0,5.9-0.1,6.3,0.1,6.5l4,3.6l-1.2,5.6c-0.1,0.3,0.3,0.5,0.5,0.3L8,13.1V0z"></path> </g> </symbol><symbol id="shape-switch" viewbox="0 0 12 12"><title>switch</title> <g> <path d="M12,6v6L8,8h2V6c0-.86,0-2-1.11-2C8.26,4,7.71,5,7.24,5.85l-.68,1.2c-.71,1.26-1.66,3-3.38,3l-.29,0C1.81,9.88,0,9.2,0,6V0L4,4H2V6c0,1.89.75,2,1.1,2,.74,0,1.24-1.09,1.71-1.93l.68-1.19C6.21,3.59,7.19,1.8,9.1,2S12,3.73,12,6Z"></path></g></symbol><symbol id="shape-success" viewbox="0 0 16 16"><title>success</title><g id="ae5d57c1-25a9-4acf-9423-53ece48b8287"><g id="a6cf5708-628a-46a8-82c1-d78ecc833d76"><path d="M14,2.69a8,8,0,1,1-1.51-1.32L11,2.81A5.89,5.89,0,0,0,8,2a6,6,0,1,0,5.6,3.83L8,11.3,3.61,7.12,5,5.72,8,8.57Z"></path></g></g></symbol><symbol id="shape-tag" viewbox="0 0 16 16"><title>tag</title> <path clip-rule="evenodd" d="M15,0H8.1C7.8,0,7.4,0.2,7.2,0.4L0.3,7.3c-0.4,0.4-0.4,1,0,1.4l7,7
+	c0.4,0.4,1,0.4,1.4,0l6.9-6.9C15.8,8.6,16,8.2,16,7.9V1C16,0.4,15.6,0,15,0z M11,7C9.9,7,9,6.1,9,5s0.9-2,2-2c1.1,0,2,0.9,2,2
+	S12.1,7,11,7z" fill-rule="evenodd" id="svgstorea5a9210f044ad52be8e5d96797ab3cd8Tag_1"></path> </symbol><symbol id="shape-twitch" viewbox="0 0 16 16"><title>twitch</title> <g> <path d="M1,0L0,3v11h4v2h2.5l2-2H12l4-4V0H1z M14,9l-2,2H8.6L6,13.5V11H3V2h11V9z"></path> <rect height="4" width="2" x="6" y="4"></rect> <rect height="4" width="2" x="10" y="4"></rect> </g> </symbol><symbol id="shape-twitter" viewbox="0 0 16 16"><title>twitter</title> <g id="svgstoref90a96b77ecb27e54ea9e726efbad5bfTwitter_1"> <path d="M16,3c-0.6,0.3-1.2,0.4-1.9,0.5c0.7-0.4,1.2-1,1.4-1.8c-0.6,0.4-1.3,0.7-2.1,0.8c-0.6-0.6-1.5-1-2.4-1
+		C9.3,1.5,7.8,3,7.8,4.8c0,0.3,0,0.5,0.1,0.7C5.1,5.4,2.7,4.1,1.1,2.1c-0.3,0.5-0.4,1-0.4,1.7c0,1.1,0.8,2.1,1.6,2.7
+		C1.8,6.5,1,6.3,1,6.1c0,0,0,0,0,0C1,7.7,2,9,3.5,9.3c-0.3,0.1-0.7,0.1-1,0.1c-0.2,0-0.5,0-0.7-0.1c0.4,1.3,1.6,2.3,3,2.3
+		c-1.1,0.9-2.6,1.4-4.1,1.4c-0.3,0-0.5,0-0.8,0c1.5,0.9,3.2,1.5,5,1.5c6,0,9.3-5,9.3-9.3c0-0.1,0-0.3,0-0.4C15,4.3,15.6,3.7,16,3z"></path> </g> </symbol><symbol id="shape-user" viewbox="0 0 16 16"><title>user</title> <path clip-rule="evenodd" d="M16,14c-0.2-3-1.7-4.9-4.3-5.7C12.5,7.5,13,6.3,13,5c0-2.8-2.2-5-5-5S3,2.2,3,5
+	c0,1.3,0.5,2.5,1.3,3.3C1.7,9.1,0.3,11,0,14l0,1v1h16v-1L16,14z M8,2c1.7,0,3,1.3,3,3c0,1.6-1.3,3-3,3S5,6.6,5,5C5,3.3,6.3,2,8,2z
+	 M7,10h2c3.2,0,4.7,1.2,5,4H2C2.3,11.2,3.8,10,7,10z" fill-rule="evenodd"></path> </symbol><symbol id="shape-warning" viewbox="0 0 14 16"><title>warning</title><g id="a5fb08a3-aaed-49e3-9f06-c897f01d8dda"><g id="bef19ab1-4e2c-403c-8f1d-78b9ca4047e0"><path d="M3,12h9a2,2,0,0,0,2-2V2a2,2,0,0,0-2-2H2A2,2,0,0,0,0,2V14a2,2,0,0,0,2,2H12a2,2,0,0,0,2-2V12a2,2,0,0,1-2,2H3a1,1,0,0,1,0-2ZM7,2A1,1,0,1,1,6,3,1,1,0,0,1,7,2ZM6,6A1,1,0,0,1,8,6V9A1,1,0,0,1,6,9Z"></path></g></g></symbol><symbol id="shape-wattage" viewbox="0 0 16 16"><title>wattage</title> <g transform="translate(0,-952.36218)"> <path d="M12.6,952.4c-0.1,0-0.1,0-0.2,0.1l-9.3,6.2c0,0-0.1,0.1-0.1,0.1c0,0.1,0,0.1,0,0.2c0,0.1,0,0.1,0.1,0.2
+		c0,0.1,0.1,0.1,0.1,0.1l4.1,2.2L3,967.8c-0.2,0.4,0.2,0.7,0.5,0.5l10.4-8.2c0,0,0.1-0.1,0.1-0.1c0-0.1,0-0.1,0-0.2
+		c0-0.1,0-0.1-0.1-0.2c0,0-0.1-0.1-0.1-0.1l-3.9-1.7l2.9-4.9c0-0.1,0-0.1,0-0.2c0-0.1,0-0.1-0.1-0.2c0-0.1-0.1-0.1-0.1-0.1
+		S12.7,952.4,12.6,952.4L12.6,952.4z"></path> </g> </symbol><symbol id="shape-weight" viewbox="0 0 16 16"><title>weight</title> <path d="M14,6c0,0-0.6-0.3-1.7-0.5l0.7-4c0-0.3-0.1-0.7-0.4-0.8C11.8,0.4,10.5,0,8,0S4.2,0.4,3.5,0.7C3.2,0.8,3,1.2,3.1,1.5l0.7,4
+	C2.6,5.7,2,6,2,6L0,16h16L14,6z M5.7,5L5.2,2.2C5.8,2.1,6.7,2,8,2s2.2,0.1,2.8,0.2L10.3,5H5.7z"></path> </symbol><symbol id="shape-youtube" viewbox="0 0 16 16"><title>youtube</title> <g id="svgstore9835bd0812257179631c97dc285c4eb5Lozenge"> <g> <path d="M15.8,4.5c0,0-0.2-1-0.6-1.6c-0.6-0.7-1.3-0.7-1.6-0.7C11.4,2,8,2,8,2l0,0c0,0-3.4,0-5.6,0.2c-0.4,0-1,0.1-1.6,0.7
+			C0.4,3.5,0.2,4.5,0.2,4.5S0,5.9,0,7.3v1.3c0,1.5,0.2,2.7,0.2,2.7s0.2,1.2,0.6,1.8c0.6,0.7,1.4,0.7,1.8,0.8C3.8,14,8,14,8,14
+			s3.4,0,5.6-0.2c0.4,0,1-0.1,1.6-0.7c0.4-0.5,0.6-1.8,0.6-1.8S16,10.1,16,8.7V7.3C16,5.9,15.8,4.5,15.8,4.5z M6,10.6V5.4L11,8
+			L6,10.6z"></path> </g> </g> </symbol></svg>
+<header class="masthead">
+<nav id="navigation" role="navigation">
+<section class="nav__top">
+<div class="nav__wrapper nav__wrapper--top xs-col-11 lg-col-9 xl-col-8 xs-mx-auto">
+<a class="nav__logo" href="/"><img src="/static/img/logo.svg"/></a>
+<ul class="nav__menu--mobile list-unstyled">
+<li class="nav-icon"><a class="js-trigger--accountMobile" href="#"><svg class="icon shape-user"><use xlink:href="#shape-user"></use></svg></a></li>
+<li class="nav-icon"><a class="js-trigger-offCanvas--search" href="#"><svg class="icon shape-search"><use xlink:href="#shape-search"></use></svg></a></li>
+<li class="nav-icon"><a class="js-trigger--menuMobile" href="#"><svg class="icon shape-menu"><use xlink:href="#shape-menu"></use></svg></a></li>
+<li class="nav-icon icon--hide"><a class="js-trigger--close" href="#"><svg class="icon shape-delete"><use xlink:href="#shape-delete"></use></svg></a></li>
+</ul>
+<ul class="nav__account list-unstyled">
+<li class="nav__account--login"><a href="/accounts/login/">Log In</a></li>
+<li class="nav__account--register"><a href="/accounts/register/" id="js-trigger--profileMobile">Register</a></li>
+<li class="nav__account--country">
+<form action="/qapi/switch_country/" class="country-selector" id="form_country_select" method="post">
+<input name="csrfmiddlewaretoken" type="hidden" value="v8qMNLr6oc6vJitEtRNkcY5eJTh2X2R9V5yDzuREodguvbmxnmRf9PofThDV7cy4"/>
+<select class="select select--small language-selector" id="country_select" name="cc">
+<option value="au">Australia</option>
+<option value="be">Belgium</option>
+<option value="ca">Canada</option>
+<option value="de">Deutschland</option>
+<option value="es">España</option>
+<option value="fr">France</option>
+<option value="in">India</option>
+<option value="ie">Ireland</option>
+<option value="it">Italia</option>
+<option value="nl">Netherlands</option>
+<option value="nz">New Zealand</option>
+<option value="pt">Portugal</option>
+<option value="se">Sweden</option>
+<option value="uk">United Kingdom</option>
+<option selected="selected" value="us">United States</option>
+</select>
+<input id="form_country_select_url" name="url" type="hidden" value="/guide/"/>
+<span class="flag-icon flag-us"></span>
+</form>
+</li>
+</ul>
+</div>
+</section>
+<section class="nav__bottom">
+<div class="nav__wrapper nav__wrapper--bottom xs-col-10 sm-col-11 lg-col-9 xl-col-8 xs-mx-auto">
+<ul class="nav__categories list-unstyled">
+<li class="nav__categories--partlist"><a href="/list/"><svg class="nav__icon" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g data-name="Layer 2"><path d="M23.85 7.87a6.39 6.39 0 0 1-1.79 3.31 6.54 6.54 0 0 1-6.93 1.5L4.58 23.22a2.57 2.57 0 0 1-1.89.78 2.64 2.64 0 0 1-1.91-.78 2.68 2.68 0 0 1-.78-1.9 2.71 2.71 0 0 1 .78-1.9L11.32 8.87a6.54 6.54 0 0 1 1.5-6.93A6.39 6.39 0 0 1 16.13.15a6.12 6.12 0 0 1 3.63.29l-4.1 4.1.4 3.4 3.4.4 4.1-4.1a6.12 6.12 0 0 1 .29 3.63z" data-name="Layer 1"></path></g></svg>System Builder</a></li><li class="nav__categories--guides"><a href="/guide/"><svg class="nav__icon" viewbox="0 0 18 24" xmlns="http://www.w3.org/2000/svg"><g data-name="Layer 2"><path d="M12 0H0v24h18V6zm4 22H2v-2h3v-1H2v-2h5v-1H2v-2h3v-1H2v-2h5v-1H2V8h3V7H2V5h5V4H2V2h9v5h5z" data-name="Layer 1"></path></g></svg>Build Guides</a></li><li class="nav__categories--builds"><a href="/builds/"><svg class="nav__icon" viewbox="0 0 20 24" xmlns="http://www.w3.org/2000/svg"><g data-name="Layer 2"><g data-name="Layer 1"><path d="M19.08 1l-12-1H7a.62.62 0 0 0-.19 0h-.14l-.09.1-.13.07-.13.09L.45 4.17A1 1 0 0 0 0 5v17a1 1 0 0 0 .84 1l6 1H19a1 1 0 0 0 1-1V2a1 1 0 0 0-.92-1zM6 21.82l-4-.67V5.54l4-2.67zM18 22H8V2.09l10 .83z"></path><circle cx="13" cy="18" r="1"></circle><path d="M17 4.6L9 4v2l8 .6v-2zM17 7.6L9 7v2l8 .6v-2z"></path></g></g></svg>Completed Builds</a></li><li class="nav__categories--browseProducts js-trigger--browseProducts"><a href="#"><svg class="nav__icon" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g data-name="Layer 2"><g data-name="Layer 1"><path d="M8 8h8v8H8z"></path><path d="M24 9V7h-2V4a2 2 0 0 0-2-2h-3V0h-2v2h-2V0h-2v2H9V0H7v2H4a2 2 0 0 0-2 2v3H0v2h2v2H0v2h2v2H0v2h2v3a2 2 0 0 0 2 2h3v2h2v-2h2v2h2v-2h2v2h2v-2h3a2 2 0 0 0 2-2v-3h2v-2h-2v-2h2v-2h-2V9zm-4 11H4V4h16z"></path></g></g></svg>Browse Products<span class="down-caret"><svg class="icon shape-dropdown-arrow"><use xlink:href="#shape-dropdown-arrow"></use></svg></span></a></li><li class="nav__subLinks"><div class="nav__subLinks--group1"><a class="nav__categories--drops" href="/products/pricedrop/">Price Drops</a><a class="nav__categories--forums" href="/forums/">Forums</a></div><div class="nav__subLinks--group2"><a class="nav__categories--trends" href="/trends/">Price Trends</a><a class="nav__categories--blog" href="/blog/">Blog</a></div></li>
+<li>
+<div class="browseProducts browseProducts--hide">
+<div class="browseProducts__wrapper xs-col-10 sm-col-11 lg-col-9 xl-col-8 xs-mx-auto">
+<div class="browseProducts__block--group1">
+<ul class="browseProducts__block--popular list-unstyled">
+<li><a href="/products/cpu/"><img alt="CPU" src="//cdn.pcpartpicker.com/static/forever/img/nav-cpu.png"/>CPU</a></li>
+<li><a href="/products/cpu-cooler/"><img alt="CPU Cooler" src="//cdn.pcpartpicker.com/static/forever/img/nav-cpucooler.png"/>CPU Cooler</a></li>
+<li><a href="/products/motherboard/"><img alt="Motherboard" src="//cdn.pcpartpicker.com/static/forever/img/nav-motherboard.png"/>Motherboard</a></li>
+<li><a href="/products/memory/"><img alt="Memory" src="//cdn.pcpartpicker.com/static/forever/img/nav-memory.png"/>Memory</a></li>
+<li><a href="/products/internal-hard-drive/"><img alt="Storage" src="//cdn.pcpartpicker.com/static/forever/img/nav-ssd.png"/>Storage</a></li>
+<li><a href="/products/video-card/"><img alt="Video Card" src="//cdn.pcpartpicker.com/static/forever/img/nav-videocard.png"/>Video Card</a></li>
+<li><a href="/products/power-supply/"><img alt="Power Supply" src="//cdn.pcpartpicker.com/static/forever/img/nav-powersupply.png"/>Power Supply</a></li>
+<li><a href="/products/case/"><img alt="Case" src="//cdn.pcpartpicker.com/static/forever/img/nav-case.png"/>Case</a></li>
+</ul>
+</div>
+<div class="browseProducts__block--group2">
+<div class="browseProducts__col1">
+<ul class="browseProducts__block--cooling list-unstyled">
+<li><h2>Cooling</h2></li>
+<li><a href="/products/case-fan/">Case Fans</a></li>
+<li><a href="/products/fan-controller/">Fan Controllers</a></li>
+<li><a href="/products/thermal-paste/">Thermal Compound</a></li>
+</ul>
+<ul class="browseProducts__block--drives list-unstyled">
+<li><h2>Drives</h2></li>
+<li><a href="/products/optical-drive/">Optical Drives</a></li>
+</ul>
+<ul class="browseProducts__block--expansion list-unstyled">
+<li><h2>Expansion</h2></li>
+<li><a href="/products/sound-card/">Sound Cards</a></li>
+<li><a href="/products/wired-network-card/">Wired Networking</a></li>
+<li><a href="/products/wireless-network-card/">Wireless Networking</a></li>
+</ul>
+</div>
+<div class="browseProducts__col2">
+<ul class="browseProducts__block--displays list-unstyled">
+<li><h2>Displays</h2></li>
+<li><a href="/products/monitor/">Monitors</a></li>
+</ul>
+<ul class="browseProducts__block--externalStorage list-unstyled">
+<li><h2>External Storage</h2></li>
+<li><a href="/products/external-hard-drive/">External Hard Drives</a></li>
+</ul>
+<ul class="browseProducts__block--peripherals list-unstyled">
+<li><h2>Peripherals</h2></li>
+<li><a href="/products/headphones/">Headphones</a></li>
+<li><a href="/products/keyboard/">Keyboards</a></li>
+<li><a href="/products/mouse/">Mice</a></li>
+<li><a href="/products/speakers/">Speakers</a></li>
+<li><a href="/products/ups/">Uninterruptible Power Supplies</a></li>
+</ul>
+</div>
+<div class="browseProducts__col3">
+<ul class="browseProducts__block--software list-unstyled">
+<li><h2>Software</h2></li>
+<li><a href="/products/software/#W=1">Antivirus</a></li>
+<li><a href="/products/software/#W=8">Audio &amp; Video</a></li>
+<li><a href="/products/software/#W=2">Backup</a></li>
+<li><a href="/products/software/#W=3">Design &amp; Illumination</a></li>
+<li><a href="/products/software/#W=5">Internet Security</a></li>
+<li><a href="/products/software/#W=7">Office &amp; Productivity</a></li>
+<li><a href="/products/os/">Operating Systems</a></li>
+<li><a href="/products/software/#W=6">Photography</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</li>
+</ul>
+<a class="nav__search js-trigger-offCanvas--search" href="#"><svg class="icon shape-search"><use xlink:href="#shape-search"></use></svg></a>
+</div>
+</section>
+</nav>
+</header>
+<section class="main-wrapper xs-col-12">
+<div id="guide-index">
+<div class="wrapper wrapper__pageTitle">
+<section class="xs-col-11 lg-col-9 xl-col-8 xs-mx-auto">
+<!-- Sub Title Module -->
+<h1 class="pageTitle">Build Guides</h1>
+<!-- End Page Title Module -->
+</section>
+</div>
+<div class="wrapper wrapper__pageContent">
+<section class="xs-col-11 lg-col-9 xl-col-8 xs-mx-auto">
+<div class="main-content xs-col-12">
+<div class="block">
+<section class="module-subTitle">
+<div class="subTitle">
+<div class="subTitle__header">
+<h2>Desktop / Gaming / Streaming</h2>
+</div>
+</div>
+</section>
+<ul class="guideGrid list-unstyled">
+<li class="guideGroup guideGroup__card">
+<a class="guideGroup__target" href="/guide/X77Ycf/great-amd-gamingstreaming-build"></a>
+<div class="guideGroup__content--wrapper1">
+<!-- <h2 class="guide__cat">Category</h2> -->
+<h1 class="guide__title">Great AMD Gaming/Streaming Build</h1>
+<!-- <p class="guide__author">— by ThoughtA</p> -->
+<ul class="guide__keyProducts list-unstyled">
+<li>AMD Ryzen 5 2600X</li>
+<li>Parametric Video Card (Chipset: GeForce RTX 2060; Length: 223 mm - 403 mm)</li>
+<li>Phanteks P300 ATX Mid Tower</li>
+</ul>
+</div>
+<div class="guideGroup__content--wrapper2">
+<div class="guide__numbers">
+<p class="guide__price">
+                $935.76
+            </p>
+<p class="guide__links"><span class="guide__link--comments"><svg class="icon shape-comment"><use xlink:href="#shape-comment"></use></svg>581</span></p>
+</div>
+<ul class="guide__images list-unstyled">
+<li class="guide__images--1"><img src="//cdn.pcpartpicker.com/static/forever/images/product/7684b8a795c4b1b92c0e4dcdc6483c7f.256p.jpg"/></li>
+<li class="guide__images--2"><img src="//cdn.pcpartpicker.com/static/forever/images/product/55aea2dd64e2e3a3e3b1d678048d8d76.256p.jpg"/></li>
+<li class="guide__images--3"><img src="//cdn.pcpartpicker.com/static/forever/images/product/e623089ba2b3010c09c7015f9538a311.256p.jpg"/></li>
+</ul>
+</div>
+</li>
+<li class="guideGroup guideGroup__card">
+<a class="guideGroup__target" href="/guide/vGgXsY/magnificent-intel-gamingstreaming-build"></a>
+<div class="guideGroup__content--wrapper1">
+<!-- <h2 class="guide__cat">Category</h2> -->
+<h1 class="guide__title">Magnificent Intel Gaming/Streaming Build</h1>
+<!-- <p class="guide__author">— by ThoughtA</p> -->
+<ul class="guide__keyProducts list-unstyled">
+<li>Intel Core i7-9700K</li>
+<li>Parametric Video Card (Chipset: GeForce RTX 2080; Length: 224 mm - 403 mm)</li>
+<li>NZXT H500i (White) ATX Mid Tower</li>
+</ul>
+</div>
+<div class="guideGroup__content--wrapper2">
+<div class="guide__numbers">
+<p class="guide__price">
+                $1706.32
+            </p>
+<p class="guide__links"><span class="guide__link--comments"><svg class="icon shape-comment"><use xlink:href="#shape-comment"></use></svg>173</span></p>
+</div>
+<ul class="guide__images list-unstyled">
+<li class="guide__images--1"><img src="//cdn.pcpartpicker.com/static/forever/images/product/383db94d1a46e523d238461d361bb07a.256p.jpg"/></li>
+<li class="guide__images--2"><img src="//cdn.pcpartpicker.com/static/forever/images/product/3760e89d1820da393f084e2c18a62e3b.256p.jpg"/></li>
+<li class="guide__images--3"><img src="//cdn.pcpartpicker.com/static/forever/images/product/194b9ea773b2ab1a0e734f53e20a48c8.256p.jpg"/></li>
+</ul>
+</div>
+</li>
+<li class="guideGroup guideGroup__card">
+<a class="guideGroup__target" href="/guide/Dvttt6/excellent-amd-gamingstreaming-build"></a>
+<div class="guideGroup__content--wrapper1">
+<!-- <h2 class="guide__cat">Category</h2> -->
+<h1 class="guide__title">Excellent AMD Gaming/Streaming Build</h1>
+<!-- <p class="guide__author">— by manirelli</p> -->
+<ul class="guide__keyProducts list-unstyled">
+<li>AMD Ryzen 5 2600X</li>
+<li>Parametric Video Card (Chipset: GeForce RTX 2070)</li>
+<li>Corsair Carbide SPEC-06 RGB ATX Mid Tower</li>
+</ul>
+</div>
+<div class="guideGroup__content--wrapper2">
+<div class="guide__numbers">
+<p class="guide__price">
+                $1189.04
+            </p>
+<p class="guide__links"><span class="guide__link--comments"><svg class="icon shape-comment"><use xlink:href="#shape-comment"></use></svg>52</span></p>
+</div>
+<ul class="guide__images list-unstyled">
+<li class="guide__images--1"><img src="//cdn.pcpartpicker.com/static/forever/images/product/d719f8d9f77586947ce311d0de640a79.256p.jpg"/></li>
+<li class="guide__images--2"><img src="//cdn.pcpartpicker.com/static/forever/images/product/55aea2dd64e2e3a3e3b1d678048d8d76.256p.jpg"/></li>
+<li class="guide__images--3"><img src="https://images-na.ssl-images-amazon.com/images/I/31jlF7P2XnL.jpg"/></li>
+</ul>
+</div>
+</li>
+<li class="guideGroup guideGroup__card">
+<a class="guideGroup__target" href="/guide/CQscCJ/excellent-intel-gamingstreaming-build"></a>
+<div class="guideGroup__content--wrapper1">
+<!-- <h2 class="guide__cat">Category</h2> -->
+<h1 class="guide__title">Excellent Intel Gaming/Streaming Build</h1>
+<!-- <p class="guide__author">— by manirelli</p> -->
+<ul class="guide__keyProducts list-unstyled">
+<li>Intel Core i5-9600K</li>
+<li>Parametric Video Card (Chipset: GeForce RTX 2070)</li>
+<li>Corsair Carbide SPEC-06 RGB ATX Mid Tower</li>
+</ul>
+</div>
+<div class="guideGroup__content--wrapper2">
+<div class="guide__numbers">
+<p class="guide__price">
+                $1218.15
+            </p>
+<p class="guide__links"><span class="guide__link--comments"><svg class="icon shape-comment"><use xlink:href="#shape-comment"></use></svg>49</span></p>
+</div>
+<ul class="guide__images list-unstyled">
+<li class="guide__images--1"><img src="//cdn.pcpartpicker.com/static/forever/images/product/d719f8d9f77586947ce311d0de640a79.256p.jpg"/></li>
+<li class="guide__images--2"><img src="//cdn.pcpartpicker.com/static/forever/images/product/33f96aec821c5c10f4b1fd636a7d1881.256p.jpg"/></li>
+<li class="guide__images--3"><img src="https://images-na.ssl-images-amazon.com/images/I/31jlF7P2XnL.jpg"/></li>
+</ul>
+</div>
+</li>
+<li class="guideGroup guideGroup__card">
+<a class="guideGroup__target" href="/guide/d77Ycf/great-intel-gamingstreaming-build"></a>
+<div class="guideGroup__content--wrapper1">
+<!-- <h2 class="guide__cat">Category</h2> -->
+<h1 class="guide__title">Great Intel Gaming/Streaming Build</h1>
+<!-- <p class="guide__author">— by ThoughtA</p> -->
+<ul class="guide__keyProducts list-unstyled">
+<li>Intel Core i5-9600K</li>
+<li>Parametric Video Card (Chipset: GeForce RTX 2060; Length: 223 mm - 403 mm)</li>
+<li>Phanteks P300 ATX Mid Tower</li>
+</ul>
+</div>
+<div class="guideGroup__content--wrapper2">
+<div class="guide__numbers">
+<p class="guide__price">
+                $954.16
+            </p>
+<p class="guide__links"><span class="guide__link--comments"><svg class="icon shape-comment"><use xlink:href="#shape-comment"></use></svg>55</span></p>
+</div>
+<ul class="guide__images list-unstyled">
+<li class="guide__images--1"><img src="//cdn.pcpartpicker.com/static/forever/images/product/7684b8a795c4b1b92c0e4dcdc6483c7f.256p.jpg"/></li>
+<li class="guide__images--2"><img src="//cdn.pcpartpicker.com/static/forever/images/product/33f96aec821c5c10f4b1fd636a7d1881.256p.jpg"/></li>
+<li class="guide__images--3"><img src="//cdn.pcpartpicker.com/static/forever/images/product/e623089ba2b3010c09c7015f9538a311.256p.jpg"/></li>
+</ul>
+</div>
+</li>
+<li class="guideGroup guideGroup__card">
+<a class="guideGroup__target" href="/guide/NV9TwP/magnificent-amd-gamingstreaming-build"></a>
+<div class="guideGroup__content--wrapper1">
+<!-- <h2 class="guide__cat">Category</h2> -->
+<h1 class="guide__title">Magnificent AMD Gaming/Streaming Build</h1>
+<!-- <p class="guide__author">— by ThoughtA</p> -->
+<ul class="guide__keyProducts list-unstyled">
+<li>AMD Ryzen 7 2700X</li>
+<li>Parametric Video Card (Chipset: GeForce RTX 2080; Length: 224 mm - 403 mm)</li>
+<li>NZXT H500i (White) ATX Mid Tower</li>
+</ul>
+</div>
+<div class="guideGroup__content--wrapper2">
+<div class="guide__numbers">
+<p class="guide__price">
+                $1631.32
+            </p>
+<p class="guide__links"><span class="guide__link--comments"><svg class="icon shape-comment"><use xlink:href="#shape-comment"></use></svg>59</span></p>
+</div>
+<ul class="guide__images list-unstyled">
+<li class="guide__images--1"><img src="//cdn.pcpartpicker.com/static/forever/images/product/383db94d1a46e523d238461d361bb07a.256p.jpg"/></li>
+<li class="guide__images--2"><img src="//cdn.pcpartpicker.com/static/forever/images/product/4e84967ef18c9b42e543b58c836d73ef.256p.jpg"/></li>
+<li class="guide__images--3"><img src="//cdn.pcpartpicker.com/static/forever/images/product/194b9ea773b2ab1a0e734f53e20a48c8.256p.jpg"/></li>
+</ul>
+</div>
+</li>
+<li class="guideGroup guideGroup__card">
+<a class="guideGroup__target" href="/guide/wbH9TW/enthusiast-intel-gamingstreaming-build"></a>
+<div class="guideGroup__content--wrapper1">
+<!-- <h2 class="guide__cat">Category</h2> -->
+<h1 class="guide__title">Enthusiast Intel Gaming/Streaming Build</h1>
+<!-- <p class="guide__author">— by manirelli</p> -->
+<ul class="guide__keyProducts list-unstyled">
+<li>Intel Core i5-9600K</li>
+<li>Parametric Video Card (Chipset: GeForce RTX 2080)</li>
+<li>Fractal Design Meshify C Dark TG ATX Mid Tower</li>
+</ul>
+</div>
+<div class="guideGroup__content--wrapper2">
+<div class="guide__numbers">
+<p class="guide__price">
+                $1408.75
+            </p>
+<p class="guide__links"><span class="guide__link--comments"><svg class="icon shape-comment"><use xlink:href="#shape-comment"></use></svg>33</span></p>
+</div>
+<ul class="guide__images list-unstyled">
+<li class="guide__images--1"><img src="//cdn.pcpartpicker.com/static/forever/images/product/5e077c6b1272ca2c11e4f7df6326370a.256p.jpg"/></li>
+<li class="guide__images--2"><img src="//cdn.pcpartpicker.com/static/forever/images/product/33f96aec821c5c10f4b1fd636a7d1881.256p.jpg"/></li>
+<li class="guide__images--3"><img src="//cdn.pcpartpicker.com/static/forever/images/product/194b9ea773b2ab1a0e734f53e20a48c8.256p.jpg"/></li>
+</ul>
+</div>
+</li>
+<li class="guideGroup guideGroup__card">
+<a class="guideGroup__target" href="/guide/MHTwrH/enthusiast-amd-gamingstreaming-build"></a>
+<div class="guideGroup__content--wrapper1">
+<!-- <h2 class="guide__cat">Category</h2> -->
+<h1 class="guide__title">Enthusiast AMD Gaming/Streaming Build</h1>
+<!-- <p class="guide__author">— by manirelli</p> -->
+<ul class="guide__keyProducts list-unstyled">
+<li>AMD Ryzen 7 2700</li>
+<li>Parametric Video Card (Chipset: GeForce RTX 2080)</li>
+<li>Fractal Design Meshify C Dark TG ATX Mid Tower</li>
+</ul>
+</div>
+<div class="guideGroup__content--wrapper2">
+<div class="guide__numbers">
+<p class="guide__price">
+                $1428.18
+            </p>
+<p class="guide__links"><span class="guide__link--comments"><svg class="icon shape-comment"><use xlink:href="#shape-comment"></use></svg>2</span></p>
+</div>
+<ul class="guide__images list-unstyled">
+<li class="guide__images--1"><img src="//cdn.pcpartpicker.com/static/forever/images/product/5e077c6b1272ca2c11e4f7df6326370a.256p.jpg"/></li>
+<li class="guide__images--2"><img src="//cdn.pcpartpicker.com/static/forever/images/product/fee6d8b626235a58c1cc1577e6760118.256p.jpg"/></li>
+<li class="guide__images--3"><img src="//cdn.pcpartpicker.com/static/forever/images/product/194b9ea773b2ab1a0e734f53e20a48c8.256p.jpg"/></li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="block">
+<section class="module-subTitle">
+<div class="subTitle">
+<div class="subTitle__header">
+<h2>Desktop / Gaming</h2>
+</div>
+</div>
+</section>
+<ul class="guideGrid list-unstyled">
+<li class="guideGroup guideGroup__card">
+<a class="guideGroup__target" href="/guide/hXzKHx/entry-level-intel-gaming-build"></a>
+<div class="guideGroup__content--wrapper1">
+<!-- <h2 class="guide__cat">Category</h2> -->
+<h1 class="guide__title">Entry Level Intel Gaming Build</h1>
+<!-- <p class="guide__author">— by ThoughtA</p> -->
+<ul class="guide__keyProducts list-unstyled">
+<li>Intel Core i3-8100</li>
+<li>Parametric Video Card (Chipset: Radeon RX 570)</li>
+<li>Cooler Master MasterBox Q300L MicroATX Mini Tower</li>
+</ul>
+</div>
+<div class="guideGroup__content--wrapper2">
+<div class="guide__numbers">
+<p class="guide__price">
+                $493.21
+            </p>
+<p class="guide__links"><span class="guide__link--comments"><svg class="icon shape-comment"><use xlink:href="#shape-comment"></use></svg>225</span></p>
+</div>
+<ul class="guide__images list-unstyled">
+<li class="guide__images--1"><img src="//cdn.pcpartpicker.com/static/forever/images/product/ec48e16ee4d6629045cfc4d71c649746.256p.jpg"/></li>
+<li class="guide__images--2"><img src="//cdn.pcpartpicker.com/static/forever/images/product/907d3d6fa5bcbf87be2045d806ccadd7.256p.jpg"/></li>
+<li class="guide__images--3"><img src="//cdn.pcpartpicker.com/static/forever/images/product/7c58acfc1f7aaff4c3ffa18ed5e9d9c8.256p.jpg"/></li>
+</ul>
+</div>
+</li>
+<li class="guideGroup guideGroup__card">
+<a class="guideGroup__target" href="/guide/csQzK8/modest-amd-gaming-build"></a>
+<div class="guideGroup__content--wrapper1">
+<!-- <h2 class="guide__cat">Category</h2> -->
+<h1 class="guide__title">Modest AMD Gaming Build</h1>
+<!-- <p class="guide__author">— by manirelli</p> -->
+<ul class="guide__keyProducts list-unstyled">
+<li>AMD Ryzen 5 2600</li>
+<li>Parametric Video Card (Chipset: Radeon RX 580; Memory: 8 GB; Length: 223 mm - 403 mm)</li>
+<li>Thermaltake Versa H18 MicroATX Mini Tower</li>
+</ul>
+</div>
+<div class="guideGroup__content--wrapper2">
+<div class="guide__numbers">
+<p class="guide__price">
+                $643.08
+            </p>
+<p class="guide__links"><span class="guide__link--comments"><svg class="icon shape-comment"><use xlink:href="#shape-comment"></use></svg>201</span></p>
+</div>
+<ul class="guide__images list-unstyled">
+<li class="guide__images--1"><img src="https://images-na.ssl-images-amazon.com/images/I/51BARwNk2iL.jpg"/></li>
+<li class="guide__images--2"><img src="//cdn.pcpartpicker.com/static/forever/images/product/55aea2dd64e2e3a3e3b1d678048d8d76.256p.jpg"/></li>
+<li class="guide__images--3"><img src="//cdn.pcpartpicker.com/static/forever/images/product/d53db7190559b6287a4ff549f3bf5904.256p.jpg"/></li>
+</ul>
+</div>
+</li>
+<li class="guideGroup guideGroup__card">
+<a class="guideGroup__target" href="/guide/GFLrxr/entry-level-amd-gaming-build"></a>
+<div class="guideGroup__content--wrapper1">
+<!-- <h2 class="guide__cat">Category</h2> -->
+<h1 class="guide__title">Entry Level AMD Gaming Build</h1>
+<!-- <p class="guide__author">— by ThoughtA</p> -->
+<ul class="guide__keyProducts list-unstyled">
+<li>AMD Ryzen 3 2200G</li>
+<li>Parametric Video Card (Chipset: Radeon RX 570)</li>
+<li>Cooler Master MasterBox Q300L MicroATX Mini Tower</li>
+</ul>
+</div>
+<div class="guideGroup__content--wrapper2">
+<div class="guide__numbers">
+<p class="guide__price">
+                $455.59
+            </p>
+<p class="guide__links"><span class="guide__link--comments"><svg class="icon shape-comment"><use xlink:href="#shape-comment"></use></svg>285</span></p>
+</div>
+<ul class="guide__images list-unstyled">
+<li class="guide__images--1"><img src="//cdn.pcpartpicker.com/static/forever/images/product/ec48e16ee4d6629045cfc4d71c649746.256p.jpg"/></li>
+<li class="guide__images--2"><img src="//cdn.pcpartpicker.com/static/forever/images/product/ad2e56d88c77de3053dcc5dada363f58.256p.jpg"/></li>
+<li class="guide__images--3"><img src="//cdn.pcpartpicker.com/static/forever/images/product/7c58acfc1f7aaff4c3ffa18ed5e9d9c8.256p.jpg"/></li>
+</ul>
+</div>
+</li>
+<li class="guideGroup guideGroup__card">
+<a class="guideGroup__target" href="/guide/Jd2Ff7/budget-homeoffice-build"></a>
+<div class="guideGroup__content--wrapper1">
+<!-- <h2 class="guide__cat">Category</h2> -->
+<h1 class="guide__title">Budget Home/Office Build</h1>
+<!-- <p class="guide__author">— by manirelli</p> -->
+<ul class="guide__keyProducts list-unstyled">
+<li>AMD Athlon 200GE</li>
+<li>Cooler Master MasterBox E300L MicroATX Mini Tower</li>
+</ul>
+</div>
+<div class="guideGroup__content--wrapper2">
+<div class="guide__numbers">
+<p class="guide__price">
+                $287.92
+            </p>
+<p class="guide__links"><span class="guide__link--comments"><svg class="icon shape-comment"><use xlink:href="#shape-comment"></use></svg>92</span></p>
+</div>
+<ul class="guide__images list-unstyled">
+<li class="guide__images--1"><img src="//cdn.pcpartpicker.com/static/forever/images/product/b7953c88e1423a9a2594aae474291664.256p.jpg"/></li>
+<li class="guide__images--2"><img src="//cdn.pcpartpicker.com/static/forever/images/product/f55fe8a2443698085e9d8d2997cc3173.256p.jpg"/></li>
+<li class="guide__images--3"><img src="//cdn.pcpartpicker.com/static/forever/images/product/3913f5f16b91b289a25dc957d3f9b9e4.256p.jpg"/></li>
+</ul>
+</div>
+</li>
+<li class="guideGroup guideGroup__card">
+<a class="guideGroup__target" href="/guide/s77Ycf/modest-intel-gaming-build"></a>
+<div class="guideGroup__content--wrapper1">
+<!-- <h2 class="guide__cat">Category</h2> -->
+<h1 class="guide__title">Modest Intel Gaming Build</h1>
+<!-- <p class="guide__author">— by manirelli</p> -->
+<ul class="guide__keyProducts list-unstyled">
+<li>Intel Core i5-8500</li>
+<li>Parametric Video Card (Chipset: Radeon RX 580; Memory: 8 GB; Length: 223 mm - 403 mm)</li>
+<li>Thermaltake Versa H18 MicroATX Mini Tower</li>
+</ul>
+</div>
+<div class="guideGroup__content--wrapper2">
+<div class="guide__numbers">
+<p class="guide__price">
+                $759.11
+            </p>
+<p class="guide__links"><span class="guide__link--comments"><svg class="icon shape-comment"><use xlink:href="#shape-comment"></use></svg>40</span></p>
+</div>
+<ul class="guide__images list-unstyled">
+<li class="guide__images--1"><img src="https://images-na.ssl-images-amazon.com/images/I/51BARwNk2iL.jpg"/></li>
+<li class="guide__images--2"><img src="//cdn.pcpartpicker.com/static/forever/images/product/028ee303e2f6aed00ffa4a750f24b033.256p.jpg"/></li>
+<li class="guide__images--3"><img src="//cdn.pcpartpicker.com/static/forever/images/product/d53db7190559b6287a4ff549f3bf5904.256p.jpg"/></li>
+</ul>
+</div>
+</li>
+<li class="guideGroup guideGroup__card">
+<a class="guideGroup__target" href="/guide/nV9TwP/portable-lan-build"></a>
+<div class="guideGroup__content--wrapper1">
+<!-- <h2 class="guide__cat">Category</h2> -->
+<h1 class="guide__title">Portable LAN Build</h1>
+<!-- <p class="guide__author">— by ThoughtA</p> -->
+<ul class="guide__keyProducts list-unstyled">
+<li>AMD Ryzen 5 2600</li>
+<li>Parametric Video Card (Gigabyte GeForce RTX 2070 8 GB GAMING OC, Gigabyte GeForce RTX 2070 8 GB GAMING 8G, Gigabyte GeForce RTX 2070 8 GB WINDFORCE, ...)</li>
+<li>Fractal Design Core 500 Mini ITX Desktop</li>
+</ul>
+</div>
+<div class="guideGroup__content--wrapper2">
+<div class="guide__numbers">
+<p class="guide__price">
+                $999.36
+            </p>
+<p class="guide__links"><span class="guide__link--comments"><svg class="icon shape-comment"><use xlink:href="#shape-comment"></use></svg>29</span></p>
+</div>
+<ul class="guide__images list-unstyled">
+<li class="guide__images--1"><img src="//cdn.pcpartpicker.com/static/forever/images/product/4b12e1f7058a7b16e715f1753251fe1c.256p.jpg"/></li>
+<li class="guide__images--2"><img src="//cdn.pcpartpicker.com/static/forever/images/product/55aea2dd64e2e3a3e3b1d678048d8d76.256p.jpg"/></li>
+<li class="guide__images--3"><img src="https://images-na.ssl-images-amazon.com/images/I/31wbWhiUqFL.jpg"/></li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</section>
+</div>
+</div>
+</section>
+<div class="modal" id="default_dialog">
+<div class="modal__container xs-col-12 sm-col-9 md-col-7 lg-col-5 xs-mx-auto">
+<div class="modal__header">
+<h2></h2>
+<a class="modal__close js-hide-modal" href="javascript:">
+<svg class="icon shape-delete"><use xlink:href="#shape-delete"></use></svg>
+</a>
+</div>
+<div class="modal__content">
+</div>
+<div class="modal__footer">
+<input class="button button--small" id="default_dialog_ok" type="submit" value="OK"/>
+<input class="button button--small button--secondary button--dark js-hide-modal" id="default_dialog_cancel" type="button" value="Cancel"/>
+</div>
+</div>
+</div>
+<footer class="clearfix">
+<nav class="xs-col-11 lg-col-9 xl-col-8 xs-mx-auto">
+<div class="clearfix">
+<!-- footer logo -->
+<div class="col xs-col-12 sm-col-3">
+<div class="footer__logo">
+<a class="footer__logo--img" href="/"><img src="/static/img/pl-icon.svg"/></a>
+<h1>
+<ul>
+<li class="footer__headline-one">Pick Parts.</li>
+<li class="footer__headline-two">Build Your PC.</li>
+<li class="footer__headline-three">Compare And Share.</li>
+</ul>
+</h1>
+</div>
+</div>
+<!-- footer main & secondary nav links -->
+<div class="col xs-col-12 sm-col-3">
+<h2>Categories</h2>
+<ul class="footer__main-nav">
+<li><a href="/list/">System Builds</a></li>
+<li><a href="/guide/">Build Guides</a></li>
+<li><a href="/builds/">Completed Builds</a></li>
+<li><a href="/products/">Browse Products</a></li>
+</ul>
+</div>
+<div class="col xs-col-12 sm-col-3">
+<h2>Information</h2>
+<ul class="footer__secondary-nav">
+<li><a href="/forums/">Forums</a></li>
+<li><a href="/products/pricedrop/">Price Drops</a></li>
+<li><a href="/trends/">Price Trends</a></li>
+<li><a href="/blog/">Blog</a></li>
+</ul>
+</div>
+<div class="col xs-col-12 sm-col-3">
+<h2>Company</h2>
+<ul class="footer__secondary-nav">
+<li><a href="/about/">About</a></li>
+<li><a href="/contact/">Contact &amp; Imprint</a></li>
+<li><a href="/tos/">Terms of Service</a></li>
+<li><a href="/code-of-conduct/">User Code of Conduct</a></li>
+<li><a href="/code-of-conduct/industry-affiliate/">Industry Code of Conduct</a></li>
+<li><a href="/privacy/">Privacy Policy</a></li>
+<li><a href="/disclosure/">Disclosure</a></li>
+</ul>
+</div>
+</div>
+<div class="clearfix">
+<!-- footer social -->
+<div class="col xs-col-12">
+<ul class="footer__social">
+<li><a href="https://www.facebook.com/pcpartpicker/">
+<svg class="icon shape-facebook">
+<use xlink:href="#shape-facebook"></use>
+</svg></a>
+</li>
+<li><a href="https://www.instagram.com/pcpartpicker/">
+<svg class="icon shape-instagram">
+<use xlink:href="#shape-instagram"></use>
+</svg></a>
+</li>
+<li><a href="http://discord.gg/pcpartpicker">
+<svg class="icon shape-discord">
+<use xlink:href="#shape-discord"></use>
+</svg></a>
+</li>
+<li><a href="https://www.twitter.com/pcpartpicker/">
+<svg class="icon shape-twitter">
+<use xlink:href="#shape-twitter"></use>
+</svg></a>
+</li>
+<li><a href="https://www.twitch.tv/pcpartpicker">
+<svg class="icon shape-twitch">
+<use xlink:href="#shape-twitch"></use>
+</svg></a>
+</li>
+<li><a href="https://www.youtube.com/pcpartpicker/">
+<svg class="icon shape-search">
+<use xlink:href="#shape-youtube"></use>
+</svg></a>
+</li>
+</ul>
+</div>
+<!-- footer legal & copyright -->
+<div class="xs-col-12">
+<p class="footer__copyright">©2019 PCPartPicker, LLC. All rights reserved.</p>
+</div>
+<ul class="pcppNetwork">
+<li class="pcppNetwork__header"><h1>PCPartPicker Network</h1></li>
+<li class="pcppNetwork__logo pcppNetwork__logo--pcpp"><a href="https://pcpartpicker.com/"><img src="/static/core/img/niche-logos/pcpartpicker.svg"/></a></li>
+<li class="pcppNetwork__logo pcppNetwork__logo--cb"><a href="https://cyclingbuilder.com/"><img src="/static/core/img/niche-logos/cyclingbuilder.svg"/></a></li>
+</ul>
+</div>
+</nav>
+<!-- <div class="pattern-background-three"></div> -->
+</footer>
+<!-- All Off Canvas items go here -->
+<!-- Sort - off canvas on small screens -->
+<div class="offCanvas offCanvas__sort">
+<header class="masthead">
+<nav id="navigation" role="navigation">
+<section class="nav__top clearfix">
+<div class="nav__wrapper xs-col-11 lg-col-9 xl-col-8 xs-mx-auto">
+<!-- Logo -->
+<div class="nav__logo">
+<a href="/"><img src="/static/img/logo.svg"/></a>
+</div>
+<!-- close -->
+<ul class="nav__menu--mobile">
+<li class="close">
+<a class="js-trigger-offCanvas--sort" href="#">
+<svg class="icon shape-delete">
+<use xlink:href="#shape-delete"></use>
+</svg>
+</a>
+</li>
+</ul>
+</div>
+</section>
+</nav>
+</header>
+<!-- Offcanvas main content -->
+<div class="offCanvas__content">
+<section class="xs-col-11 lg-col-9 xl-col-8 xs-mx-auto">
+<section class="module-subTitle">
+<div class="subTitle">
+<div class="subTitle__header">
+<h2>Sort</h2>
+</div>
+</div>
+</section>
+<ul class="list-unstyled" id="sort_options">
+</ul>
+</section>
+</div>
+</div>
+<div class="offCanvas offCanvas__search">
+<header class="masthead">
+<nav id="navigation" role="navigation">
+<section class="nav__top clearfix">
+<div class="nav__wrapper xs-col-11 lg-col-9 xl-col-8 xs-mx-auto">
+<div class="nav__logo">
+<a href="/"><img src="/static/img/logo.svg"/></a>
+</div>
+<ul class="nav__menu--mobile">
+<li class="close">
+<a class="js-trigger-offCanvas--search" href="#">
+<svg class="icon shape-delete">
+<use xlink:href="#shape-delete"></use>
+</svg>
+</a>
+</li>
+</ul>
+</div>
+</section>
+</nav>
+</header>
+<!-- Offcanvas main content -->
+<div class="offCanvas__content">
+<section class="xs-col-11 lg-col-9 xl-col-8 xs-mx-auto">
+<div class="search--input">
+<div class="block searchField">
+<form action="/search/" class="clearfix" id="site_search" method="get">
+<div class="col xs-col-10 sm-col-11 xs-pr2">
+<input class="text-input xs-col-12" id="search_q" name="q" placeholder="Search..." type="text"/>
+</div>
+<div class="col xs-col-2 sm-col-1">
+<button class="button button--primary xs-col-12" onclick="$('#site_search').submit();return false;"><svg class="icon shape-search"><use xlink:href="#shape-search"></use></svg></button>
+</div>
+</form>
+</div>
+</div>
+</section>
+<section class="xs-col-11 lg-col-9 xl-col-8 xs-mx-auto" id="search_result">
+<div class="search_results">
+</div>
+</section>
+</div>
+</div>
+<svg style="display: none;"><symbol id="shape-add" viewbox="0 0 16 16"><title>add</title> <polygon points="15,7 15,9 9,9 9,15 7,15 7,9 1,9 1,7 7,7 7,1 9,1 9,7 "></polygon> </symbol><symbol id="shape-arrow-down" viewbox="0 0 16 16"><title>arrow-down</title> <polygon points="13.7,10.3 8,16 2.3,10.3 3.7,8.9 7,12.2 7,0 9,0 9,12.2 12.3,8.9 "></polygon> </symbol><symbol id="shape-arrow-left" viewbox="0 0 16 16"><title>arrow-left</title> <polygon points="5.7,13.7 0,8 5.7,2.3 7.1,3.7 3.8,7 16,7 16,9 3.8,9 7.1,12.3 "></polygon> </symbol><symbol id="shape-arrow-right" viewbox="0 0 16 16"><title>arrow-right</title> <polygon points="10.3,13.7 16,8 10.3,2.3 8.9,3.7 12.2,7 0,7 0,9 12.2,9 8.9,12.3 "></polygon> </symbol><symbol id="shape-arrow-up" viewbox="0 0 16 16"><title>arrow-up</title> <polygon points="2.3,5.7 8,0 13.7,5.7 12.3,7.1 9,3.8 9,16 7,16 7,3.8 3.7,7.1 "></polygon> </symbol><symbol id="shape-author" viewbox="0 0 16 15.99"><title>author</title><path d="M15.88,4a11,11,0,0,0-1.72-2.14A12.72,12.72,0,0,0,11.9.11a.83.83,0,0,0-1,.12L9.16,2a13.37,13.37,0,0,1,2.76,2.16,15.5,15.5,0,0,1,2,2.64L15.76,5A.77.77,0,0,0,15.88,4Zm-4.68.85A13.1,13.1,0,0,0,8.43,2.73L2.1,9.1a.62.62,0,0,0-.2.31C1.28,11.31.7,13.18.07,15a.59.59,0,0,0,.13.73A.67.67,0,0,0,.7,16,.62.62,0,0,0,1,15.94c1.85-.65,3.76-1.28,5.66-1.89a1.73,1.73,0,0,0,.32-.2l6.29-6.33A16.38,16.38,0,0,0,11.2,4.85ZM5.73,12.24l-2-1.92,5-5.05a9.56,9.56,0,0,1,1.11.93,8.57,8.57,0,0,1,.89,1Z" transform="translate(0 0)"></path></symbol><symbol id="shape-checkmark" viewbox="0 0 16 16"><title>checkmark</title> <polygon points="6.5,12.7 2.1,8.5 3.5,7.1 6.5,10 12.5,4.1 13.9,5.5 "></polygon> </symbol><symbol id="shape-clipboard" viewbox="0 0 16 16"><title>clipboard</title> <path clip-rule="evenodd" d="M12,2v3H4V2H1v14h14V2H12z M4,9h6v1H4V9z M10,14H4v-1h6
+	V14z M12,12H4v-1h8V12z M12,8H4V7h8V8z M10,1H9c0-1-0.5-1-1-1S7,0,7,1H6C5.3,1,5,1.5,5,2v2h6V2C11,1.5,10.7,1,10,1z" fill-rule="evenodd" id="svgstoree6504bd1c55184341284ec8f5303104aAdd_to_Clipboard_1"></path> </symbol><symbol id="shape-combo" viewbox="0 0 16 16"><title>combo</title> <path d="M8,0L8,0L8,0L0,4.6v6.8L8,16l8-4.6V4.6L8,0z M3.7,11.2l-1.7-1V7.1l1.7,1V11.2z M2.8,5.3l5.2-3l1.8,1l-5.2,3L2.8,5.3z
+	 M7,13.1l-1.7-0.9V9.1L7,10V13.1z M6.2,7.2l5.2-3l1.8,1.1L8,8.3L6.2,7.2z M14,10.2l-5,2.9V10l5-2.9V10.2z"></path> <polygon points="8,8 8,8 8,8 "></polygon> </symbol><symbol id="shape-comment" viewbox="0 0 16 16"><title>comment</title> <g> <path clip-rule="evenodd" d="M0,0v13h2v2.4C2,15.7,2.3,16,2.6,16h1.1c0.2,0,0.3,0,0.5-0.1l5-2.9H16V0H0z
+		 M14,11H8.8L4,13.8V11H2V2h12V11z" fill-rule="evenodd"></path> <rect clip-rule="evenodd" fill-rule="evenodd" height="2" width="8" x="4" y="4"></rect> <rect clip-rule="evenodd" fill-rule="evenodd" height="2" width="5" x="4" y="7"></rect> </g> </symbol><symbol id="shape-delete" viewbox="0 0 16 16"><title>delete</title> <polygon points="12.6,2 14,3.4 9.4,8 14,12.6 12.6,14 8,9.4 3.4,14 2,12.6 6.6,8 2,3.4 3.4,2 8,6.6 "></polygon> </symbol><symbol id="shape-discord" viewbox="0 0 14 16"><title>discord</title> <g data-name="Layer 2" id="a7b7be95-aee6-4bf3-97d8-e227fdcf9a29"><g data-name="Layer 1" id="ac203262-690b-4e2c-8320-e664a395a8d8"><path d="M5.55,6.71a.85.85,0,0,0-.81.89.85.85,0,0,0,.81.89.85.85,0,0,0,.82-.89A.85.85,0,0,0,5.55,6.71Z"></path><path d="M8.47,6.71a.85.85,0,0,0-.81.89.82.82,0,1,0,1.63,0A.85.85,0,0,0,8.47,6.71Z"></path><path d="M12.36,0H1.64A1.65,1.65,0,0,0,0,1.65v10.7A1.65,1.65,0,0,0,1.64,14h9.07l-.42-1.37,1,.95,1,.9L14,16V1.65A1.65,1.65,0,0,0,12.36,0ZM9.27,10.45,8.74,9.8a2.55,2.55,0,0,0,1.45-1,4.72,4.72,0,0,1-.92.47,4.89,4.89,0,0,1-1.16.34A5.52,5.52,0,0,1,6,9.66a6.69,6.69,0,0,1-1.18-.35A4.9,4.9,0,0,1,4.28,9L4.21,9l0,0A2,2,0,0,1,4,8.84a2.5,2.5,0,0,0,1.4.94l-.53.67A2.9,2.9,0,0,1,2.38,9.23,10.73,10.73,0,0,1,3.53,4.57a3.9,3.9,0,0,1,2.25-.84l.08.09A5.51,5.51,0,0,0,3.75,4.87l.47-.23A5.76,5.76,0,0,1,6,4.14l.14,0a7.15,7.15,0,0,1,1.61,0,6.68,6.68,0,0,1,2.41.77,5.25,5.25,0,0,0-2-1l.11-.13a3.9,3.9,0,0,1,2.25.84,10.73,10.73,0,0,1,1.15,4.66A2.93,2.93,0,0,1,9.27,10.45Z"></path></g></g> </symbol><symbol id="shape-dots" viewbox="0 0 16 16"><title>dots</title> <g> <circle cx="8" cy="8" r="2"></circle> <circle cx="14" cy="8" r="2"></circle> <circle cx="2" cy="8" r="2"></circle> </g> </symbol><symbol id="shape-drag-handle" viewbox="0 0 16 16"><title>drag-handle</title> <g> <rect height="2" width="12" x="2" y="3"></rect> <rect height="2" width="12" x="2" y="11"></rect> <rect height="2" width="12" x="2" y="7"></rect> </g> </symbol><symbol id="shape-dropdown-arrow" viewbox="0 0 16 16"><title>dropdown-arrow</title> <polygon points="2.1,5.5 3.5,4.1 8,8.6 12.5,4.1 13.9,5.5 8,11.4 "></polygon> </symbol><symbol id="shape-error" viewbox="0 0 16 16"><title>error</title><g id="b1e7ca39-4f25-4c40-88bf-2e754b4cb735"><g id="a15822b5-ef0b-4bc7-b836-44218ba5f682"><path d="M12.89,4.53A6,6,0,0,1,8,14a5.61,5.61,0,0,1-1.54-.21L4.89,15.37A7.89,7.89,0,0,0,8,16,8,8,0,0,0,12.9,1.67l-9.79,9.8A6,6,0,0,1,8,2a6,6,0,0,1,1.54.2L11.11.63A7.89,7.89,0,0,0,8,0,8,8,0,0,0,3.1,14.33Z"></path></g></g></symbol><symbol id="shape-facebook" viewbox="0 0 16 16"><title>facebook</title> <g id="svgstorebfcc0a6663646a19f59dfe3651326ff3Facebook_4"> <path clip-rule="evenodd" d="M16,0H0v16h16V0z M11,5h-1C9.2,5,9,5,9,7h2v2H9v4H7V9H5V7h2c0-1.5,0-4,3-4h1V5z" fill-rule="evenodd"></path> </g> </symbol><symbol id="shape-history" viewbox="0 0 16 16"><title>history</title> <path d="M6,0v3H3v3H0v10h10v-3h3v-3h3V0H6z M8,14H2V8h1v5h5V14z M11,11H5V5h1v5h5V11z M14,8H8V2h6V8z"></path> </symbol><symbol id="shape-inbox" viewbox="0 0 16 16"><title>inbox</title> <path d="M0,2v12h16V2H0z M14,4v1L8,7.9L2,5V4H14z M2,12V7.3l6,2.9l6-2.9V12H2z"></path> </symbol><symbol id="shape-instagram" viewbox="0 0 16 16"><title>instagram</title> <g> <path d="M14,0H2C0.9,0,0,0.9,0,2v12c0,1.1,0.9,2,2,2h12c1.1,0,2-0.9,2-2V2C16,0.9,15.1,0,14,0z M14,12.5c0,0.8-0.7,1.5-1.5,1.5h-9
+		C2.7,14,2,13.3,2,12.5v-9C2,2.7,2.7,2,3.5,2h9C13.3,2,14,2.7,14,3.5V12.5z"></path> <path d="M8,4C5.8,4,4,5.8,4,8c0,2.2,1.8,4,4,4c2.2,0,4-1.8,4-4C12,5.8,10.2,4,8,4z M8,10c-1.1,0-2-0.9-2-2s0.9-2,2-2s2,0.9,2,2
+		S9.1,10,8,10z"></path> <circle cx="12" cy="4" r="1"></circle> </g> </symbol><symbol id="shape-issue" viewbox="0 0 16 16"><title>issue</title><g id="b17657e8-fb00-494b-ba1a-ab46e98d888e"><g id="aa96ab17-cbed-4f13-a09d-359b11c7fee6"><rect height="2" width="2" x="7" y="9"></rect><path d="M8,0A8.26,8.26,0,0,0,7,.06V7H9V2.09a6,6,0,1,1-4,.72V.58A8,8,0,1,0,8,0Z"></path></g></g></symbol><symbol id="shape-link" viewbox="0 0 16 16"><title>link</title> <g id="svgstore48954c9016fceb631f896eb70fde0d88Link_4"> <path d="M7.6,12.1C7.3,12,7.1,11.9,7,12c-0.1,0.1-1.2,1.2-1.2,1.2c-0.8,0.8-2.2,0.8-3,0c-0.8-0.8-0.8-2.2,0-3l3-3
+		c0.8-0.8,2.2-0.8,3,0c0.4,0.4,1.1,0.4,1.5,0c0.4-0.4,0.4-1.1,0-1.5C10,5.5,9.7,5.3,9.4,5.1C9.2,5,9.1,4.9,8.9,4.8c0,0,0,0,0,0
+		c-0.5-0.2-1-0.3-1.6-0.3c0,0,0,0-0.1,0c-0.7,0-1.4,0.2-2,0.5c-0.4,0.2-0.7,0.4-1,0.8l-3,3c-1.7,1.7-1.7,4.3,0,6
+		c1.7,1.7,4.3,1.7,6,0l2.2-2.2c0.2-0.2,0.1-0.3-0.2-0.3C8.7,12.3,8.2,12.2,7.6,12.1z"></path> <path d="M8.8,1.2L6.5,3.5C6.3,3.7,6.4,3.8,6.7,3.8c0.6,0,1.1,0,1.7,0.2C8.6,4.1,8.9,4.1,9,4c0.1-0.1,1.3-1.3,1.3-1.3
+		c0.8-0.8,2.2-0.8,3,0c0.8,0.8,0.8,2.2,0,3l-3,3c-0.8,0.8-2.2,0.8-3,0c-0.4-0.4-1.1-0.4-1.5,0c-0.4,0.4-0.4,1.1,0,1.5
+		c0.5,0.5,1.1,0.9,1.8,1.1c0.1,0,0.3,0.1,0.4,0.1c0.2,0,0.3,0,0.4,0.1c0.2,0,0.3,0,0.5,0c0.2,0,0.3,0,0.5,0c0.1,0,0.2,0,0.3,0
+		c0.8-0.2,1.6-0.5,2.2-1.2l3-3c1.7-1.7,1.7-4.3,0-6C13.1-0.4,10.4-0.4,8.8,1.2z"></path> </g> </symbol><symbol id="shape-lock" viewbox="0 0 16 16"><title>lock</title> <path d="M12,7V5c0-2.2-1.8-4-4-4S4,2.8,4,5v2H2v8h12V7H12z M6,7V5c0-1.1,0.9-2,2-2s2,0.9,2,2v2H6z"></path> </symbol><symbol id="shape-markup-bbcode" viewbox="0 0 16 16"><title>markup-bbcode</title> <g> <path d="M7,5.3C7,3.4,6,2,3.5,2H0v12h3c2.3,0,4-0.7,4-3.2C7,9.2,6.2,8.4,5,8C6,7.6,7,7.2,7,5.3z M3.1,12H2V9h1c1.3,0,2,0.5,2,1.5
+		C5,11.5,4.3,12,3.1,12z M3,7H2V4h1.1C4.4,4,5,4.6,5,5.5C5,6.4,4.3,7,3,7z"></path> <path d="M14,8c1-0.4,2-0.8,2-2.7C16,3.4,15,2,12.5,2H9v12h3c2.3,0,4-0.7,4-3.2C16,9.2,15.2,8.4,14,8z M11,4h1.1
+		C13.4,4,14,4.6,14,5.5c0,1-0.7,1.6-2,1.6h-1V4z M12.1,12h-1V9h1c1.3,0,2,0.5,2,1.5C14,11.5,13.3,12,12.1,12z"></path> </g> </symbol><symbol id="shape-markup-html" viewbox="0 0 16 16"><title>markup-html</title> <g> <polygon points="2.8,8 5.3,4.6 3.7,3.4 0.2,8 3.7,12.6 5.3,11.4 	"></polygon> <polygon points="12.3,3.4 10.7,4.6 13.2,8 10.7,11.4 12.3,12.6 15.8,8 	"></polygon> <rect height="2" transform="matrix(0.3162 -0.9487 0.9487 0.3162 -2.1193 13.0596)" width="12.6" x="1.7" y="7"></rect> </g> </symbol><symbol id="shape-markup-pcpp" viewbox="0 0 14 16"><title>markup-pcpp</title> <g><g><path d="M7,0,2,3V5.14L0,4v8l7,4V14l2,1,5-3V3.94ZM7,1.73l4.69,2.64-2,1.23L5,3ZM5.5,13.42l-4-2.29V6.58l4,2.29ZM7,11.8V8L4,6.31,5.8,5.14,9,6.94V10.6Zm5.5-.65-2,1.2V7.2l2-1.2Z"></path></g></g> </symbol><symbol id="shape-markup-cyclingbuilder" viewbox="0 0 20 20"><title>markup-cyclingbuilder</title> <g> <path d="M8.1,17.9l-3-3l0,0l0,0c-1.3-1.3-2-3-2-4.9c0-3.8,3.1-7,7-7h4.3h-0.2h3c0.5,0.5,1,1.2,1.4,1.8h-2.4h0h-1.7h0.2H10
+		c-2.8,0-5.1,2.3-5.1,5.1c0,1.4,0.6,2.7,1.5,3.6l0,0l0,0l4.5,4.5l0.4,0.4l1.2,1.2c-0.7,0.2-1.5,0.3-2.3,0.3L8.1,17.9z"></path> <path d="M19.2,6.1h-2c0.6,1.2,1,2.5,1,3.9c0,3.7-2.5,6.9-5.9,7.8l1.4,1.4c3.7-1.5,6.3-5.1,6.3-9.3C20,8.6,19.7,7.3,19.2,6.1z"></path> <path d="M15.7,6.1h-2.4c1.1,0.9,1.8,2.4,1.8,3.9c0,2.8-2.3,5.1-5.1,5.1c-0.1,0-0.3,0-0.4,0l1.7,1.7c3.2-0.6,5.7-3.4,5.7-6.8
+		C17,8.5,16.5,7.2,15.7,6.1z"></path> <path d="M10,1.8h5.7C14.1,0.7,12.1,0,10,0C4.5,0,0,4.5,0,10c0,4.9,3.6,9,8.3,9.8l-4.1-4.1l0,0c-1.5-1.5-2.4-3.5-2.4-5.8
+		C1.8,5.5,5.5,1.8,10,1.8z"></path> <path d="M10,6.1c-2.2,0-3.9,1.8-3.9,3.9s1.8,3.9,3.9,3.9s3.9-1.8,3.9-3.9S12.2,6.1,10,6.1z M10,12.1c-1.2,0-2.1-1-2.1-2.1
+		s1-2.1,2.1-2.1s2.1,1,2.1,2.1S11.2,12.1,10,12.1z"></path> </g> </symbol><symbol id="shape-markup-plain-text" viewbox="0 0 16 16"><title>markup-plain-text</title> <polygon points="3,2 3,4 3,6 4,6 5,4 7,4 7,12 5,13 5,14 11,14 11,13 9,12 9,4 11,4 12,6 13,6 13,4 13,2 "></polygon> </symbol><symbol id="shape-markup-reddit" viewbox="0 0 16 16"><title>markup-reddit</title> <g> <path d="M16,6.9c0-1-0.8-1.8-1.8-1.8c-0.5,0-1,0.2-1.3,0.6c-1.1-0.8-2.5-1.3-4.1-1.4L10,1.2l2.6,0.5c0.1,0.8,0.7,1.4,1.5,1.4
+		c0.9,0,1.6-0.7,1.6-1.6c0-0.9-0.7-1.6-1.6-1.6c-0.6,0-1.1,0.3-1.4,0.8L9.5,0.2L7.9,4.2C6,4.2,4.3,4.8,3.1,5.7
+		C2.8,5.3,2.3,5.1,1.8,5.1C0.8,5.1,0,5.9,0,6.9c0,0.7,0.4,1.3,1,1.6C0.9,8.8,0.9,9.2,0.9,9.5c0,2.9,3.2,5.3,7.1,5.3s7.1-2.4,7.1-5.3
+		c0-0.4-0.1-0.7-0.1-1.1C15.5,8.2,16,7.6,16,6.9z M3.5,8.2c0-0.7,0.6-1.3,1.3-1.3s1.3,0.6,1.3,1.3c0,0.7-0.6,1.3-1.3,1.3
+		S3.5,8.9,3.5,8.2z M11,12.1c0,0-1.1,1.1-3.1,1.1s-3-1-3.1-1.1c-0.2-0.2-0.2-0.6,0-0.8c0.2-0.2,0.6-0.2,0.8,0c0,0,0.8,0.7,2.3,0.7
+		c1.5,0,2.2-0.7,2.3-0.7c0.2-0.2,0.6-0.2,0.8,0C11.3,11.6,11.3,11.9,11,12.1z M11.1,9.5c-0.7,0-1.3-0.6-1.3-1.3
+		c0-0.7,0.6-1.3,1.3-1.3c0.7,0,1.3,0.6,1.3,1.3C12.4,8.9,11.8,9.5,11.1,9.5z"></path> </g> </symbol><symbol id="shape-menu" viewbox="0 0 16 16"><title>menu</title> <g> <rect height="2" width="16" y="2"></rect> <rect height="2" width="16" y="12"></rect> <rect height="2" width="16" y="7"></rect> </g> </symbol><symbol id="shape-pin" viewbox="0 0 16 16"><title>pin</title> <path d="M10,3L4.9,6.4L4.4,6.1C3.9,5.9,3.4,6,3,6.3L2.5,6.8L5,9.5l-4.5,6L6.6,11l2.6,2.4l0.5-0.5c0.4-0.4,0.5-0.9,0.2-1.4L9.6,11
+	L13,6l2,0V5l-4-4h-1V3z"></path> </symbol><symbol id="shape-radio-button" viewbox="0 0 16 16"><title>radio-button</title> <circle cx="8" cy="8" r="3"></circle> </symbol><symbol id="shape-save" viewbox="0 0 16 16"><title>save</title> <g id="svgstoree6b8220da756aa9445d8dc7475de2d4aDownload_1"> <path clip-rule="evenodd" d="M10.7,5H9V0H7v5H5.3C5,5,4.9,5.3,5.1,5.5l2.6,3.3c0.2,0.2,0.5,0.2,0.6,0l2.6-3.3
+		C11.1,5.3,11,5,10.7,5z" fill-rule="evenodd"></path> <polygon clip-rule="evenodd" fill-rule="evenodd" points="11,7 11,9 14,9 14,12 2,12 2,9 5,9 5,7 0,7 0,16 16,16 16,7 	"></polygon> </g> </symbol><symbol id="shape-search" viewbox="0 0 16 16"><title>search</title> <path d="M10.9,9.5C11.6,8.5,12,7.3,12,6c0-3.3-2.7-6-6-6S0,2.7,0,6s2.7,6,6,6c1.3,0,2.5-0.4,3.5-1.1l5.1,5.1l1.4-1.4L10.9,9.5z M2,6
+	c0-2.2,1.8-4,4-4s4,1.8,4,4c0,2.2-1.8,4-4,4S2,8.2,2,6z"></path> </symbol><symbol id="shape-settings" viewbox="0 0 16 16"><title>settings</title> <path d="M16,9V7l-2.2-0.6c-0.1-0.5-0.3-0.9-0.5-1.3l1.1-2L13,1.7l-2,1.1c-0.4-0.2-0.8-0.4-1.3-0.5L9,0H7L6.4,2.2
+	C5.9,2.4,5.5,2.5,5.1,2.8l-2-1.1L1.6,3.1l1.1,2C2.5,5.5,2.4,5.9,2.2,6.4L0,7v2l2.2,0.6c0.1,0.5,0.3,0.9,0.5,1.3l-1.1,2L3,14.3l2-1.1
+	c0.4,0.2,0.8,0.4,1.3,0.5L7,16h2l0.6-2.2c0.5-0.1,0.9-0.3,1.3-0.5l2,1.1l1.4-1.4l-1.1-2c0.2-0.4,0.4-0.8,0.5-1.3L16,9z M12,8
+	c0,2.2-1.8,4-4,4s-4-1.8-4-4s1.8-4,4-4S12,5.8,12,8z"></path> </symbol><symbol id="shape-share" viewbox="0 0 16 16"><title>share</title> <path d="M8,1.9C8,1,8.5,0.7,9.2,1.3l5.6,5.2c0.3,0.3,0.3,0.7,0,1l-5.6,5.2C8.5,13.3,8,13,8,12.1V10H6.6
+	c-2.5,0.4-3.9,2.2-4.9,4.5c-0.1,0.4-0.4,0.4-0.5,0C1.1,13.8,1,13.1,1,12.4C1,8.2,4,4.7,8,4V1.9z" id="svgstore99ba9f2d10b202bfa2229f00092dfdc9Reply_1_1_"></path> </symbol><symbol id="shape-star-empty" viewbox="0 0 16 16"><title>star-empty</title> <path d="M8,3.9L8.9,6L9.2,7l1,0.1l2.3,0.2l-1.7,1.6L10,9.4l0.2,0.9l0.5,2.5l-1.9-1.2L8,11.2l-0.9,0.5l-1.9,1.2l0.5-2.5L6,9.4
+	L5.2,8.8L3.5,7.3l2.3-0.2l1-0.1L7.1,6L8,3.9 M8,0C7.9,0,7.8,0.1,7.7,0.2L5.6,5.4L0.3,5.9C0,5.9-0.1,6.3,0.1,6.5l4,3.6l-1.2,5.6
+	c0,0.2,0.1,0.4,0.3,0.4c0.1,0,0.1,0,0.2-0.1L8,13.1l4.6,2.8c0.1,0,0.1,0.1,0.2,0.1c0.2,0,0.4-0.2,0.3-0.4L11.9,10l4-3.6
+	c0.2-0.2,0.1-0.5-0.2-0.6l-5.3-0.5L8.3,0.2C8.2,0.1,8.1,0,8,0L8,0z"></path> </symbol><symbol id="shape-star-full" viewbox="0 0 16 16"><title>star-full</title> <path d="M8,13.1l4.6,2.8c0.2,0.2,0.6-0.1,0.5-0.3L11.9,10l4-3.6c0.2-0.2,0.1-0.5-0.2-0.6l-5.3-0.5L8.3,0.2c-0.1-0.3-0.5-0.3-0.6,0
+	L5.6,5.4L0.3,5.9C0,5.9-0.1,6.3,0.1,6.5l4,3.6l-1.2,5.6c-0.1,0.3,0.3,0.5,0.5,0.3L8,13.1z"></path> </symbol><symbol id="shape-star-half" viewbox="0 0 16 16"><title>star-half</title> <g id="svgstorec7a7267f60385e4654c887636181f842full"> <path d="M8,13.1l4.6,2.8c0.2,0.2,0.6-0.1,0.5-0.3L11.9,10l4-3.6c0.2-0.2,0.1-0.5-0.2-0.6l-5.3-0.5L8.3,0.2c-0.1-0.3-0.5-0.3-0.6,0
+		L5.6,5.4L0.3,5.9C0,5.9-0.1,6.3,0.1,6.5l4,3.6l-1.2,5.6c-0.1,0.3,0.3,0.5,0.5,0.3L8,13.1z"></path> </g> <g id="svgstorec7a7267f60385e4654c887636181f842half"> <path d="M8,0C7.9,0,7.8,0.1,7.7,0.2L5.6,5.4L0.3,5.9C0,5.9-0.1,6.3,0.1,6.5l4,3.6l-1.2,5.6c-0.1,0.3,0.3,0.5,0.5,0.3L8,13.1V0z"></path> </g> </symbol><symbol id="shape-switch" viewbox="0 0 12 12"><title>switch</title> <g> <path d="M12,6v6L8,8h2V6c0-.86,0-2-1.11-2C8.26,4,7.71,5,7.24,5.85l-.68,1.2c-.71,1.26-1.66,3-3.38,3l-.29,0C1.81,9.88,0,9.2,0,6V0L4,4H2V6c0,1.89.75,2,1.1,2,.74,0,1.24-1.09,1.71-1.93l.68-1.19C6.21,3.59,7.19,1.8,9.1,2S12,3.73,12,6Z"></path></g></symbol><symbol id="shape-success" viewbox="0 0 16 16"><title>success</title><g id="ae5d57c1-25a9-4acf-9423-53ece48b8287"><g id="a6cf5708-628a-46a8-82c1-d78ecc833d76"><path d="M14,2.69a8,8,0,1,1-1.51-1.32L11,2.81A5.89,5.89,0,0,0,8,2a6,6,0,1,0,5.6,3.83L8,11.3,3.61,7.12,5,5.72,8,8.57Z"></path></g></g></symbol><symbol id="shape-tag" viewbox="0 0 16 16"><title>tag</title> <path clip-rule="evenodd" d="M15,0H8.1C7.8,0,7.4,0.2,7.2,0.4L0.3,7.3c-0.4,0.4-0.4,1,0,1.4l7,7
+	c0.4,0.4,1,0.4,1.4,0l6.9-6.9C15.8,8.6,16,8.2,16,7.9V1C16,0.4,15.6,0,15,0z M11,7C9.9,7,9,6.1,9,5s0.9-2,2-2c1.1,0,2,0.9,2,2
+	S12.1,7,11,7z" fill-rule="evenodd" id="svgstorea5a9210f044ad52be8e5d96797ab3cd8Tag_1"></path> </symbol><symbol id="shape-twitch" viewbox="0 0 16 16"><title>twitch</title> <g> <path d="M1,0L0,3v11h4v2h2.5l2-2H12l4-4V0H1z M14,9l-2,2H8.6L6,13.5V11H3V2h11V9z"></path> <rect height="4" width="2" x="6" y="4"></rect> <rect height="4" width="2" x="10" y="4"></rect> </g> </symbol><symbol id="shape-twitter" viewbox="0 0 16 16"><title>twitter</title> <g id="svgstoref90a96b77ecb27e54ea9e726efbad5bfTwitter_1"> <path d="M16,3c-0.6,0.3-1.2,0.4-1.9,0.5c0.7-0.4,1.2-1,1.4-1.8c-0.6,0.4-1.3,0.7-2.1,0.8c-0.6-0.6-1.5-1-2.4-1
+		C9.3,1.5,7.8,3,7.8,4.8c0,0.3,0,0.5,0.1,0.7C5.1,5.4,2.7,4.1,1.1,2.1c-0.3,0.5-0.4,1-0.4,1.7c0,1.1,0.8,2.1,1.6,2.7
+		C1.8,6.5,1,6.3,1,6.1c0,0,0,0,0,0C1,7.7,2,9,3.5,9.3c-0.3,0.1-0.7,0.1-1,0.1c-0.2,0-0.5,0-0.7-0.1c0.4,1.3,1.6,2.3,3,2.3
+		c-1.1,0.9-2.6,1.4-4.1,1.4c-0.3,0-0.5,0-0.8,0c1.5,0.9,3.2,1.5,5,1.5c6,0,9.3-5,9.3-9.3c0-0.1,0-0.3,0-0.4C15,4.3,15.6,3.7,16,3z"></path> </g> </symbol><symbol id="shape-user" viewbox="0 0 16 16"><title>user</title> <path clip-rule="evenodd" d="M16,14c-0.2-3-1.7-4.9-4.3-5.7C12.5,7.5,13,6.3,13,5c0-2.8-2.2-5-5-5S3,2.2,3,5
+	c0,1.3,0.5,2.5,1.3,3.3C1.7,9.1,0.3,11,0,14l0,1v1h16v-1L16,14z M8,2c1.7,0,3,1.3,3,3c0,1.6-1.3,3-3,3S5,6.6,5,5C5,3.3,6.3,2,8,2z
+	 M7,10h2c3.2,0,4.7,1.2,5,4H2C2.3,11.2,3.8,10,7,10z" fill-rule="evenodd"></path> </symbol><symbol id="shape-warning" viewbox="0 0 14 16"><title>warning</title><g id="a5fb08a3-aaed-49e3-9f06-c897f01d8dda"><g id="bef19ab1-4e2c-403c-8f1d-78b9ca4047e0"><path d="M3,12h9a2,2,0,0,0,2-2V2a2,2,0,0,0-2-2H2A2,2,0,0,0,0,2V14a2,2,0,0,0,2,2H12a2,2,0,0,0,2-2V12a2,2,0,0,1-2,2H3a1,1,0,0,1,0-2ZM7,2A1,1,0,1,1,6,3,1,1,0,0,1,7,2ZM6,6A1,1,0,0,1,8,6V9A1,1,0,0,1,6,9Z"></path></g></g></symbol><symbol id="shape-wattage" viewbox="0 0 16 16"><title>wattage</title> <g transform="translate(0,-952.36218)"> <path d="M12.6,952.4c-0.1,0-0.1,0-0.2,0.1l-9.3,6.2c0,0-0.1,0.1-0.1,0.1c0,0.1,0,0.1,0,0.2c0,0.1,0,0.1,0.1,0.2
+		c0,0.1,0.1,0.1,0.1,0.1l4.1,2.2L3,967.8c-0.2,0.4,0.2,0.7,0.5,0.5l10.4-8.2c0,0,0.1-0.1,0.1-0.1c0-0.1,0-0.1,0-0.2
+		c0-0.1,0-0.1-0.1-0.2c0,0-0.1-0.1-0.1-0.1l-3.9-1.7l2.9-4.9c0-0.1,0-0.1,0-0.2c0-0.1,0-0.1-0.1-0.2c0-0.1-0.1-0.1-0.1-0.1
+		S12.7,952.4,12.6,952.4L12.6,952.4z"></path> </g> </symbol><symbol id="shape-weight" viewbox="0 0 16 16"><title>weight</title> <path d="M14,6c0,0-0.6-0.3-1.7-0.5l0.7-4c0-0.3-0.1-0.7-0.4-0.8C11.8,0.4,10.5,0,8,0S4.2,0.4,3.5,0.7C3.2,0.8,3,1.2,3.1,1.5l0.7,4
+	C2.6,5.7,2,6,2,6L0,16h16L14,6z M5.7,5L5.2,2.2C5.8,2.1,6.7,2,8,2s2.2,0.1,2.8,0.2L10.3,5H5.7z"></path> </symbol><symbol id="shape-youtube" viewbox="0 0 16 16"><title>youtube</title> <g id="svgstore9835bd0812257179631c97dc285c4eb5Lozenge"> <g> <path d="M15.8,4.5c0,0-0.2-1-0.6-1.6c-0.6-0.7-1.3-0.7-1.6-0.7C11.4,2,8,2,8,2l0,0c0,0-3.4,0-5.6,0.2c-0.4,0-1,0.1-1.6,0.7
+			C0.4,3.5,0.2,4.5,0.2,4.5S0,5.9,0,7.3v1.3c0,1.5,0.2,2.7,0.2,2.7s0.2,1.2,0.6,1.8c0.6,0.7,1.4,0.7,1.8,0.8C3.8,14,8,14,8,14
+			s3.4,0,5.6-0.2c0.4,0,1-0.1,1.6-0.7c0.4-0.5,0.6-1.8,0.6-1.8S16,10.1,16,8.7V7.3C16,5.9,15.8,4.5,15.8,4.5z M6,10.6V5.4L11,8
+			L6,10.6z"></path> </g> </g> </symbol></svg>
+<div class="offCanvas offCanvas__gallery">
+<header class="gallery__header">
+<div class="gallery__title">
+<h3></h3>
+<h1></h1>
+</div>
+<div class="gallery__controls">
+<div class="gallery__imagecount">
+<p>0 <span></span> 0</p>
+</div><a class="gallery__controls--nav pp-gallery-left" href="#">
+<svg class="icon shape-arrow-left">
+<use xlink:href="#shape-arrow-left"></use>
+</svg>
+</a><a class="gallery__controls--nav pp-gallery-right" href="#">
+<svg class="icon shape-arrow-right">
+<use xlink:href="#shape-arrow-right"></use>
+</svg>
+</a><a class="js-trigger--gallery gallery__controls--close" href="#">
+<svg class="icon shape-delete">
+<use xlink:href="#shape-delete"></use>
+</svg>
+</a>
+</div>
+</header>
+<section class="gallery__stage">
+<div class="gallery__content">
+</div>
+</section>
+<section class="gallery__controls--mobile">
+<div class="gallery__controls">
+<a class="pp-gallery-left" href="#">
+<svg class="icon shape-arrow-left">
+<use xlink:href="#shape-arrow-left"></use>
+</svg>
+</a><div class="gallery__imagecount">
+<p>0 <span></span> 0</p>
+</div><a class="pp-gallery-right" href="#">
+<svg class="icon shape-arrow-right">
+<use xlink:href="#shape-arrow-right"></use>
+</svg>
+</a>
+</div>
+</section>
+</div>
+<!-- Hides the header until you need it. -->
+</body>
+</html>
+

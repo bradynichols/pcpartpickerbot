@@ -1,25 +1,11 @@
-import requests
 from bs4 import BeautifulSoup
 import pandas as pd
-import numpy as np
-from selenium import webdriver
-from time import sleep
 
-#launch url
-url = "https://pcpartpicker.com/products/case/"
 
-# create a new Firefox session
-browser = webdriver.Firefox()
-print("Connected")
-
-browser.get(url)
-sleep(2)
-
-innerHTML = browser.execute_script("return document.getElementsByTagName('html')[0].innerHTML")
-
-soup=BeautifulSoup(innerHTML, 'html.parser')
-
-all = soup.find_all("tr", {"class":"tr__product"})
+with open(r'.\storeddata\casedata.txt', 'r') as f:
+    text = f.read()
+data = BeautifulSoup(text, "html.parser")
+all = data.find_all("tr", {"class":"tr__product"})
 
 types = []
 colors = []
@@ -57,3 +43,4 @@ data = {'Name':lowernames,
 
 CASEDF1 = pd.DataFrame(data)
 CASEDF = CASEDF1.set_index("Name", drop = True)
+print(CASEDF)

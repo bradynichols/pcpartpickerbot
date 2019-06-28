@@ -1,0 +1,2584 @@
+<!DOCTYPE doctype html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>GPU Database | TechPowerUp</title>
+<meta content="Graphics card and GPU database with specifications for products launched in recent years. Includes clocks, photos, and technical details." name="description"/> <meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="https://tpucdn.com" rel="preconnect"/>
+<meta content="TechPowerUp" name="application-name"/>
+<link as="font" crossorigin="" href="https://tpucdn.com/css/fonts/tpu-body-regular-v1561643053315.woff2" rel="preload" type="font/woff2"/>
+<link as="font" crossorigin="" href="https://tpucdn.com/css/fonts/tpu-body-bold-v1561643053315.woff2" rel="preload" type="font/woff2"/>
+<link as="font" crossorigin="" href="https://tpucdn.com/css/fonts/opensans-condbold-v1561643053315.woff2" rel="preload" type="font/woff2"/>
+<meta content="https://www.facebook.com/TechPowerUp" property="article:publisher">
+<meta content="TechPowerUp" property="og:site_name"/>
+<meta content="TechPowerUp" property="og:title"/>
+<meta content="website" property="og:type"/>
+<meta content="" property="og:description"/>
+<meta content="https://tpucdn.com/images/logo_og-v1561643053315.png" property="og:image"/>
+<link href="https://tpucdn.com/favicon-v1561643053315.ico" rel="shortcut icon"/>
+<link href="https://tpucdn.com/apple-touch-icon-v1561643053315.png" rel="apple-touch-icon"/>
+<meta content="#b50000" name="theme-color">
+<link href="https://tpucdn.com/css/style-v1561643053315.css" rel="stylesheet"/>
+<link href="https://tpucdn.com/css/databases-v1561643053315.css" rel="stylesheet"/>
+<script>
+			loadjs=function(){var n=function(){},e={},t={},r={};function c(n,e){if(n){var c=r[n];if(t[n]=e,c)for(;c.length;)c[0](n,e),c.splice(0,1)}}function i(e,t){e.call&&(e={success:e}),t.length?(e.error||n)(t):(e.success||n)(e)}function o(e,t,r,c){var i,s,u=document,f=r.async,a=(r.numRetries||0)+1,h=r.before||n;c=c||0,/(^css!|\.css$)/.test(e)?(i=!0,(s=u.createElement("link")).rel="stylesheet",s.href=e.replace(/^css!/,"")):((s=u.createElement("script")).src=e,s.async=void 0===f||f),s.onload=s.onerror=s.onbeforeload=function(n){var u=n.type[0];if(i&&"hideFocus"in s)try{s.sheet.cssText.length||(u="e")}catch(n){u="e"}if("e"==u&&(c+=1)<a)return o(e,t,r,c);t(e,u,n.defaultPrevented)},!1!==h(e,s)&&u.head.appendChild(s)}function s(n,t,r){var s,u;if(t&&t.trim&&(s=t),u=(s?r:t)||{},s){if(s in e)throw"LoadJS";e[s]=!0}!function(n,e,t){var r,c,i=(n=n.push?n:[n]).length,s=i,u=[];for(r=function(n,t,r){if("e"==t&&u.push(n),"b"==t){if(!r)return;u.push(n)}--i||e(u)},c=0;c<s;c++)o(n[c],r,t)}(n,function(n){i(u,n),c(s,n)},u)}return s.ready=function(n,e){return function(n,e){var c,i,o,s=[],u=(n=n.push?n:[n]).length,f=u;for(c=function(n,t){t.length&&s.push(n),--f||e(s)};u--;)i=n[u],(o=t[i])?c(i,o):(r[i]=r[i]||[]).push(c)}(n,function(n){i(e,n)}),s},s.done=function(n){c(n,[])},s.reset=function(){e={},t={},r={}},s.isDefined=function(n){return n in e},s}();
+		</script>
+<!--[if lt IE 9]><script src="https://tpucdn.com/js/html5shiv.min-v1561643053315.js"></script><![endif]-->
+<!--[if lt IE 9]><script>window.onerror = function(){ return true; }</script><![endif]-->
+<script>
+			loadjs(["https://tpucdn.com/js/jquery-3.2.1.min-v1561643053315.js", "https://tpucdn.com/js/tpu-v1561643053315.js"], { async: false, success: function() { $(function() { loadjs.done('jquery'); }); }});
+
+			loadjs.ready(['jquery'], function() {
+				
+				loadjs(["https://tpucdn.com/js/popup/popup.min-v1561643053315.css", "https://tpucdn.com/js/popup/popup.min-v1561643053315.js"], 'popup');
+
+																loadjs(["https://tpucdn.com/js/highlight/jquery.highlight.min-v1561643053315.js"], 'highlight');																																							});
+
+																							</script>
+<link href="/rss/news" rel="alternate" title="TechPowerUp Frontpage News" type="application/rss+xml"/>
+<link href="/rss/reviews" rel="alternate" title="TechPowerup Reviews" type="application/rss+xml"/>
+<noscript><style>.jsonly { display: none !important; }</style></noscript>
+</meta></meta></head>
+<body class="body gpudb">
+<div id="viewport">
+<div class="no-ad-found"></div><span class="6fbd517b5bcf9d768565327d5ca651da"></span> <header class="site-header clearfix" id="top">
+<div class="site-header__logo-wrapper">
+<label class="navigation-toggle" for="navigation-check" onclick="" title="Menu"></label>
+<label class="sidebar-toggle" for="sidebar-check" onclick="" title="Right-side Bar"></label>
+<script>
+						loadjs.ready(['jquery'], function() {
+							$('.sidebar').clone().insertBefore('#page').addClass('sidebar--responsive').find('.mnmuzjsddc').remove();
+							$('#navigation-check').prop('checked', false).on('click', function() {
+								$('html').toggleClass('navigation-active', $(this).is(':checked'));
+							});
+							$('#sidebar-check').prop('checked', false).on('click', function() {
+								$('html').toggleClass('sidebar-active', $(this).is(':checked'));
+							});
+						});
+					</script>
+<a class="site-header__logo" href="/" title="TechPowerUp"></a>
+</div>
+<figure class="nkuztfvdswe"><a href="http://www.techpowerup.com/njutrvceser/852.png2" rel="nofollow external" target="_blank"><span><img alt="" src="https://www.techpowerup.com/njutrvceser/8cfa3846.jpg"/></span></a><span class="6fbd517b5bcf9d768565327d5ca651da"></span></figure>
+</header>
+<input id="sidebar-check" type="checkbox"/>
+<input id="navigation-check" type="checkbox"/>
+<nav id="menu">
+<label for="navigation-check" id="menu-toggle" onclick="" title="Close"></label>
+<ul>
+<li><a href="/">Home</a></li>
+<li><a href="/review/">Reviews</a></li>
+<li><a href="/forums/">Forums</a></li>
+<li><a href="/download/">Downloads</a></li>
+<li><a href="/gallery/">Case Mod Gallery</a></li>
+<li>
+<label class="menu-toggle-sub" for="menu-databases" onclick="">Databases</label>
+<input class="sub-menu-check" id="menu-databases" type="checkbox"/>
+<ul class="sub-menu" id="menu-databases-sub">
+<li class="menu-sub-heading">Databases…
+								<label class="menu-back" for="menu-databases" onclick="" title="Back">Back</label>
+</li>
+<li><a href="/vgabios/">VGA Bios Collection</a></li>
+<li><a href="/gpu-specs/">GPU Database</a></li>
+<li><a href="/cpudb/">CPU Database</a></li>
+<li><a href="/reviewdb/">Review Database</a></li>
+</ul>
+</li>
+<li>
+<label class="menu-toggle-sub" for="menu-software" onclick="">Our Software</label>
+<input class="sub-menu-check" id="menu-software" type="checkbox"/>
+<ul class="sub-menu" id="menu-software-sub">
+<li class="menu-sub-heading">Our Software…
+								<label class="menu-back" for="menu-software" onclick="" title="Back">Back</label>
+</li>
+<li><a href="/gpuz/">GPU-Z</a></li>
+<li><a href="/realtemp/">RealTemp</a></li>
+<li><a href="/tpucapture/">TPUCapture</a></li>
+<li><a href="/memtest64/">MemTest64</a></li>
+</ul>
+</li>
+<li>
+<label class="menu-toggle-sub" for="menu-more" onclick="">More</label>
+<input class="sub-menu-check" id="menu-more" type="checkbox"/>
+<ul class="sub-menu" id="menu-more-sub">
+<li class="menu-sub-heading">More…
+								<label class="menu-back" for="menu-more" onclick="" title="Back">Back</label>
+</li>
+<li><a href="/articles/">Articles</a></li>
+<li><a href="/oldstuff/">Old Stuff</a></li>
+<li><a href="/trivia/">Computer Trivia</a></li>
+<li><a href="/live/">TPU Live</a></li>
+<li><a href="http://www.techpowerup.org" target="_top">Free Image Hosting</a></li>
+</ul>
+</li>
+<li><a href="/contact/">Contact Us</a></li>
+<li class="social">
+<a class="facebook" href="https://www.facebook.com/TechPowerUp" rel="nofollow" target="_blank" title="Facebook"></a>
+<a class="twitter" href="https://twitter.com/TechPowerUp" rel="nofollow" target="_blank" title="Twitter"></a>
+<a class="instagram" href="https://www.instagram.com/techpowerupofficial/" rel="nofollow" target="_blank" title="Instagram"></a>
+<a class="youtube" href="https://www.youtube.com/c/TechPowerUp" rel="nofollow" target="_blank" title="YouTube"></a>
+<a class="rss" href="/rss/" title="RSS"></a>
+</li>
+</ul>
+</nav>
+<div class="clearfix" id="page">
+<article class="content">
+<aside class="changes">
+<h1>Recent Database Updates</h1>
+<div>
+<table>
+<tr>
+<th> </th>
+<td>Edited <a href="/gpu-specs/geforce-rtx-2080-super.c3439">GeForce RTX 2080 Super</a></td>
+</tr>
+<tr>
+<th> </th>
+<td>Edited <a href="/gpu-specs/geforce-rtx-2070-super.c3440">GeForce RTX 2070 Super</a></td>
+</tr>
+<tr>
+<th> </th>
+<td>Edited <a href="/gpu-specs/geforce-rtx-2060-super.c3441">GeForce RTX 2060 Super</a></td>
+</tr>
+<tr>
+<th>Jun 27 </th>
+<td>Edited <a href="/gpu-specs/geforce-rtx-2070-super.c3440">GeForce RTX 2070 Super</a></td>
+</tr>
+<tr>
+<th> </th>
+<td>Edited <a href="/gpu-specs/geforce-rtx-2060-super.c3441">GeForce RTX 2060 Super</a></td>
+</tr>
+<tr>
+<th> </th>
+<td>Edited <a href="/gpu-specs/radeon-rx-5700-xt.c3339">Radeon RX 5700 XT</a></td>
+</tr>
+<tr>
+<th> </th>
+<td>Edited <a href="/gpu-specs/radeon-vii.c3358">Radeon VII</a></td>
+</tr>
+<tr>
+<th>Jun 26 </th>
+<td>Edited <a href="/gpu-specs/geforce-7800-gtx-512.c144">GeForce 7800 GTX 512</a></td>
+</tr>
+<tr>
+<th> </th>
+<td>Edited <a href="/gpu-specs/quadro4-700-go-gl.c1828">Quadro4 700 Go GL</a></td>
+</tr>
+<tr>
+<th> </th>
+<td>Edited <a href="/gpu-specs/radeon-rx-5700-xt-50th-anniversary.c3438">Radeon RX 5700 XT 50th Anniversary</a></td>
+</tr>
+<tr>
+<th>Jun 23 </th>
+<td>Edited <a href="/gpu-specs/geforce-rtx-2080-ti.c3305">GeForce RTX 2080 Ti</a></td>
+</tr>
+<tr>
+<th>Jun 22 </th>
+<td>Edited <a href="/gpu-specs/radeon-rx-5700.c3437">Radeon RX 5700</a></td>
+</tr>
+<tr>
+<th>Jun 20 </th>
+<td>Edited <a href="/gpu-specs/geforce-rtx-2080-super.c3439">GeForce RTX 2080 Super</a></td>
+</tr>
+<tr>
+<th>Jun 19 </th>
+<td>Edited <a href="/gpu-specs/geforce-rtx-2060-super.c3441">GeForce RTX 2060 Super</a></td>
+</tr>
+<tr>
+<th> </th>
+<td>Edited <a href="/gpu-specs/geforce-rtx-2080-super.c3439">GeForce RTX 2080 Super</a></td>
+</tr>
+<tr>
+<th>Jun 17 </th>
+<td>Edited <a href="/gpu-specs/radeon-rx-5700-xt.c3339">Radeon RX 5700 XT</a></td>
+</tr>
+<tr>
+<th>Jun 16 </th>
+<td>Edited <a href="/gpu-specs/uhd-graphics-910.c3448">UHD Graphics 910</a></td>
+</tr>
+<tr>
+<th> </th>
+<td>Edited <a href="/gpu-specs/uhd-graphics-920.c3447">UHD Graphics 920</a></td>
+</tr>
+<tr>
+<th> </th>
+<td>Edited <a href="/gpu-specs/iris-plus-graphics-930.c3446">Iris Plus Graphics 930</a></td>
+</tr>
+<tr>
+<th> </th>
+<td>Edited <a href="/gpu-specs/iris-plus-graphics-950.c3399">Iris Plus Graphics 950</a></td>
+</tr>
+<tr>
+<th> </th>
+<td>Edited <a href="/gpu-specs/iris-plus-graphics-930.c3445">Iris Plus Graphics 930</a></td>
+</tr>
+<tr>
+<th> </th>
+<td>Edited <a href="/gpu-specs/iris-plus-graphics-930.c3445">Iris Plus Graphics 930</a></td>
+</tr>
+<tr>
+<th> </th>
+<td>Edited <a href="/gpu-specs/iris-plus-graphics-940.c3444">Iris Plus Graphics 940</a></td>
+</tr>
+<tr>
+<th> </th>
+<td>Edited <a href="/gpu-specs/iris-plus-graphics-940.c3387">Iris Plus Graphics 940</a></td>
+</tr>
+<tr>
+<th>Jun 14 </th>
+<td>Edited <a href="/gpu-specs/geforce-mx150-gp107.c3443">GeForce MX150 GP107</a></td>
+</tr>
+<tr>
+<th> </th>
+<td>Edited <a href="/gpu-specs/geforce-mx150-gp107.c3443">GeForce MX150 GP107</a></td>
+</tr>
+<tr>
+<th> </th>
+<td>Edited <a href="/gpu-specs/geforce-gtx-1650-max-q.c3383">GeForce GTX 1650 Max-Q</a></td>
+</tr>
+<tr>
+<th> </th>
+<td>Edited <a href="/gpu-specs/geforce-gtx-1650-mobile.c3367">GeForce GTX 1650 Mobile</a></td>
+</tr>
+<tr>
+<th> </th>
+<td>Edited <a href="/gpu-specs/quadro-t1000.c3435">Quadro T1000</a></td>
+</tr>
+<tr>
+<th> </th>
+<td>Edited <a href="/gpu-specs/quadro-p2200.c3442">Quadro P2200</a></td>
+</tr>
+</table>
+</div>
+</aside>
+<h1 class="pagetitle">GPU Specs Database</h1>
+<p class="p">Below you will find a reference list of most graphics cards released in recent years.</p>
+<form action="/gpu-specs/" autocomplete="off" id="form" method="get">
+<section class="search">
+<h1>Refine Search Parameters</h1>
+<div>
+<fieldset class="filters">
+<ul class="clearfix">
+<li>
+<label for="mfgr">Manufacturer</label>
+<select id="mfgr" name="mfgr">
+<option selected="" value="">All</option>
+<option value="AMD">AMD (662)</option>
+<option value="ATI">ATI (589)</option>
+<option value="Intel">Intel (152)</option>
+<option value="Matrox">Matrox (10)</option>
+<option value="NVIDIA">NVIDIA (1134)</option>
+<option value="XGI">XGI (16)</option>
+</select>
+</li>
+<li>
+<label for="released">Release Date</label>
+<select id="released" name="released">
+<option selected="" value="">All</option>
+<option value="2019">2019 (73)</option>
+<option value="2018">2018 (91)</option>
+<option value="2017">2017 (116)</option>
+<option value="2016">2016 (117)</option>
+<option value="2015">2015 (171)</option>
+<option value="2014">2014 (150)</option>
+<option value="2013">2013 (225)</option>
+<option value="2012">2012 (176)</option>
+<option value="2011">2011 (176)</option>
+<option value="2010">2010 (147)</option>
+<option value="2009">2009 (106)</option>
+<option value="2008">2008 (180)</option>
+<option value="2007">2007 (162)</option>
+<option value="2006">2006 (125)</option>
+<option value="2005">2005 (97)</option>
+<option value="2004">2004 (124)</option>
+<option value="2003">2003 (113)</option>
+<option value="2002">2002 (64)</option>
+<option value="2001">2001 (49)</option>
+<option value="2000">2000 (23)</option>
+<option value="1999">1999 (24)</option>
+<option value="1998">1998 (11)</option>
+<option value="1997">1997 (8)</option>
+<option value="1996">1996 (7)</option>
+<option value="1995">1995 (9)</option>
+<option value="1993">1993 (3)</option>
+<option value="1992">1992 (8)</option>
+<option value="1990">1990 (1)</option>
+<option value="1988">1988 (3)</option>
+<option value="1987">1987 (3)</option>
+<option value="1986">1986 (1)</option>
+</select>
+</li>
+<li>
+<label for="directx">DirectX</label>
+<select id="directx" name="directx">
+<option selected="" value="">All</option>
+<option value="1.0">1.0 (2)</option>
+<option value="5.0">5.0 (14)</option>
+<option value="6.0">6.0 (34)</option>
+<option value="7.0">7.0 (74)</option>
+<option value="8.0">8.0 (40)</option>
+<option value="8.1">8.1 (62)</option>
+<option value="9.0">9.0 (85)</option>
+<option value="9.0a">9.0a (58)</option>
+<option value="9.0b">9.0b (79)</option>
+<option value="9.0c">9.0c (267)</option>
+<option value="10.0">10.0 (51)</option>
+<option value="10.1">10.1 (132)</option>
+<option value="11.1">11.1 (276)</option>
+<option value="11.1*">11.1* (1)</option>
+<option value="11.2">11.2 (244)</option>
+<option value="12.0">12.0 (1105)</option>
+<option value="N/A">N/A (39)</option>
+</select>
+</li>
+<li>
+<label for="mobile">Mobile</label>
+<select id="mobile" name="mobile">
+<option selected="" value="">All</option>
+<option value="No">No (1515)</option>
+<option value="Yes">Yes (1048)</option>
+</select>
+</li>
+<li>
+<label for="workstation">Workstation</label>
+<select id="workstation" name="workstation">
+<option selected="" value="">All</option>
+<option value="No">No (2007)</option>
+<option value="Yes">Yes (556)</option>
+</select>
+</li>
+<li>
+<label for="igp">IGP</label>
+<select id="igp" name="igp">
+<option selected="" value="">All</option>
+<option value="No">No (2174)</option>
+<option value="Yes">Yes (389)</option>
+</select>
+</li>
+<li>
+<label for="generation">Generation</label>
+<select id="generation" name="generation">
+<option selected="" value="">All</option>
+<option value="MDA/CGA">MDA/CGA (2)</option>
+<option value="EGA">EGA (3)</option>
+<option value="VGA">VGA (4)</option>
+<option value="Mach 8">Mach 8 (3)</option>
+<option value="Mach 32">Mach 32 (7)</option>
+<option value="Mach 64">Mach 64 (9)</option>
+<option value="Rage">Rage (1)</option>
+<option value="Rage 2">Rage 2 (4)</option>
+<option value="Rage 3">Rage 3 (6)</option>
+<option value="Rage 4">Rage 4 (6)</option>
+<option value="Rage 6">Rage 6 (10)</option>
+<option value="Radeon R100">Radeon R100 (7)</option>
+<option value="Radeon R200">Radeon R200 (21)</option>
+<option value="Radeon R400 AGP">Radeon R400 AGP (17)</option>
+<option value="Radeon R300">Radeon R300 (39)</option>
+<option value="Radeon R400 PCIe">Radeon R400 PCIe (23)</option>
+<option value="Radeon R500 AGP">Radeon R500 AGP (11)</option>
+<option value="Radeon R500 PCIe">Radeon R500 PCIe (42)</option>
+<option value="Radeon R600">Radeon R600 (44)</option>
+<option value="Radeon R600/R700">Radeon R600/R700 (6)</option>
+<option value="Radeon R700">Radeon R700 (26)</option>
+<option value="Evergreen">Evergreen (27)</option>
+<option value="Northern Islands">Northern Islands (31)</option>
+<option value="Southern Islands">Southern Islands (25)</option>
+<option value="Sea Islands">Sea Islands (19)</option>
+<option value="Volcanic Islands">Volcanic Islands (33)</option>
+<option value="Pirate Islands">Pirate Islands (28)</option>
+<option value="Arctic Islands">Arctic Islands (11)</option>
+<option value="Polaris">Polaris (29)</option>
+<option value="Vega II">Vega II (1)</option>
+<option value="Navi">Navi (3)</option>
+<option value="NV1">NV1 (2)</option>
+<option value="Riva">Riva (4)</option>
+<option value="TNT2">TNT2 (6)</option>
+<option value="GeForce 256">GeForce 256 (2)</option>
+<option value="GeForce 2 MX PCI">GeForce 2 MX PCI (4)</option>
+<option value="GeForce 2 MX">GeForce 2 MX (5)</option>
+<option value="GeForce 2">GeForce 2 (5)</option>
+<option value="GeForce 3">GeForce 3 (3)</option>
+<option value="GeForce 4 MX">GeForce 4 MX (13)</option>
+<option value="GeForce 4 Ti">GeForce 4 Ti (9)</option>
+<option value="GeForce FX">GeForce FX (26)</option>
+<option value="GeForce PCX">GeForce PCX (5)</option>
+<option value="GeForce 6 PCI">GeForce 6 PCI (3)</option>
+<option value="GeForce 6 AGP">GeForce 6 AGP (21)</option>
+<option value="GeForce 6 PCIe">GeForce 6 PCIe (20)</option>
+<option value="GeForce 7 AGP">GeForce 7 AGP (7)</option>
+<option value="GeForce 7 PCIe">GeForce 7 PCIe (26)</option>
+<option value="GeForce 8">GeForce 8 (23)</option>
+<option value="GeForce 9">GeForce 9 (26)</option>
+<option value="GeForce 100">GeForce 100 (7)</option>
+<option value="GeForce 200">GeForce 200 (27)</option>
+<option value="GeForce 300">GeForce 300 (9)</option>
+<option value="GeForce 400">GeForce 400 (30)</option>
+<option value="GeForce 500">GeForce 500 (26)</option>
+<option value="GeForce 600">GeForce 600 (34)</option>
+<option value="GeForce 700">GeForce 700 (35)</option>
+<option value="GeForce 900">GeForce 900 (10)</option>
+<option value="GeForce 10">GeForce 10 (24)</option>
+<option value="GeForce 16">GeForce 16 (4)</option>
+<option value="GeForce 20">GeForce 20 (8)</option>
+<option value="Rage GL">Rage GL (4)</option>
+<option value="FireGL">FireGL (30)</option>
+<option value="FireMV Multi-View">FireMV Multi-View (8)</option>
+<option value="FirePro RG">FirePro RG (1)</option>
+<option value="FireStream">FireStream (6)</option>
+<option value="FirePro Multi-View">FirePro Multi-View (6)</option>
+<option value="Radeon Sky">Radeon Sky (3)</option>
+<option value="Radeon Instinct">Radeon Instinct (6)</option>
+<option value="FirePro Remote">FirePro Remote (2)</option>
+<option value="Quadro4 NVS">Quadro4 NVS (4)</option>
+<option value="Quadro NVS">Quadro NVS (12)</option>
+<option value="Quadro2">Quadro2 (4)</option>
+<option value="Quadro4 XGL">Quadro4 XGL (8)</option>
+<option value="Quadro CX">Quadro CX (1)</option>
+<option value="Quadro VX">Quadro VX (1)</option>
+<option value="Quadro RTX">Quadro RTX (4)</option>
+<option value="Quadro Plex">Quadro Plex (7)</option>
+<option value="Tesla">Tesla (53)</option>
+<option value="GRID K1">GRID K1 (6)</option>
+<option value="GRID K2">GRID K2 (6)</option>
+<option value="GRID K3">GRID K3 (1)</option>
+<option value="GRID K5">GRID K5 (5)</option>
+<option value="GRID Mx">GRID Mx (8)</option>
+<option value="Knights Ferry">Knights Ferry (1)</option>
+<option value="Knights Corner">Knights Corner (6)</option>
+<option value="Rage Mobility">Rage Mobility (9)</option>
+<option value="M6">M6 (3)</option>
+<option value="M7">M7 (3)</option>
+<option value="M9">M9 (5)</option>
+<option value="M1x">M1x (8)</option>
+<option value="M2x">M2x (7)</option>
+<option value="M5x">M5x (6)</option>
+<option value="M6x">M6x (8)</option>
+<option value="M7x">M7x (9)</option>
+<option value="M8x">M8x (10)</option>
+<option value="M9x">M9x (23)</option>
+<option value="Manhattan">Manhattan (14)</option>
+<option value="Vancouver">Vancouver (33)</option>
+<option value="London">London (30)</option>
+<option value="Solar System">Solar System (16)</option>
+<option value="Mobility Radeon">Mobility Radeon (26)</option>
+<option value="GeForce2 Go">GeForce2 Go (4)</option>
+<option value="GeForce4 Go">GeForce4 Go (7)</option>
+<option value="GeForce FX Go 5">GeForce FX Go 5 (13)</option>
+<option value="GeForce Go 6">GeForce Go 6 (9)</option>
+<option value="GeForce Go 7">GeForce Go 7 (16)</option>
+<option value="GeForce 8M">GeForce 8M (10)</option>
+<option value="GeForce 9M">GeForce 9M (18)</option>
+<option value="GeForce 100M">GeForce 100M (11)</option>
+<option value="GeForce 200M">GeForce 200M (11)</option>
+<option value="GeForce 300M">GeForce 300M (15)</option>
+<option value="GeForce 400M">GeForce 400M (13)</option>
+<option value="GeForce 500M">GeForce 500M (14)</option>
+<option value="GeForce 600M">GeForce 600M (30)</option>
+<option value="GeForce 700M">GeForce 700M (25)</option>
+<option value="GeForce 800M">GeForce 800M (17)</option>
+<option value="GeForce 900M">GeForce 900M (25)</option>
+<option value="GeForce 10 Mobile">GeForce 10 Mobile (24)</option>
+<option value="GeForce MX">GeForce MX (8)</option>
+<option value="GeForce 16 Mobile">GeForce 16 Mobile (5)</option>
+<option value="GeForce 20 Mobile">GeForce 20 Mobile (10)</option>
+<option value="GeForce 600A">GeForce 600A (2)</option>
+<option value="GeForce 700A">GeForce 700A (11)</option>
+<option value="GeForce 800A">GeForce 800A (8)</option>
+<option value="GeForce 900A">GeForce 900A (7)</option>
+<option value="Mobility FireGL">Mobility FireGL (12)</option>
+<option value="FirePro Mobility">FirePro Mobility (4)</option>
+<option value="FirePro">FirePro (76)</option>
+<option value="Radeon Pro">Radeon Pro (46)</option>
+<option value="Quadro NVS Mobile">Quadro NVS Mobile (10)</option>
+<option value="NVS">NVS (13)</option>
+<option value="Quadro2 Go">Quadro2 Go (1)</option>
+<option value="Quadro4 Go">Quadro4 Go (2)</option>
+<option value="Quadro FX Go">Quadro FX Go (4)</option>
+<option value="Quadro FX">Quadro FX (68)</option>
+<option value="Quadro">Quadro (106)</option>
+<option value="Radeon Xpress">Radeon Xpress (16)</option>
+<option value="Zacate [Palm]">Zacate [Palm] (2)</option>
+<option value="Bristol Ridge">Bristol Ridge (6)</option>
+<option value="Great Horned Owl">Great Horned Owl (3)</option>
+<option value="Vega">Vega (8)</option>
+<option value="GeForce 2 MX IGP">GeForce 2 MX IGP (2)</option>
+<option value="GeForce 4 MX IGP">GeForce 4 MX IGP (1)</option>
+<option value="GeForce 6 IGP">GeForce 6 IGP (8)</option>
+<option value="GeForce 7 IGP">GeForce 7 IGP (11)</option>
+<option value="GeForce 8 IGP">GeForce 8 IGP (3)</option>
+<option value="GeForce 9 IGP">GeForce 9 IGP (7)</option>
+<option value="Extreme Graphics">Extreme Graphics (1)</option>
+<option value="GMA 4500">GMA 4500 (7)</option>
+<option value="Desna [Palm]">Desna [Palm] (1)</option>
+<option value="Hondo [Palm]">Hondo [Palm] (1)</option>
+<option value="Ontario [Palm]">Ontario [Palm] (2)</option>
+<option value="Llano [Sumo]">Llano [Sumo] (10)</option>
+<option value="Ontario [Wrestler]">Ontario [Wrestler] (6)</option>
+<option value="Trinity">Trinity (15)</option>
+<option value="Richland">Richland (14)</option>
+<option value="Temash">Temash (3)</option>
+<option value="Kabini">Kabini (9)</option>
+<option value="Mullins">Mullins (6)</option>
+<option value="Kaveri">Kaveri (7)</option>
+<option value="Carrizo">Carrizo (4)</option>
+<option value="Stoney Ridge">Stoney Ridge (4)</option>
+<option value="Raven Ridge">Raven Ridge (14)</option>
+<option value="Raven Ridge 2">Raven Ridge 2 (1)</option>
+<option value="Picasso">Picasso (4)</option>
+<option value="Crystal System">Crystal System (83)</option>
+<option value="GeForce Go 6 IGP">GeForce Go 6 IGP (2)</option>
+<option value="GeForce 7M IGP">GeForce 7M IGP (2)</option>
+<option value="GeForce 8M IGP">GeForce 8M IGP (2)</option>
+<option value="GeForce 9M IGP">GeForce 9M IGP (6)</option>
+<option value="Graphics">Graphics (9)</option>
+<option value="Extreme Graphics 2">Extreme Graphics 2 (2)</option>
+<option value="GMA">GMA (1)</option>
+<option value="GMA 900">GMA 900 (2)</option>
+<option value="GMA 950">GMA 950 (5)</option>
+<option value="GMA 3000">GMA 3000 (6)</option>
+<option value="GMA 3100">GMA 3100 (8)</option>
+<option value="GMA 3500">GMA 3500 (1)</option>
+<option value="GMA 500">GMA 500 (1)</option>
+<option value="GMA 600">GMA 600 (1)</option>
+<option value="GMA 3600">GMA 3600 (2)</option>
+<option value="GMA 4500M">GMA 4500M (3)</option>
+<option value="GMA 4700M">GMA 4700M (1)</option>
+<option value="UHD Graphics">UHD Graphics (14)</option>
+<option value="HD Graphics">HD Graphics (81)</option>
+<option value="Radeon IGP">Radeon IGP (34)</option>
+<option value="Quadro NVS IGP">Quadro NVS IGP (1)</option>
+<option value="ION">ION (8)</option>
+<option value="All-In-Wonder">All-In-Wonder (28)</option>
+<option value="All-In-One">All-In-One (29)</option>
+<option value="Embedded">Embedded (19)</option>
+<option value="Tegra">Tegra (8)</option>
+<option value="XG40">XG40 (16)</option>
+<option value="G">G (4)</option>
+<option value="Parhelia">Parhelia (6)</option>
+<option value="Mining GPUs">Mining GPUs (6)</option>
+<option value="Console GPU">Console GPU (16)</option>
+</select>
+</li>
+<li>
+<label for="architecture">Architecture</label>
+<select id="architecture" name="architecture">
+<option selected="" value="">All</option>
+<option value="Celsius">Celsius (61)</option>
+<option value="Curie">Curie (160)</option>
+<option value="Fahrenheit">Fahrenheit (7)</option>
+<option value="Fermi">Fermi (79)</option>
+<option value="Fermi 2.0">Fermi 2.0 (88)</option>
+<option value="G400">G400 (2)</option>
+<option value="G500">G500 (2)</option>
+<option value="GCN 1.0">GCN 1.0 (186)</option>
+<option value="GCN 2.0">GCN 2.0 (67)</option>
+<option value="GCN 3.0">GCN 3.0 (68)</option>
+<option value="GCN 4.0">GCN 4.0 (90)</option>
+<option value="GCN 5.0">GCN 5.0 (47)</option>
+<option value="GCN 5.1">GCN 5.1 (5)</option>
+<option value="GeForce ULP">GeForce ULP (4)</option>
+<option value="Generation 1.0">Generation 1.0 (5)</option>
+<option value="Generation 11.0">Generation 11.0 (7)</option>
+<option value="Generation 2.0">Generation 2.0 (4)</option>
+<option value="Generation 3.0">Generation 3.0 (2)</option>
+<option value="Generation 3.5">Generation 3.5 (6)</option>
+<option value="Generation 4.0">Generation 4.0 (14)</option>
+<option value="Generation 5.0">Generation 5.0 (11)</option>
+<option value="Generation 5.75">Generation 5.75 (2)</option>
+<option value="Generation 6.0">Generation 6.0 (8)</option>
+<option value="Generation 7.0">Generation 7.0 (7)</option>
+<option value="Generation 7.5">Generation 7.5 (16)</option>
+<option value="Generation 8.0">Generation 8.0 (15)</option>
+<option value="Generation 9.0">Generation 9.0 (18)</option>
+<option value="Generation 9.5">Generation 9.5 (22)</option>
+<option value="Kelvin">Kelvin (21)</option>
+<option value="Kepler">Kepler (133)</option>
+<option value="Kepler 2.0">Kepler 2.0 (28)</option>
+<option value="Knights">Knights (7)</option>
+<option value="Mach">Mach (24)</option>
+<option value="Maxwell">Maxwell (51)</option>
+<option value="Maxwell 2.0">Maxwell 2.0 (44)</option>
+<option value="N/A">N/A (5)</option>
+<option value="Parhelia">Parhelia (6)</option>
+<option value="Pascal">Pascal (90)</option>
+<option value="PowerVR SGX535">PowerVR SGX535 (2)</option>
+<option value="PowerVR SGX545">PowerVR SGX545 (3)</option>
+<option value="R400">R400 (69)</option>
+<option value="R500">R500 (85)</option>
+<option value="RDNA 1.0">RDNA 1.0 (3)</option>
+<option value="Rage 2">Rage 2 (2)</option>
+<option value="Rage 3">Rage 3 (6)</option>
+<option value="Rage 4">Rage 4 (19)</option>
+<option value="Rage 6">Rage 6 (29)</option>
+<option value="Rage 7">Rage 7 (48)</option>
+<option value="Rage 8">Rage 8 (41)</option>
+<option value="Rage 9">Rage 9 (42)</option>
+<option value="Rankine">Rankine (58)</option>
+<option value="TeraScale">TeraScale (167)</option>
+<option value="TeraScale 2">TeraScale 2 (207)</option>
+<option value="TeraScale 3">TeraScale 3 (37)</option>
+<option value="Tesla">Tesla (173)</option>
+<option value="Tesla 2.0">Tesla 2.0 (81)</option>
+<option value="Turing">Turing (41)</option>
+<option value="Volta">Volta (10)</option>
+<option value="Wonder">Wonder (9)</option>
+<option value="XG4">XG4 (16)</option>
+<option value="i740">i740 (3)</option>
+</select>
+</li>
+<li>
+<label for="gpu">Graphics Processor</label>
+<select id="gpu" name="gpu">
+<option selected="" value="">All</option>
+<option value="16899-0">16899-0 (3)</option>
+<option value="18800-1">18800-1 (2)</option>
+<option value="28800-5">28800-5 (1)</option>
+<option value="28800-6">28800-6 (1)</option>
+<option value="Almador">Almador (2)</option>
+<option value="Alviso">Alviso (1)</option>
+<option value="Amber Lake GT2">Amber Lake GT2 (2)</option>
+<option value="Amethyst">Amethyst (9)</option>
+<option value="Antigua">Antigua (3)</option>
+<option value="Antilles">Antilles (2)</option>
+<option value="Apollo Lake GT1">Apollo Lake GT1 (3)</option>
+<option value="Apollo Lake GT1.5">Apollo Lake GT1.5 (2)</option>
+<option value="Auburn">Auburn (3)</option>
+<option value="Baffin">Baffin (18)</option>
+<option value="Banks">Banks (3)</option>
+<option value="Barts">Barts (6)</option>
+<option value="Bay Trail GT1">Bay Trail GT1 (1)</option>
+<option value="Bearlake">Bearlake (5)</option>
+<option value="Beema">Beema (6)</option>
+<option value="Blackcomb">Blackcomb (5)</option>
+<option value="Bonaire">Bonaire (7)</option>
+<option value="Braswell GT1">Braswell GT1 (5)</option>
+<option value="Broadwater">Broadwater (6)</option>
+<option value="Broadway">Broadway (7)</option>
+<option value="Broadwell GT1">Broadwell GT1 (1)</option>
+<option value="Broadwell GT2">Broadwell GT2 (4)</option>
+<option value="Broadwell GT3">Broadwell GT3 (2)</option>
+<option value="Broadwell GT3e">Broadwell GT3e (3)</option>
+<option value="Brookdale">Brookdale (1)</option>
+<option value="C51">C51 (6)</option>
+<option value="C61">C61 (5)</option>
+<option value="C67">C67 (3)</option>
+<option value="C68">C68 (5)</option>
+<option value="C73">C73 (5)</option>
+<option value="C77">C77 (2)</option>
+<option value="C78">C78 (5)</option>
+<option value="C79">C79 (14)</option>
+<option value="C7A">C7A (1)</option>
+<option value="C7A-ION">C7A-ION (1)</option>
+<option value="C89">C89 (2)</option>
+<option value="CW16800-A">CW16800-A (1)</option>
+<option value="CW16800-B">CW16800-B (1)</option>
+<option value="Caicos">Caicos (19)</option>
+<option value="Calistoga">Calistoga (2)</option>
+<option value="Cantiga">Cantiga (1)</option>
+<option value="Cape Verde">Cape Verde (16)</option>
+<option value="Capilano">Capilano (4)</option>
+<option value="Capsaicin">Capsaicin (2)</option>
+<option value="Cayman">Cayman (6)</option>
+<option value="Cedar">Cedar (17)</option>
+<option value="Cedarview">Cedarview (2)</option>
+<option value="Chelsea">Chelsea (4)</option>
+<option value="Cloverview">Cloverview (1)</option>
+<option value="Coffee Lake GT1">Coffee Lake GT1 (2)</option>
+<option value="Coffee Lake GT2">Coffee Lake GT2 (3)</option>
+<option value="Coffee Lake GT3e">Coffee Lake GT3e (1)</option>
+<option value="Condor">Condor (4)</option>
+<option value="Crestline">Crestline (1)</option>
+<option value="Crush11">Crush11 (2)</option>
+<option value="Crush17">Crush17 (1)</option>
+<option value="Curacao">Curacao (4)</option>
+<option value="Cypress">Cypress (14)</option>
+<option value="Devastator">Devastator (8)</option>
+<option value="Devastator Lite">Devastator Lite (6)</option>
+<option value="Durango">Durango (1)</option>
+<option value="Durango 2">Durango 2 (1)</option>
+<option value="ES1000">ES1000 (1)</option>
+<option value="Eaglelake">Eaglelake (9)</option>
+<option value="Ellesmere">Ellesmere (16)</option>
+<option value="Emerald">Emerald (2)</option>
+<option value="Exo">Exo (5)</option>
+<option value="Fenghuang">Fenghuang (1)</option>
+<option value="Fiji">Fiji (5)</option>
+<option value="Flipper">Flipper (1)</option>
+<option value="G70">G70 (9)</option>
+<option value="G71">G71 (24)</option>
+<option value="G72">G72 (18)</option>
+<option value="G73">G73 (16)</option>
+<option value="G80">G80 (14)</option>
+<option value="G84">G84 (18)</option>
+<option value="G86">G86 (14)</option>
+<option value="G92">G92 (29)</option>
+<option value="G92B">G92B (7)</option>
+<option value="G94">G94 (14)</option>
+<option value="G94B">G94B (4)</option>
+<option value="G96">G96 (7)</option>
+<option value="G96C">G96C (21)</option>
+<option value="G98">G98 (18)</option>
+<option value="GF100">GF100 (21)</option>
+<option value="GF104">GF104 (9)</option>
+<option value="GF106">GF106 (14)</option>
+<option value="GF108">GF108 (35)</option>
+<option value="GF110">GF110 (17)</option>
+<option value="GF114">GF114 (14)</option>
+<option value="GF116">GF116 (10)</option>
+<option value="GF117">GF117 (19)</option>
+<option value="GF119">GF119 (28)</option>
+<option value="GK104">GK104 (50)</option>
+<option value="GK106">GK106 (15)</option>
+<option value="GK107">GK107 (46)</option>
+<option value="GK110">GK110 (8)</option>
+<option value="GK110B">GK110B (13)</option>
+<option value="GK180">GK180 (1)</option>
+<option value="GK208">GK208 (19)</option>
+<option value="GK208B">GK208B (7)</option>
+<option value="GK20A">GK20A (1)</option>
+<option value="GK210">GK210 (1)</option>
+<option value="GM107">GM107 (30)</option>
+<option value="GM108">GM108 (21)</option>
+<option value="GM200">GM200 (5)</option>
+<option value="GM204">GM204 (27)</option>
+<option value="GM206">GM206 (10)</option>
+<option value="GM20B">GM20B (2)</option>
+<option value="GP100">GP100 (5)</option>
+<option value="GP102">GP102 (8)</option>
+<option value="GP104">GP104 (28)</option>
+<option value="GP104B">GP104B (4)</option>
+<option value="GP106">GP106 (13)</option>
+<option value="GP106B">GP106B (4)</option>
+<option value="GP107">GP107 (18)</option>
+<option value="GP108">GP108 (8)</option>
+<option value="GP108B">GP108B (1)</option>
+<option value="GP10B">GP10B (1)</option>
+<option value="GT200">GT200 (3)</option>
+<option value="GT200B">GT200B (20)</option>
+<option value="GT215">GT215 (12)</option>
+<option value="GT216">GT216 (16)</option>
+<option value="GT218">GT218 (28)</option>
+<option value="GV100">GV100 (9)</option>
+<option value="GV10B">GV10B (1)</option>
+<option value="Gemini Lake GT1">Gemini Lake GT1 (1)</option>
+<option value="Gemini Lake GT1.5">Gemini Lake GT1.5 (1)</option>
+<option value="Grantsdale">Grantsdale (1)</option>
+<option value="Granville">Granville (3)</option>
+<option value="Grenada">Grenada (4)</option>
+<option value="Hainan">Hainan (2)</option>
+<option value="Haswell GT1">Haswell GT1 (4)</option>
+<option value="Haswell GT2">Haswell GT2 (8)</option>
+<option value="Haswell GT3">Haswell GT3 (2)</option>
+<option value="Haswell GT3e">Haswell GT3e (2)</option>
+<option value="Hawaii">Hawaii (8)</option>
+<option value="Heathrow">Heathrow (3)</option>
+<option value="Hemlock">Hemlock (2)</option>
+<option value="Hollywood">Hollywood (1)</option>
+<option value="ION">ION (4)</option>
+<option value="Ice Lake GT2">Ice Lake GT2 (7)</option>
+<option value="Ironlake">Ironlake (2)</option>
+<option value="Ivy Bridge GT1">Ivy Bridge GT1 (3)</option>
+<option value="Ivy Bridge GT2">Ivy Bridge GT2 (3)</option>
+<option value="Jet">Jet (22)</option>
+<option value="Juniper">Juniper (10)</option>
+<option value="Kaby Lake GT1">Kaby Lake GT1 (2)</option>
+<option value="Kaby Lake GT2">Kaby Lake GT2 (7)</option>
+<option value="Kaby Lake GT3e">Kaby Lake GT3e (2)</option>
+<option value="Kalindi">Kalindi (12)</option>
+<option value="Knights Corner">Knights Corner (6)</option>
+<option value="Knights Ferry">Knights Ferry (1)</option>
+<option value="Lakeport">Lakeport (4)</option>
+<option value="Latte">Latte (1)</option>
+<option value="Lexa">Lexa (26)</option>
+<option value="Lexington">Lexington (1)</option>
+<option value="Lincroft">Lincroft (1)</option>
+<option value="Litho">Litho (3)</option>
+<option value="Liverpool">Liverpool (1)</option>
+<option value="Loveland">Loveland (12)</option>
+<option value="M1">M1 (1)</option>
+<option value="M10">M10 (6)</option>
+<option value="M11">M11 (2)</option>
+<option value="M12">M12 (1)</option>
+<option value="M18">M18 (1)</option>
+<option value="M22">M22 (2)</option>
+<option value="M24">M24 (3)</option>
+<option value="M26">M26 (3)</option>
+<option value="M28">M28 (2)</option>
+<option value="M3">M3 (2)</option>
+<option value="M4">M4 (2)</option>
+<option value="M52">M52 (1)</option>
+<option value="M54">M54 (1)</option>
+<option value="M56">M56 (3)</option>
+<option value="M58">M58 (2)</option>
+<option value="M6">M6 (3)</option>
+<option value="M62">M62 (2)</option>
+<option value="M64">M64 (3)</option>
+<option value="M66">M66 (3)</option>
+<option value="M68">M68 (1)</option>
+<option value="M7">M7 (4)</option>
+<option value="M71">M71 (2)</option>
+<option value="M72">M72 (1)</option>
+<option value="M74">M74 (2)</option>
+<option value="M76">M76 (5)</option>
+<option value="M82">M82 (4)</option>
+<option value="M86">M86 (4)</option>
+<option value="M88">M88 (4)</option>
+<option value="M9">M9 (5)</option>
+<option value="M9+">M9+ (1)</option>
+<option value="M92">M92 (9)</option>
+<option value="M96">M96 (8)</option>
+<option value="M97">M97 (3)</option>
+<option value="M98">M98 (5)</option>
+<option value="Mach32">Mach32 (7)</option>
+<option value="Mach64">Mach64 (9)</option>
+<option value="Mach64 GT">Mach64 GT (1)</option>
+<option value="Mach64 GT-B">Mach64 GT-B (2)</option>
+<option value="Mach64 LT">Mach64 LT (2)</option>
+<option value="Mach8">Mach8 (3)</option>
+<option value="Madison">Madison (6)</option>
+<option value="Malta">Malta (2)</option>
+<option value="Mars">Mars (15)</option>
+<option value="Meso">Meso (14)</option>
+<option value="Montara">Montara (2)</option>
+<option value="Montevina">Montevina (1)</option>
+<option value="NV1">NV1 (2)</option>
+<option value="NV10 A3">NV10 A3 (3)</option>
+<option value="NV11 A2">NV11 A2 (4)</option>
+<option value="NV11 B2">NV11 B2 (10)</option>
+<option value="NV11 B3">NV11 B3 (2)</option>
+<option value="NV15 A4">NV15 A4 (2)</option>
+<option value="NV15 A5">NV15 A5 (4)</option>
+<option value="NV17 A3">NV17 A3 (12)</option>
+<option value="NV17 A4">NV17 A4 (1)</option>
+<option value="NV17 A5">NV17 A5 (5)</option>
+<option value="NV18 A2">NV18 A2 (2)</option>
+<option value="NV18 A4">NV18 A4 (7)</option>
+<option value="NV18 C1">NV18 C1 (5)</option>
+<option value="NV19">NV19 (1)</option>
+<option value="NV20 A5">NV20 A5 (4)</option>
+<option value="NV25 A2">NV25 A2 (5)</option>
+<option value="NV25 A3">NV25 A3 (2)</option>
+<option value="NV28 A1">NV28 A1 (3)</option>
+<option value="NV28 A2">NV28 A2 (5)</option>
+<option value="NV2A">NV2A (2)</option>
+<option value="NV3">NV3 (3)</option>
+<option value="NV30">NV30 (4)</option>
+<option value="NV31">NV31 (7)</option>
+<option value="NV34 A1">NV34 A1 (8)</option>
+<option value="NV34 A2">NV34 A2 (4)</option>
+<option value="NV34 A3">NV34 A3 (2)</option>
+<option value="NV34 B1">NV34 B1 (10)</option>
+<option value="NV35">NV35 (8)</option>
+<option value="NV36">NV36 (8)</option>
+<option value="NV37">NV37 (3)</option>
+<option value="NV38">NV38 (3)</option>
+<option value="NV39">NV39 (1)</option>
+<option value="NV4">NV4 (1)</option>
+<option value="NV40">NV40 (10)</option>
+<option value="NV41">NV41 (10)</option>
+<option value="NV42">NV42 (1)</option>
+<option value="NV43 A2">NV43 A2 (15)</option>
+<option value="NV43 A4">NV43 A4 (4)</option>
+<option value="NV44 A1">NV44 A1 (4)</option>
+<option value="NV44 A2">NV44 A2 (10)</option>
+<option value="NV44 B2">NV44 B2 (2)</option>
+<option value="NV45">NV45 (7)</option>
+<option value="NV48">NV48 (3)</option>
+<option value="NV5 B5">NV5 B5 (3)</option>
+<option value="NV5 B6">NV5 B6 (3)</option>
+<option value="Navi 10">Navi 10 (3)</option>
+<option value="Neo">Neo (1)</option>
+<option value="Neptune">Neptune (2)</option>
+<option value="New Zealand">New Zealand (1)</option>
+<option value="Oland">Oland (19)</option>
+<option value="Onega">Onega (2)</option>
+<option value="Opal">Opal (11)</option>
+<option value="Parhelia-512">Parhelia-512 (5)</option>
+<option value="Parhelia-LX">Parhelia-LX (1)</option>
+<option value="Park">Park (5)</option>
+<option value="Picasso">Picasso (4)</option>
+<option value="Pineview">Pineview (2)</option>
+<option value="Pinewood">Pinewood (3)</option>
+<option value="Pitcairn">Pitcairn (13)</option>
+<option value="Polaris 20">Polaris 20 (15)</option>
+<option value="Polaris 21">Polaris 21 (11)</option>
+<option value="Polaris 22">Polaris 22 (3)</option>
+<option value="Polaris 24">Polaris 24 (2)</option>
+<option value="Polaris 30">Polaris 30 (1)</option>
+<option value="Portola">Portola (1)</option>
+<option value="Poulsbo">Poulsbo (1)</option>
+<option value="R100">R100 (4)</option>
+<option value="R200">R200 (9)</option>
+<option value="R250">R250 (1)</option>
+<option value="R300">R300 (11)</option>
+<option value="R350">R350 (7)</option>
+<option value="R360">R360 (7)</option>
+<option value="R420">R420 (11)</option>
+<option value="R423">R423 (9)</option>
+<option value="R430">R430 (7)</option>
+<option value="R480">R480 (9)</option>
+<option value="R481">R481 (5)</option>
+<option value="R520">R520 (9)</option>
+<option value="R580">R580 (7)</option>
+<option value="R580+">R580+ (5)</option>
+<option value="R600">R600 (7)</option>
+<option value="R680">R680 (1)</option>
+<option value="R700">R700 (2)</option>
+<option value="RC300">RC300 (1)</option>
+<option value="RC410">RC410 (4)</option>
+<option value="RS100">RS100 (2)</option>
+<option value="RS200">RS200 (5)</option>
+<option value="RS250">RS250 (1)</option>
+<option value="RS300">RS300 (2)</option>
+<option value="RS350">RS350 (2)</option>
+<option value="RS400">RS400 (1)</option>
+<option value="RS480">RS480 (3)</option>
+<option value="RS482">RS482 (2)</option>
+<option value="RS485">RS485 (1)</option>
+<option value="RS600">RS600 (2)</option>
+<option value="RS690">RS690 (7)</option>
+<option value="RS740">RS740 (1)</option>
+<option value="RS780">RS780 (7)</option>
+<option value="RS880">RS880 (8)</option>
+<option value="RSX-CXD2953">RSX-CXD2953 (1)</option>
+<option value="RSX-CXD2991">RSX-CXD2991 (1)</option>
+<option value="RSX-CXD5302">RSX-CXD5302 (1)</option>
+<option value="RV100">RV100 (4)</option>
+<option value="RV200">RV200 (5)</option>
+<option value="RV250">RV250 (5)</option>
+<option value="RV280">RV280 (11)</option>
+<option value="RV350">RV350 (12)</option>
+<option value="RV360">RV360 (3)</option>
+<option value="RV370">RV370 (13)</option>
+<option value="RV380">RV380 (5)</option>
+<option value="RV410">RV410 (12)</option>
+<option value="RV505">RV505 (2)</option>
+<option value="RV515">RV515 (10)</option>
+<option value="RV516">RV516 (9)</option>
+<option value="RV530">RV530 (11)</option>
+<option value="RV535">RV535 (3)</option>
+<option value="RV560">RV560 (5)</option>
+<option value="RV570">RV570 (5)</option>
+<option value="RV610">RV610 (8)</option>
+<option value="RV620">RV620 (14)</option>
+<option value="RV630">RV630 (10)</option>
+<option value="RV635">RV635 (8)</option>
+<option value="RV670">RV670 (14)</option>
+<option value="RV710">RV710 (8)</option>
+<option value="RV711">RV711 (2)</option>
+<option value="RV730">RV730 (14)</option>
+<option value="RV740">RV740 (2)</option>
+<option value="RV770">RV770 (14)</option>
+<option value="RV790">RV790 (2)</option>
+<option value="Rage 2">Rage 2 (2)</option>
+<option value="Rage 3">Rage 3 (4)</option>
+<option value="Rage 3 Turbo">Rage 3 Turbo (2)</option>
+<option value="Rage 4">Rage 4 (9)</option>
+<option value="Rage 4 PRO">Rage 4 PRO (2)</option>
+<option value="Rage 6">Rage 6 (10)</option>
+<option value="Rage Mobility">Rage Mobility (3)</option>
+<option value="Raven">Raven (17)</option>
+<option value="Raven 2">Raven 2 (1)</option>
+<option value="Redwood">Redwood (17)</option>
+<option value="Robson">Robson (6)</option>
+<option value="Sandy Bridge GT1">Sandy Bridge GT1 (3)</option>
+<option value="Sandy Bridge GT2">Sandy Bridge GT2 (3)</option>
+<option value="Sandy Bridge GT2+">Sandy Bridge GT2+ (2)</option>
+<option value="Saturn">Saturn (8)</option>
+<option value="Scorpio">Scorpio (1)</option>
+<option value="Scrapper">Scrapper (8)</option>
+<option value="Scrapper Lite">Scrapper Lite (5)</option>
+<option value="Seymour">Seymour (10)</option>
+<option value="Skylake GT1">Skylake GT1 (2)</option>
+<option value="Skylake GT2">Skylake GT2 (6)</option>
+<option value="Skylake GT3e">Skylake GT3e (3)</option>
+<option value="Skylake GT4e">Skylake GT4e (2)</option>
+<option value="Solano">Solano (1)</option>
+<option value="Spectre">Spectre (2)</option>
+<option value="Spectre Lite">Spectre Lite (4)</option>
+<option value="Spectre SL">Spectre SL (1)</option>
+<option value="Springdale">Springdale (1)</option>
+<option value="Stoney">Stoney (4)</option>
+<option value="Strato">Strato (4)</option>
+<option value="Sumo">Sumo (5)</option>
+<option value="Sun">Sun (9)</option>
+<option value="SuperSumo">SuperSumo (5)</option>
+<option value="TU102">TU102 (4)</option>
+<option value="TU104">TU104 (12)</option>
+<option value="TU104B">TU104B (2)</option>
+<option value="TU106">TU106 (8)</option>
+<option value="TU106B">TU106B (3)</option>
+<option value="TU116">TU116 (4)</option>
+<option value="TU116B">TU116B (1)</option>
+<option value="TU117">TU117 (7)</option>
+<option value="Tahiti">Tahiti (24)</option>
+<option value="Tegra 2">Tegra 2 (1)</option>
+<option value="Tegra 3">Tegra 3 (1)</option>
+<option value="Tegra 4">Tegra 4 (2)</option>
+<option value="Thames">Thames (12)</option>
+<option value="Tobago">Tobago (5)</option>
+<option value="Tonga">Tonga (5)</option>
+<option value="Topaz">Topaz (11)</option>
+<option value="Trinidad">Trinidad (4)</option>
+<option value="Trinity GL">Trinity GL (2)</option>
+<option value="Tropo">Tropo (9)</option>
+<option value="Turks">Turks (18)</option>
+<option value="Vega 10">Vega 10 (22)</option>
+<option value="Vega 12">Vega 12 (2)</option>
+<option value="Vega 20">Vega 20 (5)</option>
+<option value="Venus">Venus (11)</option>
+<option value="Vesuvius">Vesuvius (1)</option>
+<option value="Wani">Wani (10)</option>
+<option value="Weston">Weston (3)</option>
+<option value="Whiskey Lake GT2">Whiskey Lake GT2 (1)</option>
+<option value="Whistler">Whistler (17)</option>
+<option value="Whitney">Whitney (1)</option>
+<option value="Wimbledon">Wimbledon (2)</option>
+<option value="XG40">XG40 (6)</option>
+<option value="XG41">XG41 (6)</option>
+<option value="XG42">XG42 (2)</option>
+<option value="XG45">XG45 (1)</option>
+<option value="XG47">XG47 (1)</option>
+<option value="Xenos">Xenos (1)</option>
+</select>
+</li>
+<li>
+<label for="ushaders">Shaders</label>
+<select id="ushaders" name="ushaders">
+<option selected="" value="">All</option>
+<option value="0">0 (756)</option>
+<option value="8">8 (22)</option>
+<option value="16">16 (79)</option>
+<option value="24">24 (2)</option>
+<option value="32">32 (41)</option>
+<option value="40">40 (44)</option>
+<option value="48">48 (68)</option>
+<option value="64">64 (13)</option>
+<option value="72">72 (3)</option>
+<option value="80">80 (67)</option>
+<option value="96">96 (87)</option>
+<option value="112">112 (10)</option>
+<option value="120">120 (27)</option>
+<option value="128">128 (52)</option>
+<option value="144">144 (19)</option>
+<option value="160">160 (42)</option>
+<option value="184">184 (1)</option>
+<option value="192">192 (79)</option>
+<option value="216">216 (2)</option>
+<option value="228">228 (1)</option>
+<option value="240">240 (21)</option>
+<option value="244">244 (3)</option>
+<option value="256">256 (24)</option>
+<option value="288">288 (6)</option>
+<option value="320">320 (110)</option>
+<option value="336">336 (10)</option>
+<option value="352">352 (6)</option>
+<option value="384">384 (197)</option>
+<option value="400">400 (31)</option>
+<option value="448">448 (13)</option>
+<option value="480">480 (47)</option>
+<option value="512">512 (76)</option>
+<option value="576">576 (5)</option>
+<option value="640">640 (71)</option>
+<option value="704">704 (4)</option>
+<option value="720">720 (3)</option>
+<option value="768">768 (48)</option>
+<option value="800">800 (36)</option>
+<option value="896">896 (24)</option>
+<option value="960">960 (13)</option>
+<option value="1024">1024 (32)</option>
+<option value="1120">1120 (4)</option>
+<option value="1152">1152 (11)</option>
+<option value="1280">1280 (40)</option>
+<option value="1344">1344 (11)</option>
+<option value="1408">1408 (2)</option>
+<option value="1440">1440 (6)</option>
+<option value="1536">1536 (41)</option>
+<option value="1600">1600 (9)</option>
+<option value="1664">1664 (3)</option>
+<option value="1792">1792 (31)</option>
+<option value="1920">1920 (6)</option>
+<option value="2048">2048 (46)</option>
+<option value="2176">2176 (1)</option>
+<option value="2304">2304 (33)</option>
+<option value="2432">2432 (1)</option>
+<option value="2496">2496 (4)</option>
+<option value="2560">2560 (23)</option>
+<option value="2688">2688 (3)</option>
+<option value="2816">2816 (8)</option>
+<option value="2880">2880 (12)</option>
+<option value="2944">2944 (5)</option>
+<option value="3072">3072 (9)</option>
+<option value="3200">3200 (3)</option>
+<option value="3584">3584 (16)</option>
+<option value="3840">3840 (5)</option>
+<option value="4096">4096 (22)</option>
+<option value="4352">4352 (1)</option>
+<option value="4608">4608 (3)</option>
+<option value="5120">5120 (9)</option>
+</select>
+</li>
+<li>
+<label for="tmus">TMUs</label>
+<select id="tmus" name="tmus">
+<option selected="" value="">All</option>
+<option value="0">0 (28)</option>
+<option value="1">1 (45)</option>
+<option value="2">2 (72)</option>
+<option value="3">3 (11)</option>
+<option value="4">4 (367)</option>
+<option value="6">6 (23)</option>
+<option value="8">8 (412)</option>
+<option value="10">10 (8)</option>
+<option value="12">12 (94)</option>
+<option value="16">16 (246)</option>
+<option value="18">18 (4)</option>
+<option value="20">20 (91)</option>
+<option value="23">23 (1)</option>
+<option value="24">24 (242)</option>
+<option value="28">28 (1)</option>
+<option value="32">32 (189)</option>
+<option value="36">36 (3)</option>
+<option value="40">40 (102)</option>
+<option value="44">44 (11)</option>
+<option value="48">48 (79)</option>
+<option value="56">56 (62)</option>
+<option value="57">57 (1)</option>
+<option value="60">60 (6)</option>
+<option value="61">61 (3)</option>
+<option value="64">64 (73)</option>
+<option value="72">72 (13)</option>
+<option value="80">80 (70)</option>
+<option value="88">88 (2)</option>
+<option value="96">96 (24)</option>
+<option value="104">104 (3)</option>
+<option value="112">112 (42)</option>
+<option value="120">120 (6)</option>
+<option value="128">128 (71)</option>
+<option value="136">136 (1)</option>
+<option value="144">144 (29)</option>
+<option value="152">152 (1)</option>
+<option value="160">160 (23)</option>
+<option value="176">176 (8)</option>
+<option value="184">184 (5)</option>
+<option value="192">192 (12)</option>
+<option value="200">200 (3)</option>
+<option value="208">208 (4)</option>
+<option value="224">224 (19)</option>
+<option value="240">240 (17)</option>
+<option value="256">256 (23)</option>
+<option value="272">272 (1)</option>
+<option value="288">288 (3)</option>
+<option value="320">320 (9)</option>
+</select>
+</li>
+<li>
+<label for="rops">ROPs</label>
+<select id="rops" name="rops">
+<option selected="" value="">All</option>
+<option value="1">1 (129)</option>
+<option value="2">2 (195)</option>
+<option value="3">3 (28)</option>
+<option value="4">4 (658)</option>
+<option value="6">6 (11)</option>
+<option value="8">8 (502)</option>
+<option value="9">9 (2)</option>
+<option value="12">12 (51)</option>
+<option value="16">16 (442)</option>
+<option value="20">20 (3)</option>
+<option value="24">24 (44)</option>
+<option value="28">28 (8)</option>
+<option value="32">32 (251)</option>
+<option value="40">40 (15)</option>
+<option value="48">48 (67)</option>
+<option value="56">56 (1)</option>
+<option value="57">57 (1)</option>
+<option value="60">60 (2)</option>
+<option value="61">61 (3)</option>
+<option value="64">64 (119)</option>
+<option value="80">80 (3)</option>
+<option value="88">88 (2)</option>
+<option value="96">96 (18)</option>
+<option value="128">128 (8)</option>
+</select>
+</li>
+<li>
+<label for="memtype">Memory Type</label>
+<select id="memtype" name="memtype">
+<option selected="" value="">All</option>
+<option value="SDR">SDR (64)</option>
+<option value="DDR">DDR (310)</option>
+<option value="DDR2">DDR2 (157)</option>
+<option value="DDR3">DDR3 (315)</option>
+<option value="DDR4">DDR4 (2)</option>
+<option value="GDDR2">GDDR2 (2)</option>
+<option value="GDDR3">GDDR3 (462)</option>
+<option value="GDDR4">GDDR4 (13)</option>
+<option value="GDDR5">GDDR5 (709)</option>
+<option value="GDDR5X">GDDR5X (19)</option>
+<option value="GDDR6">GDDR6 (35)</option>
+<option value="HBM">HBM (7)</option>
+<option value="HBM2">HBM2 (46)</option>
+<option value="Legacy">Legacy (33)</option>
+<option value="System Shared">System Shared (389)</option>
+</select>
+</li>
+<li>
+<label for="memsize">Memory Size</label>
+<select id="memsize" name="memsize">
+<option selected="" value="">All</option>
+<option value="0 MB">0 MB (8)</option>
+<option value="1 MB">1 MB (12)</option>
+<option value="2 GB">2 GB (316)</option>
+<option value="2 MB">2 MB (13)</option>
+<option value="2.5 GB">2.5 GB (2)</option>
+<option value="3 GB">3 GB (39)</option>
+<option value="4 GB">4 GB (171)</option>
+<option value="4 MB">4 MB (8)</option>
+<option value="5 GB">5 GB (7)</option>
+<option value="6 GB">6 GB (51)</option>
+<option value="8 GB">8 GB (109)</option>
+<option value="8 MB">8 MB (13)</option>
+<option value="10 GB">10 GB (2)</option>
+<option value="11 GB">11 GB (2)</option>
+<option value="12 GB">12 GB (19)</option>
+<option value="16 GB">16 GB (35)</option>
+<option value="16 MB">16 MB (15)</option>
+<option value="24 GB">24 GB (5)</option>
+<option value="32 GB">32 GB (9)</option>
+<option value="32 MB">32 MB (64)</option>
+<option value="48 GB">48 GB (1)</option>
+<option value="64 MB">64 MB (107)</option>
+<option value="128 MB">128 MB (194)</option>
+<option value="256 MB">256 MB (258)</option>
+<option value="320 MB">320 MB (1)</option>
+<option value="384 MB">384 MB (2)</option>
+<option value="512 MB">512 MB (266)</option>
+<option value="640 MB">640 MB (2)</option>
+<option value="768 MB">768 MB (8)</option>
+<option value="896 MB">896 MB (7)</option>
+<option value="1024 MB">1024 MB (388)</option>
+<option value="1280 MB">1280 MB (8)</option>
+<option value="1536 MB">1536 MB (29)</option>
+<option value="1792 MB">1792 MB (3)</option>
+<option value="System Shared">System Shared (389)</option>
+</select>
+</li>
+<li>
+<label for="buswidth">Memory Bus Width</label>
+<select id="buswidth" name="buswidth">
+<option selected="" value="">All</option>
+<option value="32 bit">32 bit (21)</option>
+<option value="64 bit">64 bit (535)</option>
+<option value="96 bit">96 bit (2)</option>
+<option value="128 bit">128 bit (820)</option>
+<option value="160 bit">160 bit (3)</option>
+<option value="192 bit">192 bit (62)</option>
+<option value="256 bit">256 bit (523)</option>
+<option value="320 bit">320 bit (17)</option>
+<option value="352 bit">352 bit (2)</option>
+<option value="384 bit">384 bit (95)</option>
+<option value="448 bit">448 bit (8)</option>
+<option value="512 bit">512 bit (33)</option>
+<option value="1024 bit">1024 bit (5)</option>
+<option value="2048 bit">2048 bit (22)</option>
+<option value="3072 bit">3072 bit (2)</option>
+<option value="4096 bit">4096 bit (24)</option>
+<option value="System Shared">System Shared (389)</option>
+</select>
+</li>
+<li>
+<label for="interface">Bus Interface</label>
+<select id="interface" name="interface">
+<option selected="" value="">All</option>
+<option value="AGP 2x">AGP 2x (20)</option>
+<option value="AGP 4x">AGP 4x (127)</option>
+<option value="AGP 8x">AGP 8x (200)</option>
+<option value="AGP Pro 8x">AGP Pro 8x (6)</option>
+<option value="IGP">IGP (157)</option>
+<option value="MXM">MXM (4)</option>
+<option value="MXM-A (3.0)">MXM-A (3.0) (68)</option>
+<option value="MXM-B (3.0)">MXM-B (3.0) (94)</option>
+<option value="MXM-HE">MXM-HE (10)</option>
+<option value="MXM-I">MXM-I (4)</option>
+<option value="MXM-II">MXM-II (39)</option>
+<option value="MXM-III">MXM-III (7)</option>
+<option value="MXM-IV">MXM-IV (1)</option>
+<option value="PCI">PCI (136)</option>
+<option value="PCI-X">PCI-X (2)</option>
+<option value="PCIe 1.0 x1">PCIe 1.0 x1 (2)</option>
+<option value="PCIe 1.0 x16">PCIe 1.0 x16 (398)</option>
+<option value="PCIe 2.0 x1">PCIe 2.0 x1 (16)</option>
+<option value="PCIe 2.0 x16">PCIe 2.0 x16 (564)</option>
+<option value="PCIe 2.0 x8">PCIe 2.0 x8 (11)</option>
+<option value="PCIe 3.0 x1">PCIe 3.0 x1 (53)</option>
+<option value="PCIe 3.0 x16">PCIe 3.0 x16 (462)</option>
+<option value="PCIe 3.0 x4">PCIe 3.0 x4 (4)</option>
+<option value="PCIe 3.0 x8">PCIe 3.0 x8 (173)</option>
+<option value="PCIe 4.0 x16">PCIe 4.0 x16 (5)</option>
+</select>
+</li>
+<li>
+<label for="slots">Slots</label>
+<select id="slots" name="slots">
+<option selected="" value="">All</option>
+<option value="Single-slot">Single-slot (860)</option>
+<option value="Dual-slot">Dual-slot (484)</option>
+<option value="Triple-slot">Triple-slot (7)</option>
+<option value="Quad-slot">Quad-slot (2)</option>
+<option value="MXM Module">MXM Module (311)</option>
+<option value="IGP">IGP (524)</option>
+<option value="N/A">N/A (375)</option>
+</select>
+</li>
+<li>
+<label for="powerplugs">Power Connectors</label>
+<select id="powerplugs" name="powerplugs">
+<option selected="" value="">All</option>
+<option value="1x 6-pin">1x 6-pin (212)</option>
+<option value="1x 6-pin + 1x 8-pin">1x 6-pin + 1x 8-pin (91)</option>
+<option value="1x 8-pin">1x 8-pin (51)</option>
+<option value="1x Molex">1x Molex (60)</option>
+<option value="2x 6-pin">2x 6-pin (83)</option>
+<option value="2x 8-pin">2x 8-pin (41)</option>
+<option value="2x Molex">2x Molex (7)</option>
+<option value="3x 8-pin">3x 8-pin (4)</option>
+<option value="4x 8-pin">4x 8-pin (2)</option>
+<option value="Floppy">Floppy (6)</option>
+<option value="N/A">N/A (1096)</option>
+<option value="None">None (910)</option>
+</select>
+</li>
+<li>
+<label for="tdp">TDP</label>
+<select id="tdp" name="tdp">
+<option selected="" value="">All</option>
+<option value="2 W">2 W (6)</option>
+<option value="4 W">4 W (5)</option>
+<option value="5 W">5 W (6)</option>
+<option value="6 W">6 W (8)</option>
+<option value="7 W">7 W (16)</option>
+<option value="8 W">8 W (3)</option>
+<option value="9 W">9 W (6)</option>
+<option value="10 W">10 W (26)</option>
+<option value="11 W">11 W (10)</option>
+<option value="12 W">12 W (20)</option>
+<option value="13 W">13 W (35)</option>
+<option value="14 W">14 W (22)</option>
+<option value="15 W">15 W (122)</option>
+<option value="16 W">16 W (3)</option>
+<option value="17 W">17 W (5)</option>
+<option value="18 W">18 W (21)</option>
+<option value="19 W">19 W (22)</option>
+<option value="20 W">20 W (55)</option>
+<option value="21 W">21 W (3)</option>
+<option value="22 W">22 W (3)</option>
+<option value="23 W">23 W (40)</option>
+<option value="24 W">24 W (7)</option>
+<option value="25 W">25 W (50)</option>
+<option value="26 W">26 W (10)</option>
+<option value="27 W">27 W (14)</option>
+<option value="28 W">28 W (16)</option>
+<option value="29 W">29 W (16)</option>
+<option value="30 W">30 W (36)</option>
+<option value="31 W">31 W (12)</option>
+<option value="32 W">32 W (12)</option>
+<option value="33 W">33 W (40)</option>
+<option value="34 W">34 W (1)</option>
+<option value="35 W">35 W (91)</option>
+<option value="36 W">36 W (5)</option>
+<option value="37 W">37 W (5)</option>
+<option value="38 W">38 W (7)</option>
+<option value="39 W">39 W (16)</option>
+<option value="40 W">40 W (32)</option>
+<option value="41 W">41 W (4)</option>
+<option value="42 W">42 W (3)</option>
+<option value="43 W">43 W (3)</option>
+<option value="44 W">44 W (8)</option>
+<option value="45 W">45 W (55)</option>
+<option value="46 W">46 W (2)</option>
+<option value="47 W">47 W (9)</option>
+<option value="48 W">48 W (7)</option>
+<option value="49 W">49 W (16)</option>
+<option value="50 W">50 W (88)</option>
+<option value="51 W">51 W (2)</option>
+<option value="54 W">54 W (3)</option>
+<option value="55 W">55 W (25)</option>
+<option value="56 W">56 W (1)</option>
+<option value="57 W">57 W (4)</option>
+<option value="58 W">58 W (3)</option>
+<option value="59 W">59 W (5)</option>
+<option value="60 W">60 W (18)</option>
+<option value="62 W">62 W (2)</option>
+<option value="63 W">63 W (2)</option>
+<option value="64 W">64 W (6)</option>
+<option value="65 W">65 W (60)</option>
+<option value="66 W">66 W (4)</option>
+<option value="67 W">67 W (3)</option>
+<option value="68 W">68 W (2)</option>
+<option value="69 W">69 W (5)</option>
+<option value="70 W">70 W (6)</option>
+<option value="73 W">73 W (1)</option>
+<option value="74 W">74 W (3)</option>
+<option value="75 W">75 W (100)</option>
+<option value="76 W">76 W (3)</option>
+<option value="78 W">78 W (1)</option>
+<option value="80 W">80 W (21)</option>
+<option value="81 W">81 W (4)</option>
+<option value="83 W">83 W (3)</option>
+<option value="84 W">84 W (3)</option>
+<option value="85 W">85 W (8)</option>
+<option value="86 W">86 W (5)</option>
+<option value="89 W">89 W (2)</option>
+<option value="90 W">90 W (8)</option>
+<option value="91 W">91 W (2)</option>
+<option value="92 W">92 W (1)</option>
+<option value="94 W">94 W (1)</option>
+<option value="95 W">95 W (9)</option>
+<option value="96 W">96 W (3)</option>
+<option value="97 W">97 W (1)</option>
+<option value="100 W">100 W (53)</option>
+<option value="101 W">101 W (1)</option>
+<option value="102 W">102 W (1)</option>
+<option value="104 W">104 W (1)</option>
+<option value="105 W">105 W (6)</option>
+<option value="106 W">106 W (8)</option>
+<option value="108 W">108 W (6)</option>
+<option value="109 W">109 W (1)</option>
+<option value="110 W">110 W (13)</option>
+<option value="111 W">111 W (1)</option>
+<option value="113 W">113 W (2)</option>
+<option value="115 W">115 W (5)</option>
+<option value="116 W">116 W (2)</option>
+<option value="118 W">118 W (1)</option>
+<option value="120 W">120 W (27)</option>
+<option value="122 W">122 W (7)</option>
+<option value="125 W">125 W (7)</option>
+<option value="127 W">127 W (2)</option>
+<option value="130 W">130 W (16)</option>
+<option value="134 W">134 W (2)</option>
+<option value="135 W">135 W (2)</option>
+<option value="138 W">138 W (1)</option>
+<option value="140 W">140 W (5)</option>
+<option value="141 W">141 W (2)</option>
+<option value="142 W">142 W (3)</option>
+<option value="143 W">143 W (2)</option>
+<option value="145 W">145 W (2)</option>
+<option value="148 W">148 W (2)</option>
+<option value="150 W">150 W (58)</option>
+<option value="151 W">151 W (6)</option>
+<option value="152 W">152 W (1)</option>
+<option value="154 W">154 W (1)</option>
+<option value="155 W">155 W (1)</option>
+<option value="159 W">159 W (1)</option>
+<option value="160 W">160 W (9)</option>
+<option value="165 W">165 W (3)</option>
+<option value="170 W">170 W (7)</option>
+<option value="171 W">171 W (5)</option>
+<option value="172 W">172 W (1)</option>
+<option value="175 W">175 W (11)</option>
+<option value="180 W">180 W (7)</option>
+<option value="182 W">182 W (4)</option>
+<option value="185 W">185 W (5)</option>
+<option value="186 W">186 W (1)</option>
+<option value="188 W">188 W (4)</option>
+<option value="189 W">189 W (1)</option>
+<option value="190 W">190 W (5)</option>
+<option value="195 W">195 W (2)</option>
+<option value="197 W">197 W (1)</option>
+<option value="200 W">200 W (11)</option>
+<option value="204 W">204 W (4)</option>
+<option value="208 W">208 W (1)</option>
+<option value="210 W">210 W (4)</option>
+<option value="215 W">215 W (6)</option>
+<option value="219 W">219 W (4)</option>
+<option value="220 W">220 W (1)</option>
+<option value="225 W">225 W (39)</option>
+<option value="226 W">226 W (1)</option>
+<option value="228 W">228 W (2)</option>
+<option value="230 W">230 W (8)</option>
+<option value="231 W">231 W (1)</option>
+<option value="235 W">235 W (4)</option>
+<option value="236 W">236 W (1)</option>
+<option value="238 W">238 W (2)</option>
+<option value="239 W">239 W (1)</option>
+<option value="240 W">240 W (1)</option>
+<option value="244 W">244 W (2)</option>
+<option value="245 W">245 W (7)</option>
+<option value="247 W">247 W (1)</option>
+<option value="250 W">250 W (51)</option>
+<option value="254 W">254 W (1)</option>
+<option value="260 W">260 W (2)</option>
+<option value="265 W">265 W (1)</option>
+<option value="274 W">274 W (3)</option>
+<option value="275 W">275 W (7)</option>
+<option value="280 W">280 W (1)</option>
+<option value="286 W">286 W (1)</option>
+<option value="289 W">289 W (1)</option>
+<option value="290 W">290 W (1)</option>
+<option value="294 W">294 W (1)</option>
+<option value="295 W">295 W (3)</option>
+<option value="300 W">300 W (20)</option>
+<option value="302 W">302 W (1)</option>
+<option value="320 W">320 W (1)</option>
+<option value="345 W">345 W (1)</option>
+<option value="350 W">350 W (2)</option>
+<option value="365 W">365 W (2)</option>
+<option value="375 W">375 W (10)</option>
+<option value="475 W">475 W (2)</option>
+<option value="500 W">500 W (2)</option>
+<option value="520 W">520 W (1)</option>
+<option value="580 W">580 W (2)</option>
+<option value="600 W">600 W (2)</option>
+<option value="640 W">640 W (4)</option>
+<option value="800 W">800 W (3)</option>
+<option value="900 W">900 W (1)</option>
+<option value="unknown">unknown (688)</option>
+</select>
+</li>
+</ul>
+</fieldset>
+<fieldset class="sort" style="display:none">
+<legend>Sort by:</legend>
+<select name="sort">
+<option selected="" value="name">Name</option>
+<option value="released">Released</option>
+<option value="generation">Generation</option>
+</select>
+</fieldset>
+<script>
+				function formAjax(data) {
+					$('#list').html('Loading...');
+					$.ajax({
+						url:$('#form').attr('action'),
+						type: 'get',
+						data: data,
+						dataType: 'json',
+					}).done(function(data) {
+						$('#list').html(data.list);
+						$('.filters').replaceWith(data.filters);
+					});
+				}
+
+				function showHideSortField() {
+					var nothingSelected=$('#form').find('.filters select').filter(function(){ return this.value!=''; }).length==0;
+
+					if (nothingSelected)
+						$('.sort').hide();
+					else
+						$('.sort').show();
+				}
+
+				loadjs.ready(['jquery'], function() {
+					showHideSortField();
+
+					window.onpopstate = function (e) {
+						if (e.state==null)
+							window.location='/gpu-specs/';
+						formAjax(e.state);
+					};
+
+					$('.search').on('change', 'select', function() {
+						$('#form').submit();
+					});
+
+					$('#form').on('submit', function() {
+						showHideSortField();
+
+						var fields=$(this).find('.search select').filter(function(){ return this.value!=''; });
+
+						var formData=fields.serializeArray()
+						formData.push({ name: 'ajax', value: 1 });
+						formAjax(formData);
+
+						if (typeof window.history != 'undefined') {
+							var query=fields.serialize();
+							if (query!='')
+								query='?'+query;
+							history.pushState(formData, null, '/gpu-specs/'+query);
+						}
+
+						return false;
+					});
+				});
+			</script>
+<fieldset class="actions">
+<noscript><input class="button primary" type="submit" value="Search"/></noscript>
+<a class="resetfilter" href="/gpu-specs/">Reset Filter</a>
+<div class="ajax jsonly">
+<input autocomplete="off" id="quicksearch" name="q" placeholder="or type to Search..." type="text">
+<script>
+						loadjs.ready(['jquery', 'highlight'], function() {
+							var req=null;
+							$('#quicksearch').on('input', function() {
+								if (req) { req.abort(); req=null; }
+								val=$('#quicksearch').val();
+
+								if (val=='') {
+									$('.search').removeClass('qsearch-active');
+									$('#ajaxresults').hide();
+									$('#list').show();
+								} else {
+									$('.search').addClass('qsearch-active');
+									$('#list').hide();
+									req=$.ajax({
+										url: '/gpu-specs/?ajaxsrch='+val,
+										cache: false,
+										beforeSend: function() { $('#ajaxresults').show().html('<div class="ajax-loader" />'); },
+										success: function(data) {
+											$('#ajaxresults').show().html(data);
+											$('#ajaxresults a').highlight(val.split(' '));
+											if ($('#ajaxresults .highlight').length==0)
+												$('#ajaxresults td').highlight(val);
+											$('#ajaxresults a').on('click', function() {
+												location.hash='#'+val;
+											});
+										}
+									});
+								}
+							});
+							var hash=location.hash.slice(1);
+							if (hash!='') {
+								$('#quicksearch').val(hash).trigger('input').focus().select();
+							}
+						});
+					</script>
+</input></div>
+</fieldset>
+</div>
+</section>
+</form>
+<div class="table-wrapper" id="list">
+<table class="processors">
+<thead>
+<tr>
+<th class="mfgr" colspan="8" id="Popular">Popular</th>
+</tr>
+</thead>
+<thead class="colheader">
+<tr>
+<th>Product Name</th>
+<th>GPU Chip</th>
+<th>Released</th>
+<th>Bus</th>
+<th>Memory</th>
+<th>GPU clock</th>
+<th>Memory clock</th>
+<th>Shaders / TMUs / ROPs</th>
+</tr>
+</thead>
+<tr>
+<td class="vendor-NVIDIA">
+<a href="/gpu-specs/geforce-rtx-2080.c3224">GeForce RTX 2080</a>
+</td>
+<td>
+<a href="/gpu-specs/nvidia-tu104.g854">TU104</a>
+</td>
+<td>Sep 20th, 2018</td>
+<td>PCIe 3.0 x16</td>
+<td>8 GB, GDDR6, 256 bit</td>
+<td>1515 MHz</td>
+<td>1750 MHz</td>
+<td>2944 / 184 / 64</td>
+</tr>
+<tr>
+<td class="vendor-NVIDIA">
+<a href="/gpu-specs/geforce-rtx-2080-ti.c3305">GeForce RTX 2080 Ti</a>
+</td>
+<td>
+<a href="/gpu-specs/nvidia-tu102.g813">TU102</a>
+</td>
+<td>Sep 20th, 2018</td>
+<td>PCIe 3.0 x16</td>
+<td>11 GB, GDDR6, 352 bit</td>
+<td>1350 MHz</td>
+<td>1750 MHz</td>
+<td>4352 / 272 / 88</td>
+</tr>
+<tr>
+<td class="vendor-NVIDIA">
+<a href="/gpu-specs/geforce-rtx-2070.c3252">GeForce RTX 2070</a>
+</td>
+<td>
+<a href="/gpu-specs/nvidia-tu106.g875">TU106</a>
+</td>
+<td>Oct 17th, 2018</td>
+<td>PCIe 3.0 x16</td>
+<td>8 GB, GDDR6, 256 bit</td>
+<td>1410 MHz</td>
+<td>1750 MHz</td>
+<td>2304 / 144 / 64</td>
+</tr>
+<tr>
+<td class="vendor-AMD">
+<a href="/gpu-specs/radeon-rx-580.c2938">Radeon RX 580</a>
+</td>
+<td>
+<a href="/gpu-specs/amd-polaris-20.g807">Polaris 20</a>
+</td>
+<td>Apr 18th, 2017</td>
+<td>PCIe 3.0 x16</td>
+<td>8 GB, GDDR5, 256 bit</td>
+<td>1257 MHz</td>
+<td>2000 MHz</td>
+<td>2304 / 144 / 32</td>
+</tr>
+<tr>
+<td class="vendor-NVIDIA">
+<a href="/gpu-specs/geforce-rtx-2060.c3310">GeForce RTX 2060</a>
+</td>
+<td>
+<a href="/gpu-specs/nvidia-tu106.g875">TU106</a>
+</td>
+<td>Jan 7th, 2019</td>
+<td>PCIe 3.0 x16</td>
+<td>6 GB, GDDR6, 192 bit</td>
+<td>1365 MHz</td>
+<td>1750 MHz</td>
+<td>1920 / 120 / 48</td>
+</tr>
+<tr>
+<td class="vendor-AMD">
+<a href="/gpu-specs/radeon-rx-570.c2939">Radeon RX 570</a>
+</td>
+<td>
+<a href="/gpu-specs/amd-polaris-20.g807">Polaris 20</a>
+</td>
+<td>Apr 18th, 2017</td>
+<td>PCIe 3.0 x16</td>
+<td>4 GB, GDDR5, 256 bit</td>
+<td>1168 MHz</td>
+<td>1750 MHz</td>
+<td>2048 / 128 / 32</td>
+</tr>
+<tr>
+<td class="vendor-NVIDIA">
+<a href="/gpu-specs/geforce-gtx-1660-ti.c3364">GeForce GTX 1660 Ti</a>
+</td>
+<td>
+<a href="/gpu-specs/nvidia-tu116.g902">TU116</a>
+</td>
+<td>Feb 22nd, 2019</td>
+<td>PCIe 3.0 x16</td>
+<td>6 GB, GDDR6, 192 bit</td>
+<td>1500 MHz</td>
+<td>1500 MHz</td>
+<td>1536 / 96 / 48</td>
+</tr>
+<tr>
+<td class="vendor-NVIDIA">
+<a href="/gpu-specs/geforce-gtx-1080-ti.c2877">GeForce GTX 1080 Ti</a>
+</td>
+<td>
+<a href="/gpu-specs/nvidia-gp102.g798">GP102</a>
+</td>
+<td>Mar 10th, 2017</td>
+<td>PCIe 3.0 x16</td>
+<td>11 GB, GDDR5X, 352 bit</td>
+<td>1481 MHz</td>
+<td>1376 MHz</td>
+<td>3584 / 224 / 88</td>
+</tr>
+<tr>
+<td class="vendor-NVIDIA">
+<a href="/gpu-specs/geforce-gtx-1050-ti.c2885">GeForce GTX 1050 Ti</a>
+</td>
+<td>
+<a href="/gpu-specs/nvidia-gp107.g801">GP107</a>
+</td>
+<td>Oct 25th, 2016</td>
+<td>PCIe 3.0 x16</td>
+<td>4 GB, GDDR5, 128 bit</td>
+<td>1291 MHz</td>
+<td>1752 MHz</td>
+<td>768 / 48 / 32</td>
+</tr>
+<tr>
+<td class="vendor-NVIDIA">
+<a href="/gpu-specs/geforce-gtx-1060-6-gb.c2862">GeForce GTX 1060 6 GB</a>
+</td>
+<td>
+<a href="/gpu-specs/nvidia-gp106.g797">GP106</a>
+</td>
+<td>Jul 19th, 2016</td>
+<td>PCIe 3.0 x16</td>
+<td>6 GB, GDDR5, 192 bit</td>
+<td>1506 MHz</td>
+<td>2002 MHz</td>
+<td>1280 / 80 / 48</td>
+</tr>
+<tr>
+<td class="vendor-AMD">
+<a href="/gpu-specs/radeon-vii.c3358">Radeon VII</a>
+</td>
+<td>
+<a href="/gpu-specs/amd-vega-20.g848">Vega 20</a>
+</td>
+<td>Feb 7th, 2019</td>
+<td>PCIe 3.0 x16</td>
+<td>16 GB, HBM2, 4096 bit</td>
+<td>1400 MHz</td>
+<td>1000 MHz</td>
+<td>3840 / 240 / 64</td>
+</tr>
+<tr>
+<td class="vendor-AMD">
+<a href="/gpu-specs/radeon-vega-8.c3042">Radeon Vega 8</a>
+</td>
+<td>
+<a href="/gpu-specs/amd-raven.g816">Raven</a>
+</td>
+<td>Feb 13th, 2018</td>
+<td>IGP</td>
+<td>System Shared</td>
+<td>300 MHz</td>
+<td>System Shared</td>
+<td>512 / 32 / 8</td>
+</tr>
+<tr>
+<td class="vendor-AMD">
+<a href="/gpu-specs/radeon-rx-vega-56.c2993">Radeon RX Vega 56</a>
+</td>
+<td>
+<a href="/gpu-specs/amd-vega-10.g800">Vega 10</a>
+</td>
+<td>Aug 14th, 2017</td>
+<td>PCIe 3.0 x16</td>
+<td>8 GB, HBM2, 2048 bit</td>
+<td>1138 MHz</td>
+<td>800 MHz</td>
+<td>3584 / 224 / 64</td>
+</tr>
+<tr>
+<td class="vendor-NVIDIA">
+<a href="/gpu-specs/geforce-gtx-1080.c2839">GeForce GTX 1080</a>
+</td>
+<td>
+<a href="/gpu-specs/nvidia-gp104.g793">GP104</a>
+</td>
+<td>May 27th, 2016</td>
+<td>PCIe 3.0 x16</td>
+<td>8 GB, GDDR5X, 256 bit</td>
+<td>1607 MHz</td>
+<td>1251 MHz</td>
+<td>2560 / 160 / 64</td>
+</tr>
+<tr>
+<td class="vendor-NVIDIA">
+<a href="/gpu-specs/geforce-gtx-1650.c3366">GeForce GTX 1650</a>
+</td>
+<td>
+<a href="/gpu-specs/nvidia-tu117.g881">TU117</a>
+</td>
+<td>Apr 23rd, 2019</td>
+<td>PCIe 3.0 x16</td>
+<td>4 GB, GDDR5, 128 bit</td>
+<td>1485 MHz</td>
+<td>2000 MHz</td>
+<td>896 / 56 / 32</td>
+</tr>
+<tr>
+<td class="vendor-NVIDIA">
+<a href="/gpu-specs/geforce-gtx-1070.c2840">GeForce GTX 1070</a>
+</td>
+<td>
+<a href="/gpu-specs/nvidia-gp104.g793">GP104</a>
+</td>
+<td>Jun 10th, 2016</td>
+<td>PCIe 3.0 x16</td>
+<td>8 GB, GDDR5, 256 bit</td>
+<td>1506 MHz</td>
+<td>2002 MHz</td>
+<td>1920 / 120 / 64</td>
+</tr>
+<tr>
+<td class="vendor-AMD">
+<a href="/gpu-specs/radeon-rx-vega-64.c2871">Radeon RX Vega 64</a>
+</td>
+<td>
+<a href="/gpu-specs/amd-vega-10.g800">Vega 10</a>
+</td>
+<td>Aug 7th, 2017</td>
+<td>PCIe 3.0 x16</td>
+<td>8 GB, HBM2, 2048 bit</td>
+<td>1200 MHz</td>
+<td>945 MHz</td>
+<td>4096 / 256 / 64</td>
+</tr>
+<tr>
+<td class="vendor-NVIDIA">
+<a href="/gpu-specs/geforce-rtx-2080-super.c3439">GeForce RTX 2080 Super</a>
+</td>
+<td>
+<a href="/gpu-specs/nvidia-tu104.g854">TU104</a>
+</td>
+<td>Jul 23rd, 2019</td>
+<td>PCIe 3.0 x16</td>
+<td>8 GB, GDDR6, 256 bit</td>
+<td>1650 MHz</td>
+<td>2000 MHz</td>
+<td>3072 / 192 / 64</td>
+</tr>
+<tr>
+<td class="vendor-NVIDIA">
+<a href="/gpu-specs/geforce-gtx-1660.c3365">GeForce GTX 1660</a>
+</td>
+<td>
+<a href="/gpu-specs/nvidia-tu116.g902">TU116</a>
+</td>
+<td>Mar 14th, 2019</td>
+<td>PCIe 3.0 x16</td>
+<td>6 GB, GDDR5, 192 bit</td>
+<td>1530 MHz</td>
+<td>2001 MHz</td>
+<td>1408 / 88 / 48</td>
+</tr>
+<tr>
+<td class="vendor-NVIDIA">
+<a href="/gpu-specs/geforce-gtx-750-ti.c2548">GeForce GTX 750 Ti</a>
+</td>
+<td>
+<a href="/gpu-specs/nvidia-gm107.g762">GM107</a>
+</td>
+<td>Feb 18th, 2014</td>
+<td>PCIe 3.0 x16</td>
+<td>2 GB, GDDR5, 128 bit</td>
+<td>1020 MHz</td>
+<td>1350 MHz</td>
+<td>640 / 40 / 16</td>
+</tr>
+<tr>
+<td class="vendor-NVIDIA">
+<a href="/gpu-specs/geforce-rtx-2060-super.c3441">GeForce RTX 2060 Super</a>
+</td>
+<td>
+<a href="/gpu-specs/nvidia-tu106.g875">TU106</a>
+</td>
+<td>Jul 9th, 2019</td>
+<td>PCIe 3.0 x16</td>
+<td>8 GB, GDDR6, 256 bit</td>
+<td>1470 MHz</td>
+<td>1750 MHz</td>
+<td>2176 / 136 / 64</td>
+</tr>
+<tr>
+<td class="vendor-AMD">
+<a href="/gpu-specs/radeon-rx-590.c3322">Radeon RX 590</a>
+</td>
+<td>
+<a href="/gpu-specs/amd-polaris-30.g877">Polaris 30</a>
+</td>
+<td>Nov 15th, 2018</td>
+<td>PCIe 3.0 x16</td>
+<td>8 GB, GDDR5, 256 bit</td>
+<td>1469 MHz</td>
+<td>2000 MHz</td>
+<td>2304 / 144 / 32</td>
+</tr>
+<tr>
+<td class="vendor-AMD">
+<a href="/gpu-specs/radeon-rx-vega-11.c3054">Radeon RX Vega 11</a>
+</td>
+<td>
+<a href="/gpu-specs/amd-raven.g816">Raven</a>
+</td>
+<td>Feb 13th, 2018</td>
+<td>IGP</td>
+<td>System Shared</td>
+<td>300 MHz</td>
+<td>System Shared</td>
+<td>704 / 44 / 8</td>
+</tr>
+<tr>
+<td class="vendor-Intel">
+<a href="/gpu-specs/hd-graphics-4000.c1266">HD Graphics 4000</a>
+</td>
+<td>
+<a href="/gpu-specs/intel-ivy-bridge-gt2.g179">Ivy Bridge GT2</a>
+</td>
+<td>May 14th, 2012</td>
+<td>PCIe 1.0 x16</td>
+<td>System Shared</td>
+<td>650 MHz</td>
+<td>System Shared</td>
+<td>128 / 16 / 2</td>
+</tr>
+<tr>
+<td class="vendor-AMD">
+<a href="/gpu-specs/radeon-rx-480.c2848">Radeon RX 480</a>
+</td>
+<td>
+<a href="/gpu-specs/amd-ellesmere.g795">Ellesmere</a>
+</td>
+<td>Jun 29th, 2016</td>
+<td>PCIe 3.0 x16</td>
+<td>8 GB, GDDR5, 256 bit</td>
+<td>1120 MHz</td>
+<td>2000 MHz</td>
+<td>2304 / 144 / 32</td>
+</tr>
+<tr>
+<td class="vendor-ATI">
+<a href="/gpu-specs/radeon-hd-5450.c503">Radeon HD 5450</a>
+</td>
+<td>
+<a href="/gpu-specs/ati-cedar.g79">Cedar</a>
+</td>
+<td>Feb 4th, 2010</td>
+<td>PCIe 2.0 x16</td>
+<td>512 MB, DDR2, 64 bit</td>
+<td>650 MHz</td>
+<td>400 MHz</td>
+<td>80 / 8 / 4</td>
+</tr>
+<tr>
+<td class="vendor-NVIDIA">
+<a href="/gpu-specs/geforce-gtx-970.c2620">GeForce GTX 970</a>
+</td>
+<td>
+<a href="/gpu-specs/nvidia-gm204.g767">GM204</a>
+</td>
+<td>Sep 19th, 2014</td>
+<td>PCIe 3.0 x16</td>
+<td>4 GB, GDDR5, 256 bit</td>
+<td>1050 MHz</td>
+<td>1753 MHz</td>
+<td>1664 / 104 / 56</td>
+</tr>
+<tr>
+<td class="vendor-NVIDIA">
+<a href="/gpu-specs/geforce-gtx-1070-ti.c3010">GeForce GTX 1070 Ti</a>
+</td>
+<td>
+<a href="/gpu-specs/nvidia-gp104.g793">GP104</a>
+</td>
+<td>Nov 2nd, 2017</td>
+<td>PCIe 3.0 x16</td>
+<td>8 GB, GDDR5, 256 bit</td>
+<td>1607 MHz</td>
+<td>2002 MHz</td>
+<td>2432 / 152 / 64</td>
+</tr>
+<tr>
+<td class="vendor-NVIDIA">
+<a href="/gpu-specs/geforce-gtx-1050.c2875">GeForce GTX 1050</a>
+</td>
+<td>
+<a href="/gpu-specs/nvidia-gp107.g801">GP107</a>
+</td>
+<td>Oct 25th, 2016</td>
+<td>PCIe 3.0 x16</td>
+<td>2 GB, GDDR5, 128 bit</td>
+<td>1354 MHz</td>
+<td>1752 MHz</td>
+<td>640 / 40 / 32</td>
+</tr>
+<tr>
+<td class="vendor-NVIDIA">
+<a href="/gpu-specs/geforce-gtx-960.c2637">GeForce GTX 960</a>
+</td>
+<td>
+<a href="/gpu-specs/nvidia-gm206.g775">GM206</a>
+</td>
+<td>Jan 22nd, 2015</td>
+<td>PCIe 3.0 x16</td>
+<td>2 GB, GDDR5, 128 bit</td>
+<td>1127 MHz</td>
+<td>1753 MHz</td>
+<td>1024 / 64 / 32</td>
+</tr>
+<tr>
+<td class="vendor-AMD">
+<a href="/gpu-specs/radeon-rx-470.c2861">Radeon RX 470</a>
+</td>
+<td>
+<a href="/gpu-specs/amd-ellesmere.g795">Ellesmere</a>
+</td>
+<td>Aug 4th, 2016</td>
+<td>PCIe 3.0 x16</td>
+<td>4 GB, GDDR5, 256 bit</td>
+<td>926 MHz</td>
+<td>1650 MHz</td>
+<td>2048 / 128 / 32</td>
+</tr>
+<tr>
+<td class="vendor-AMD">
+<a href="/gpu-specs/radeon-rx-560.c2940">Radeon RX 560</a>
+</td>
+<td>
+<a href="/gpu-specs/amd-polaris-21.g812">Polaris 21</a>
+</td>
+<td>Apr 18th, 2017</td>
+<td>PCIe 3.0 x8</td>
+<td>4 GB, GDDR5, 128 bit</td>
+<td>1175 MHz</td>
+<td>1750 MHz</td>
+<td>1024 / 64 / 16</td>
+</tr>
+<tr>
+<td class="vendor-AMD">
+<a href="/gpu-specs/radeon-r5-graphics.c2629">Radeon R5 Graphics</a>
+</td>
+<td>
+<a href="/gpu-specs/amd-beema.g750">Beema</a>
+</td>
+<td>Jun 14th, 2014</td>
+<td>IGP</td>
+<td>System Shared</td>
+<td>800 MHz</td>
+<td>System Shared</td>
+<td>128 / 8 / 4</td>
+</tr>
+<tr>
+<td class="vendor-AMD">
+<a href="/gpu-specs/radeon-rx-5700-xt.c3339">Radeon RX 5700 XT</a>
+</td>
+<td>
+<a href="/gpu-specs/amd-navi-10.g861">Navi 10</a>
+</td>
+<td>Jul 7th, 2019</td>
+<td>PCIe 4.0 x16</td>
+<td>8 GB, GDDR6, 256 bit</td>
+<td>1605 MHz</td>
+<td>1750 MHz</td>
+<td>2560 / 160 / 64</td>
+</tr>
+<tr>
+<td class="vendor-AMD">
+<a href="/gpu-specs/xbox-one-x-gpu.c2977">Xbox One X GPU</a>
+</td>
+<td>
+<a href="/gpu-specs/amd-scorpio.g811">Scorpio</a>
+</td>
+<td>Nov 7th, 2017</td>
+<td>IGP</td>
+<td>12 GB, GDDR5, 384 bit</td>
+<td>1172 MHz</td>
+<td>1700 MHz</td>
+<td>2560 / 160 / 32</td>
+</tr>
+<tr>
+<td class="vendor-NVIDIA">
+<a href="/gpu-specs/geforce-gt-1030.c2954">GeForce GT 1030</a>
+</td>
+<td>
+<a href="/gpu-specs/nvidia-gp108.g808">GP108</a>
+</td>
+<td>May 17th, 2017</td>
+<td>PCIe 3.0 x4</td>
+<td>2 GB, GDDR5, 64 bit</td>
+<td>1228 MHz</td>
+<td>1502 MHz</td>
+<td>384 / 24 / 16</td>
+</tr>
+<tr>
+<td class="vendor-AMD">
+<a href="/gpu-specs/radeon-pro-580x.c3398">Radeon Pro 580X</a>
+</td>
+<td>
+<a href="/gpu-specs/amd-polaris-20.g807">Polaris 20</a>
+</td>
+<td>Mar 18th, 2019</td>
+<td>PCIe 3.0 x16</td>
+<td>8 GB, GDDR5, 256 bit</td>
+<td>1100 MHz</td>
+<td>1695 MHz</td>
+<td>2304 / 144 / 32</td>
+</tr>
+<tr>
+<td class="vendor-NVIDIA">
+<a href="/gpu-specs/geforce-210.c2020">GeForce 210</a>
+</td>
+<td>
+<a href="/gpu-specs/nvidia-gt218.g140">GT218</a>
+</td>
+<td>Oct 12th, 2009</td>
+<td>PCIe 2.0 x16</td>
+<td>512 MB, DDR3, 64 bit</td>
+<td>520 MHz</td>
+<td>400 MHz</td>
+<td>16 / 8 / 4</td>
+</tr>
+<tr>
+<td class="vendor-NVIDIA">
+<a href="/gpu-specs/geforce-gtx-980-ti.c2724">GeForce GTX 980 Ti</a>
+</td>
+<td>
+<a href="/gpu-specs/nvidia-gm200.g772">GM200</a>
+</td>
+<td>Jun 2nd, 2015</td>
+<td>PCIe 3.0 x16</td>
+<td>6 GB, GDDR5, 384 bit</td>
+<td>1000 MHz</td>
+<td>1753 MHz</td>
+<td>2816 / 176 / 96</td>
+</tr>
+<tr>
+<td class="vendor-Intel">
+<a href="/gpu-specs/hd-graphics-4600.c1953">HD Graphics 4600</a>
+</td>
+<td>
+<a href="/gpu-specs/intel-haswell-gt2.g591">Haswell GT2</a>
+</td>
+<td>May 27th, 2013</td>
+<td>PCIe 1.0 x16</td>
+<td>System Shared</td>
+<td>200 MHz</td>
+<td>System Shared</td>
+<td>160 / 20 / 2</td>
+</tr>
+<tr>
+<td class="vendor-NVIDIA">
+<a href="/gpu-specs/quadro-4000.c898">Quadro 4000</a>
+</td>
+<td>
+<a href="/gpu-specs/nvidia-gf100.g85">GF100</a>
+</td>
+<td>Nov 2nd, 2010</td>
+<td>PCIe 2.0 x16</td>
+<td>2 GB, GDDR5, 256 bit</td>
+<td>475 MHz</td>
+<td>702 MHz</td>
+<td>256 / 32 / 32</td>
+</tr>
+<tr>
+<td class="vendor-AMD">
+<a href="/gpu-specs/radeon-r9-280x.c2398">Radeon R9 280X</a>
+</td>
+<td>
+<a href="/gpu-specs/amd-tahiti.g120">Tahiti</a>
+</td>
+<td>Oct 8th, 2013</td>
+<td>PCIe 3.0 x16</td>
+<td>3 GB, GDDR5, 384 bit</td>
+<td>850 MHz</td>
+<td>1500 MHz</td>
+<td>2048 / 128 / 32</td>
+</tr>
+<tr>
+<td class="vendor-NVIDIA">
+<a href="/gpu-specs/titan-rtx.c3311">TITAN RTX</a>
+</td>
+<td>
+<a href="/gpu-specs/nvidia-tu102.g813">TU102</a>
+</td>
+<td>Dec 18th, 2018</td>
+<td>PCIe 3.0 x16</td>
+<td>24 GB, GDDR6, 384 bit</td>
+<td>1350 MHz</td>
+<td>1750 MHz</td>
+<td>4608 / 288 / 96</td>
+</tr>
+<tr>
+<td class="vendor-ATI">
+<a href="/gpu-specs/radeon-hd-5770.c250">Radeon HD 5770</a>
+</td>
+<td>
+<a href="/gpu-specs/ati-juniper.g122">Juniper</a>
+</td>
+<td>Oct 13th, 2009</td>
+<td>PCIe 2.0 x16</td>
+<td>1024 MB, GDDR5, 128 bit</td>
+<td>850 MHz</td>
+<td>1200 MHz</td>
+<td>800 / 40 / 16</td>
+</tr>
+<tr>
+<td class="vendor-NVIDIA">
+<a href="/gpu-specs/titan-x-pascal.c2863">TITAN X Pascal</a>
+</td>
+<td>
+<a href="/gpu-specs/nvidia-gp102.g798">GP102</a>
+</td>
+<td>Aug 2nd, 2016</td>
+<td>PCIe 3.0 x16</td>
+<td>12 GB, GDDR5X, 384 bit</td>
+<td>1417 MHz</td>
+<td>1251 MHz</td>
+<td>3584 / 224 / 96</td>
+</tr>
+<tr>
+<td class="vendor-AMD">
+<a href="/gpu-specs/radeon-hd-7850.c1055">Radeon HD 7850</a>
+</td>
+<td>
+<a href="/gpu-specs/amd-pitcairn.g420">Pitcairn</a>
+</td>
+<td>Mar 5th, 2012</td>
+<td>PCIe 3.0 x16</td>
+<td>2 GB, GDDR5, 256 bit</td>
+<td>860 MHz</td>
+<td>1200 MHz</td>
+<td>1024 / 64 / 32</td>
+</tr>
+<tr>
+<td class="vendor-AMD">
+<a href="/gpu-specs/radeon-hd-6450.c402">Radeon HD 6450</a>
+</td>
+<td>
+<a href="/gpu-specs/amd-caicos.g114">Caicos</a>
+</td>
+<td>Apr 7th, 2011</td>
+<td>PCIe 2.0 x16</td>
+<td>512 MB, GDDR5, 64 bit</td>
+<td>625 MHz</td>
+<td>800 MHz</td>
+<td>160 / 8 / 4</td>
+</tr>
+<tr>
+<td class="vendor-NVIDIA">
+<a href="/gpu-specs/geforce-gtx-660.c895">GeForce GTX 660</a>
+</td>
+<td>
+<a href="/gpu-specs/nvidia-gk106.g186">GK106</a>
+</td>
+<td>Sep 6th, 2012</td>
+<td>PCIe 3.0 x16</td>
+<td>2 GB, GDDR5, 192 bit</td>
+<td>980 MHz</td>
+<td>1502 MHz</td>
+<td>960 / 80 / 24</td>
+</tr>
+<tr>
+<td class="vendor-AMD">
+<a href="/gpu-specs/radeon-hd-7770-ghz-edition.c308">Radeon HD 7770 GHz Edition</a>
+</td>
+<td>
+<a href="/gpu-specs/amd-cape-verde.g100">Cape Verde</a>
+</td>
+<td>Feb 15th, 2012</td>
+<td>PCIe 3.0 x16</td>
+<td>1024 MB, GDDR5, 128 bit</td>
+<td>1000 MHz</td>
+<td>1125 MHz</td>
+<td>640 / 40 / 16</td>
+</tr>
+<tr>
+<td class="vendor-AMD">
+<a href="/gpu-specs/radeon-rx-5700.c3437">Radeon RX 5700</a>
+</td>
+<td>
+<a href="/gpu-specs/amd-navi-10.g861">Navi 10</a>
+</td>
+<td>Jul 7th, 2019</td>
+<td>PCIe 4.0 x16</td>
+<td>8 GB, GDDR6, 256 bit</td>
+<td>1465 MHz</td>
+<td>1750 MHz</td>
+<td>2304 / 144 / 64</td>
+</tr>
+</table>
+</div>
+<div class="table-wrapper" id="ajaxresults"></div>
+</article>
+<aside class="sidebar">
+<label for="sidebar-check" id="sidebar-toggle" onclick="" title="Close"></label>
+<div class="sidebar-item sidebar-time">
+<span class="sidebar-time__cur">Jun 28th, 2019 16:43 EDT</span>
+<a class="sidebar-time__link" href="#">change timezone</a>
+</div>
+<script>
+						loadjs.ready(['jquery', 'popup'], function() {
+							$('.sidebar-time__cur, .sidebar-time__link').on('click', function(e) {
+								e.preventDefault();
+								popup.ShowAJAX('Please select your timezone', '/set-timezone', { width:455 });
+							});
+						});
+					</script>
+<article class="sidebar-item sidebar-search">
+<form action="/search" class="sidebar-search__form" method="get">
+<input autocomplete="off" class="sidebar-search__input" name="search" placeholder="Search TechPowerUp" type="text">
+<input class="sidebar-search__submit" type="submit" value=""/>
+</input></form>
+</article>
+<article class="sidebar-item sidebar-login">
+<a href="/forums/login/">Sign in</a> / <a href="/forums/register">Register</a>
+</article>
+<article class="sidebar-item sidebar-drivers">
+<h3 class="sidebar-item__heading">Latest VGA Drivers</h3>
+<a class="sidebar-drivers__driver sidebar-drivers__driver--nvidia" href="/download/nvidia-geforce-graphics-drivers/" target="_blank">NVIDIA GeForce 431.18 Hotfix </a>
+<a class="sidebar-drivers__driver sidebar-drivers__driver--amd" href="/download/amd-radeon-graphics-drivers/" target="_blank">AMD Radeon Adrenalin 19.6.3 Beta </a>
+</article>
+<figure class="mnmuzjsddc"><a href="http://www.techpowerup.com/njutrvceser/393.png2" rel="nofollow external" target="_blank"><span><img alt="" src="https://www.techpowerup.com/njutrvceser/26c2b7b4.jpg"/></span></a><span class="6fbd517b5bcf9d768565327d5ca651da"></span></figure>
+<article class="sidebar-item sidebar-newposts">
+<h3 class="sidebar-item__heading">New Forum Posts</h3>
+<ul class="sidebar-newposts__list">
+<li>
+<div class="sidebar-newposts__byline">
+<time class="sidebar-newposts__time" datetime="2019-06-28T20:39:52+0000">16:39</time>
+				by
+				<span class="sidebar-newposts__username">Kursah</span>
+</div>
+<a href="/forums/threads/what-are-you-playing.204644/unread">What are you playing?</a> (<span class="sidebar-newposts__replycount">7819</span>)
+		</li>
+<li>
+<div class="sidebar-newposts__byline">
+<time class="sidebar-newposts__time" datetime="2019-06-28T20:29:49+0000">16:29</time>
+				by
+				<span class="sidebar-newposts__username">unclewebb</span>
+</div>
+<a href="/forums/threads/help-tweaking-8550u-in-throttlestop.250551/unread">Help Tweaking 8550u In ThrottleStop</a> (<span class="sidebar-newposts__replycount">4</span>)
+		</li>
+<li>
+<div class="sidebar-newposts__byline">
+<time class="sidebar-newposts__time" datetime="2019-06-28T20:17:03+0000">16:17</time>
+				by
+				<span class="sidebar-newposts__username">Toothless</span>
+</div>
+<a href="/forums/threads/i7-4770k-overheating-idle-temperature.256885/unread">I7-4770k overheating? Idle temperature</a> (<span class="sidebar-newposts__replycount">16</span>)
+		</li>
+<li>
+<div class="sidebar-newposts__byline">
+<time class="sidebar-newposts__time" datetime="2019-06-28T20:16:03+0000">16:16</time>
+				by
+				<span class="sidebar-newposts__username">silentbogo</span>
+</div>
+<a href="/forums/threads/windows-server-2016-rds-cal-issue.256858/unread">Windows Server 2016 - RDS CAL issue</a> (<span class="sidebar-newposts__replycount">6</span>)
+		</li>
+<li>
+<div class="sidebar-newposts__byline">
+<time class="sidebar-newposts__time" datetime="2019-06-28T19:50:27+0000">15:50</time>
+				by
+				<span class="sidebar-newposts__username">kedi</span>
+</div>
+<a href="/forums/threads/unlock-the-shaders-amd-radeon-rx-560d.240735/unread">Unlock the shaders - AMD Radeon RX 560D</a> (<span class="sidebar-newposts__replycount">161</span>)
+		</li>
+<li>
+<div class="sidebar-newposts__byline">
+<time class="sidebar-newposts__time" datetime="2019-06-28T19:49:23+0000">15:49</time>
+				by
+				<span class="sidebar-newposts__username">kedi</span>
+</div>
+<a href="/forums/threads/unlocking-xfx-rx-560d.251181/unread">Unlocking XFX RX 560D?</a> (<span class="sidebar-newposts__replycount">1</span>)
+		</li>
+<li>
+<div class="sidebar-newposts__byline">
+<time class="sidebar-newposts__time" datetime="2019-06-28T19:25:15+0000">15:25</time>
+				by
+				<span class="sidebar-newposts__username">P4-630</span>
+</div>
+<a href="/forums/threads/current-sales-bundles-giveaways.125191/unread">Current Sales, Bundles, Giveaways</a> (<span class="sidebar-newposts__replycount">8730</span>)
+		</li>
+<li>
+<div class="sidebar-newposts__byline">
+<time class="sidebar-newposts__time" datetime="2019-06-28T19:17:56+0000">15:17</time>
+				by
+				<span class="sidebar-newposts__username">Good3alz</span>
+</div>
+<a href="/forums/threads/the-show-off-your-tech-related-purchase-thread.225885/unread">The show off your tech related purchase thread</a> (<span class="sidebar-newposts__replycount">2939</span>)
+		</li>
+<li>
+<div class="sidebar-newposts__byline">
+<time class="sidebar-newposts__time" datetime="2019-06-28T18:31:07+0000">14:31</time>
+				by
+				<span class="sidebar-newposts__username">Bill_Bright</span>
+</div>
+<a href="/forums/threads/internet-radio-playing-with-left-or-right-channel-missing.256900/unread">Internet Radio Playing with Left or Right Channel Missing?</a> (<span class="sidebar-newposts__replycount">7</span>)
+		</li>
+<li>
+<div class="sidebar-newposts__byline">
+<time class="sidebar-newposts__time" datetime="2019-06-28T18:28:27+0000">14:28</time>
+				by
+				<span class="sidebar-newposts__username">Vayra86</span>
+</div>
+<a href="/forums/threads/searching-for-a-new-monitor-recommendations.256883/unread">Searching for a new monitor, recommendations?</a> (<span class="sidebar-newposts__replycount">15</span>)
+		</li>
+</ul>
+</article>
+<figure class="mnmuzjsddc"><a href="http://www.techpowerup.com/njutrvceser/769.png2" rel="nofollow external" target="_blank"><span><img alt="" src="https://www.techpowerup.com/njutrvceser/2b0303f7.jpg"/></span></a><span class="6fbd517b5bcf9d768565327d5ca651da"></span></figure>
+<article class="sidebar-item sidebar-top-reviews">
+<h3 class="sidebar-item__heading">Popular Reviews</h3>
+<ul class="sidebar-top-reviews__list">
+<li>
+<time class="sidebar-top-reviews__date" datetime="2019-06-14T16:04:00+0000">Jun 14th, 2019</time>
+<a class="sidebar-top-reviews__link" href="/review/future-hardware-releases/">Upcoming Hardware Launches 2019 (Updated)</a>
+</li>
+<li>
+<time class="sidebar-top-reviews__date" datetime="2019-05-21T12:23:00+0000">May 21st, 2019</time>
+<a class="sidebar-top-reviews__link" href="/review/gpu-review-system-update-may-2019/">GPU Test System Update May 2019</a>
+</li>
+<li>
+<time class="sidebar-top-reviews__date" datetime="2019-06-06T10:45:00+0000">Jun 6th, 2019</time>
+<a class="sidebar-top-reviews__link" href="/review/audioengine-a2-plus-wireless/">Audioengine A2+ Wireless Computer Speakers Review</a>
+</li>
+<li>
+<time class="sidebar-top-reviews__date" datetime="2019-06-05T13:02:00+0000">Jun 5th, 2019</time>
+<a class="sidebar-top-reviews__link" href="/review/silverstone-precision-ps15/">Silverstone Precision PS15 Review</a>
+</li>
+<li>
+<time class="sidebar-top-reviews__date" datetime="2019-03-20T10:20:00+0000">Mar 20th, 2019</time>
+<a class="sidebar-top-reviews__link" href="/review/amd-ryzen-memory-tweaking-overclocking-guide/">AMD Ryzen Memory Tweaking &amp; Overclocking Guide</a>
+</li>
+<li>
+<time class="sidebar-top-reviews__date" datetime="2019-05-30T09:28:00+0000">May 30th, 2019</time>
+<a class="sidebar-top-reviews__link" href="/review/steiger-dynamics-era/">STEIGER DYNAMICS ERA (Intel i7-9700K + NVIDIA RTX 2080 Ti) Review</a>
+</li>
+<li>
+<time class="sidebar-top-reviews__date" datetime="2018-09-24T21:17:00+0000">Sep 24th, 2018</time>
+<a class="sidebar-top-reviews__link" href="/review/nvidia-geforce-rtx-2080-ti-pci-express-scaling/">NVIDIA GeForce RTX 2080 Ti PCI-Express Scaling</a>
+</li>
+<li>
+<time class="sidebar-top-reviews__date" datetime="2019-05-31T08:17:00+0000">May 31st, 2019</time>
+<a class="sidebar-top-reviews__link" href="/review/seagate-ironwolf-ssd-480-gb/">Seagate IronWolf 110 NAS SSD 480 GB Review</a>
+</li>
+<li>
+<time class="sidebar-top-reviews__date" datetime="2019-05-13T21:15:00+0000">May 13th, 2019</time>
+<a class="sidebar-top-reviews__link" href="/review/rage-2-benchmark-performance-test/">RAGE 2 Benchmark Test &amp; Performance Analysis</a>
+</li>
+<li>
+<time class="sidebar-top-reviews__date" datetime="2019-06-11T12:00:00+0000">Jun 11th, 2019</time>
+<a class="sidebar-top-reviews__link" href="/review/roccat-kain-120-aimo/">ROCCAT Kain 120 AIMO Review</a>
+</li>
+</ul>
+</article>
+<article class="sidebar-item sidebar-app clearfix">
+<h3 class="sidebar-item__heading">TechPowerUp Mobile App</h3>
+<a class="sidebar-app__item sidebar-app--android" href="https://play.google.com/store/apps/details?id=com.techpowerup.tpu" rel="nofollow" target="_blank">Android</a>
+<a class="sidebar-app__item sidebar-app--iphone" href="http://itunes.apple.com/app/id540679285?mt=8" rel="nofollow" target="_blank">iPhone</a>
+</article>
+<article class="sidebar-item sidebar-top-news">
+<h3 class="sidebar-item__heading">Controversial News Posts</h3>
+<ul class="sidebar-top-news__list">
+<li>
+<a class="sidebar-top-news__link" href="/256700/intel-to-cut-prices-of-its-desktop-processors-by-15-in-response-to-ryzen-3000">Intel to Cut Prices of its Desktop Processors by 15% in Response to Ryzen 3000</a> (<span class="sidebar-top-news__replycount">176</span>)
+		</li>
+<li>
+<a class="sidebar-top-news__link" href="/256596/intel-ice-lake-ipc-best-case-a-massive-40-uplift-over-skylake-18-on-average">Intel "Ice Lake" IPC Best-Case a Massive 40% Uplift Over "Skylake," 18% on Average</a> (<span class="sidebar-top-news__replycount">152</span>)
+		</li>
+<li>
+<a class="sidebar-top-news__link" href="/256340/msi-ceo-amd-plans-to-stop-being-the-value-alternative-x570-motherboards-to-be-expensive">MSI CEO: AMD Plans to Stop Being the Value Alternative, X570 Motherboards to be Expensive</a> (<span class="sidebar-top-news__replycount">151</span>)
+		</li>
+<li>
+<a class="sidebar-top-news__link" href="/256427/amd-e3-next-horizon-event-live-blog">AMD E3 Next Horizon Event: Live Blog</a> (<span class="sidebar-top-news__replycount">133</span>)
+		</li>
+<li>
+<a class="sidebar-top-news__link" href="/256501/nvidias-super-tease-rumored-to-translate-into-an-entire-lineup-shift-upwards-for-turing">NVIDIA's SUPER Tease Rumored to Translate Into an Entire Lineup Shift Upwards for Turing</a> (<span class="sidebar-top-news__replycount">126</span>)
+		</li>
+<li>
+<a class="sidebar-top-news__link" href="/256842/intel-internal-memo-reveals-that-even-intel-is-impressed-by-amds-progress">Intel Internal Memo Reveals that even Intel is Impressed by AMD's Progress</a> (<span class="sidebar-top-news__replycount">120</span>)
+		</li>
+<li>
+<a class="sidebar-top-news__link" href="/256422/amd-radeon-rx-5700-xt-beats-geforce-rtx-2070-in-a-spectrum-of-games">AMD Radeon RX 5700 XT Beats GeForce RTX 2070 in a Spectrum of Games</a> (<span class="sidebar-top-news__replycount">101</span>)
+		</li>
+<li>
+<a class="sidebar-top-news__link" href="/256443/alleged-asus-amd-x570-motherboard-price-list-paints-a-horror-story">Alleged ASUS AMD X570 Motherboard Price-list Paints a Horror Story</a> (<span class="sidebar-top-news__replycount">97</span>)
+		</li>
+</ul>
+</article>
+</aside>
+</div>
+<footer class="site-footer">
+				Copyright © 2004-2019 www.techpowerup.com.<br class="site-footer__break"/>
+				All rights reserved.<br/>
+				All trademarks used are properties of their respective owners.
+			</footer>
+</div>
+<script>
+		window.ga=window.ga || function() { (ga.q=ga.q||[]).push(arguments) };
+		ga('create', 'UA-5304621-1', { 'siteSpeedSampleRate': 100 });
+		ga('set', 'transport', 'beacon');
+		ga('send', 'timing', 'Page', 'Gen', 73.3);
+		ga('send', 'pageview');
+		</script>
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+</body>
+</html>

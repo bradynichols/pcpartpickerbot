@@ -1,13 +1,9 @@
 from discord.ext.commands import Bot
-import random
-import requests
-import time
-from settings import TOKEN
+from settings import TOKEN #THIS IS MY DISCORD TOKEN, SET TOKEN = insert token here TO RUN WITH YOUR OWN BOT
 from scraper import BUILDDF, builds_string
-#from cpuscraper import CPUDF
-#from ramscraper import RAMDF
-#from mboardscraper import MBOARDDF
-#from gpuscraper import GPUDF
+from cpuscraper import CPUDF
+from mboardscraper import MBOARDDF
+from gpuscraper import GPUDF
 from casescraper import CASEDF
 import asyncio
 
@@ -48,15 +44,6 @@ async def buildinfo(ctx):
         info = "Build not found, please try again! (Try copy/pasting!)"
     await ctx.send(info)
 
-'''
-@client.command()
-async def select(ctx):
-    input = str(ctx.message.content[6:])
-    if lastcommand == "None":
-        await ctx.send("No command has been used recently. Try ?help for help!")
-    elif lastcommand == "ram":
-'''
-
 @client.command()
 async def cpu(ctx):
     input = str(ctx.message.content[5:])
@@ -90,18 +77,15 @@ async def gpu(ctx):
     try:
         chip = GPUDF.loc[input, "Chip"]
         release = GPUDF.loc[input, "Release"]
-        bus = GPUDF.loc[input, "Bus"]
         memory = GPUDF.loc[input, "Memory"]
         gpuclock = GPUDF.loc[input, "GPU Clock"]
         memclock = GPUDF.loc[input, "Memory Clock"]
-        shtr = GPUDF.loc[input, "Shaders / TMUs / ROPs"]
 
         info = ("**Release Date: **" + release + "\n" +
                 "**Chip: **" + chip + "\n" +
                 "**Memory: **" + memory + "\n" +
                 "**GPU Clock: **" + gpuclock + "\n" +
-                "**Memory Clock: **" + memclock + "\n" +
-                "**Shaders / TMUs / ROPs: **" + shtr + "")
+                "**Memory Clock: **" + memclock + "")
     except:
       info = "GPU not found, please try again!"
     await ctx.send(info)
@@ -150,54 +134,14 @@ async def case(ctx):
         info = "Case not found, please try again!"
     await ctx.send(info)
 
-
 '''
 @client.command()
-async def ram(ctx):
-    lastcommand = ram
-    input = str(ctx.message.content[5:])
-    mauthor = str(ctx.message.author)
-    await ctx.send("**" + input + "**")
-    
-    try:
-        price = RAMDF.loc[input, "Price"]
-        rtype = RAMDF.loc[input, "Type"]
-        speed = RAMDF.loc[input, "Speed"]
-        module = RAMDF.loc[input, "Module"]
-        ppg = RAMDF.loc[input, "PPG"]
-        caslat = RAMDF.loc[input, "CAS Latency"]
-
-        info = ("**Price: **" + price + "\n" +
-                "**Type: **" + rtype + "\n" +
-                "**Module: **" + module + "\n" +
-                "**Speed: **" + speed + "\n" +
-                "**Price per Gigabyte: **" + ppg + "\n" +
-                "**CAS Latency: **" + caslat + "")
-    except:
-        info = "Memory not found, please try again! (Try copy/pasting!)"
-        
-    info = "Select the configuration you would like info on using !select (1-10)"
-
-    await ctx.send(info)
+async def select(ctx):
+    input = str(ctx.message.content[6:])
+    if lastcommand == "None":
+        await ctx.send("No command has been used recently. Try ?help for help!")
+    elif lastcommand == "ram":
 '''
-
-
-'''
-    @client.event
-    async def on_message(message):
-        if message.author.id != client.user.id and lastcommand == "ram":
-            channel = message.channel
-            await channel.send('Say hello!')
-            def check(m):
-                return m.content == '1' and m.channel == channel and message.author.id != client.user.id
-            msg = await client.wait_for('message', check=check)
-            await channel.send("You said 1!".format(msg))
-        elif message.author.id != client.user.id and lastcommand == "gpu":
-            print("Nothing")
-        else:
-            print("Yeet")
-'''
-
 
 
 client.run(TOKEN)

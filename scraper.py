@@ -1,23 +1,16 @@
-import requests
 from bs4 import BeautifulSoup
 import pandas as pd
-import numpy as np
 
-r = requests.get("https://pcpartpicker.com/guide/")
-c = r.content
-
-soup = BeautifulSoup(c, "html.parser")
-
-all = soup.find_all("li", {"class": "guideGroup guideGroup__card"})
+with open(r'.\storeddata\buildsdata.txt', 'r') as f:
+    text = f.read()
+data = BeautifulSoup(text, "html.parser")
+all = data.find_all("li", {"class": "guideGroup guideGroup__card"})
 
 names = []
 prices = []
 
-
 def round_nearest(x, num=50):
     return int(round(float(x) / num) * num)
-
-
 
 for item in all:
     names.append(item.find("h1", {"class": "guide__title"}).text.replace("\n", "").strip())
@@ -88,6 +81,3 @@ data = {'Name':names,
 
 BUILDDF1 = pd.DataFrame(data)
 BUILDDF = BUILDDF1.set_index("Name", drop = True)
-
-#IDEA: SELECT BUILDS USING [1] TO [9] OR WHATEVER
-columntitles = list(BUILDDF.columns.values)
