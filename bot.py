@@ -30,8 +30,6 @@ async def builds(ctx):
     await ctx.send("**The available builds are: **")
     await ctx.send(builds_string)
 
-
-
 @client.command()
 async def buildinfo(ctx):
     input = str(ctx.message.content[11:])
@@ -68,8 +66,12 @@ async def buildinfo(ctx):
 @client.command()
 async def cpu(ctx):
     input = str(ctx.message.content[5:])
-    await ctx.send("**" + input + "**")
     input = input.lower()
+    my_list = CPUDF.index.values
+    for value in my_list:
+        if input in value:
+            input = value
+    await ctx.send("**" + input + "**")
     try:
         price = CPUDF.loc[input, "Price"]
         cores = CPUDF.loc[input, "Cores"]
@@ -88,7 +90,6 @@ async def cpu(ctx):
                 "**Thermal Design Power: **" + tdp + "")
     except:
         await ctx.send("Processor not found, finding closest match...")
-        my_list = CPUDF.index.values
         input = find_nearest(input, my_list)
         price = CPUDF.loc[input, "Price"]
         cores = CPUDF.loc[input, "Cores"]
@@ -111,8 +112,12 @@ async def cpu(ctx):
 @client.command()
 async def gpu(ctx):
     input = str(ctx.message.content[5:])
-    await ctx.send("**" + input + "**")
     input = input.lower()
+    my_list = GPUDF.index.values
+    for value in my_list:
+        if input in value:
+            input = value
+    await ctx.send("**" + input + "**")
     try:
         chip = GPUDF.loc[input, "Chip"]
         release = GPUDF.loc[input, "Release"]
@@ -126,7 +131,6 @@ async def gpu(ctx):
                 "**Memory Clock: **" + memclock + "")
     except:
         await ctx.send("GPU not found, finding closest match...")
-        my_list = GPUDF.index.values
         input = find_nearest(input, my_list)
         chip = GPUDF.loc[input, "Chip"]
         release = GPUDF.loc[input, "Release"]
@@ -144,8 +148,12 @@ async def gpu(ctx):
 @client.command()
 async def mboard(ctx):
     input = str(ctx.message.content[8:])
-    await ctx.send("**" + input + "**")
     input = input.lower()
+    my_list = MBOARDDF.index.values
+    for value in my_list:
+        if input in value:
+            input = value
+    await ctx.send("**" + input + "**")
     try:
         price = MBOARDDF.loc[input, "Price"]
         sockets = MBOARDDF.loc[input, "Sockets"]
@@ -159,7 +167,6 @@ async def mboard(ctx):
                 "**Max RAM: **" + maxram + "")
     except:
         await ctx.send("Motherboard not found, finding closest match...")
-        my_list = MBOARDDF.index.values
         input = find_nearest(input, my_list)
         price = MBOARDDF.loc[input, "Price"]
         sockets = MBOARDDF.loc[input, "Sockets"]
@@ -177,8 +184,12 @@ async def mboard(ctx):
 @client.command()
 async def case(ctx):
     input = str(ctx.message.content[6:])
-    await ctx.send("**" + input + "**")
     input = input.lower()
+    my_list = CASEDF.index.values
+    for value in my_list:
+        if input in value:
+            input = value
+    await ctx.send("**" + input + "**")
     try:
         price = CASEDF.loc[input, "Price"]
         typee = CASEDF.loc[input, "Type"]
@@ -192,9 +203,8 @@ async def case(ctx):
                 "**Window?: **" + window + "\n" +
                 '**External 5.25" Bays: **' + externals + "\n" +
                 '**Internal 3.5" Bays: **' + internals + "")
-    except AttributeError:
+    except:
         await ctx.send("Case not found, finding closest match...")
-        my_list = CASEDF.index.values
         input = find_nearest(input, my_list)
         price = CASEDF.loc[input, "Price"]
         typee = CASEDF.loc[input, "Type"]
