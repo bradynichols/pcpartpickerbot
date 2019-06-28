@@ -2,80 +2,47 @@ import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 import numpy as np
-from selenium import webdriver
-from time import sleep
 
-#launch url
-url = "https://pcpartpicker.com/products/video-card/"
+r = requests.get("https://www.techpowerup.com/gpu-specs/")
+c = r.content
 
-# create a new Firefox session
-browser = webdriver.Firefox()
-print("Connected")
+soup = BeautifulSoup(c, "html.parser")
 
-browser.get(url)
-sleep(2)
+ball = soup.find("table", {"class":"processors"})
+all = ball.find_all("tr")
 
-innerHTML = browser.execute_script("return document.getElementsByTagName('html')[0].innerHTML")
-
-soup = BeautifulSoup(innerHTML, 'html.parser')
-
-all = soup.find_all("tr", {"class":"tr__product"})
-
-oldnames = []
+tds = []
 for item in all:
-    oldnames.append(item.find("div", {"class": "td__nameWrapper"}).text)
+    tds.append(item.find_all("td"))
+del tds[0:2]
 
-gpunames = []
-for name in oldnames:
-    spl = name.split()
-    del spl[-1]
-    gpunames.append(' '.join(spl))
-
-chipsets = []
-for item in all:
-    chipsets.append(item.find("td", {"class": "td__spec td__spec--1"}).text[7:])
-
+names = []
+chips = []
+releases = []
+busses = []
 memories = []
-for item in all:
-    memories.append(item.find("td", {"class": "td__spec td__spec--2"}).text[6:])
+gpuclocks = []
+memclocks = []
+strlist = []
+for item in tds:
+    itemyeet = BeautifulSoup(str(item), "html.parser")
+    names.append(itemyeet.find("a").text)
+    chips.append(itemyeet.find_all("td")[1].text.replace("\n", ""))
+    releases.append(itemyeet.find_all("td")[2].text.replace("\n", ""))
+    busses.append(itemyeet.find_all("td")[3].text.replace("\n", ""))
+    memories.append(itemyeet.find_all("td")[4].text.replace("\n", ""))
+    gpuclocks.append(itemyeet.find_all("td")[5].text.replace("\n", ""))
+    memclocks.append(itemyeet.find_all("td")[6].text.replace("\n", ""))
+    strlist.append(itemyeet.find_all("td")[7].text.replace("\n", ""))
 
-coreclocks = []
-for item in all:
-    try:
-        coreclocks.append(item.find("td", {"class": "td__spec td__spec--3"}).text[10:])
-    except AttributeError:
-        coreclocks.append("Not Listed")
-
-boostclocks = []
-for item in all:
-    try:
-        boostclocks.append(item.find("td", {"class": "td__spec td__spec--4"}).text[11:])
-    except AttributeError:
-        boostclocks.append("Not Listed")
-
-interfaces = []
-for item in all:
-    interfaces.append(item.find("td", {"class": "td__spec td__spec--5"}).text[9:])
-
-colors = []
-for item in all:
-    try:
-        colors.append(item.find("td", {"class": "td__spec td__spec--6"}).text[5:])
-    except AttributeError:
-        colors.append("Not Listed")
-
-gpuprices = []
-for item in all:
-    gpuprices.append(item.find("td", {"class": "td__price"}).text[:-3])
-
-data = {'Name': gpunames,
-        'Price': gpuprices,
-        'Chipset': chipsets,
+data = {'Name': names,
+        'Chip': chips,
+        'Release': releases,
+        'Bus': busses,
         'Memory': memories,
-        'Core Clock': coreclocks,
-        'Boost Clock': boostclocks,
-        'Interface': interfaces,
-        'Colors': colors, }
+        'GPU Clock': gpuclocks,
+        'Memory Clock': memclocks,
+        'Shaders / TMUs / ROPs': strlist}
 
 GPUDF1 = pd.DataFrame(data)
 GPUDF = GPUDF1.set_index("Name", drop=True)

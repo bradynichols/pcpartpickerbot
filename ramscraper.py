@@ -52,7 +52,7 @@ for item in all:
 ramnames = []
 for name in oldnames:
     spl = name.split()
-    del spl[-3:]
+    del spl[-1:]
     ramnames.append(' '.join(spl))
 
 data = {'Name': ramnames,
@@ -64,4 +64,15 @@ data = {'Name': ramnames,
         'CAS Latency': caslats}
 
 RAMDF1 = pd.DataFrame(data)
+
+indicestoremove = []
+for x in ramnames:
+    ppg = RAMDF1.loc[ramnames.index(x), "PPG"]
+    if ppg == "Not Listed":
+        print(x)
+        indicestoremove.append(ramnames.index(x))
+
+for i in reversed(indicestoremove):
+    RAMDF1 = RAMDF1.drop([i], axis=0)
+
 RAMDF = RAMDF1.set_index("Name", drop=True)

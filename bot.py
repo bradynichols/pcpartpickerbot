@@ -1,16 +1,17 @@
 from discord.ext.commands import Bot
-from discord import Game
 import random
 import requests
 import time
 from settings import TOKEN
 from scraper import BUILDDF, builds_string
-from cpuscraper import CPUDF, CPUDF1
-from ramscraper import RAMDF
+#from cpuscraper import CPUDF
+#from ramscraper import RAMDF
 from mboardscraper import MBOARDDF
 from gpuscraper import GPUDF
-from casescraper import CASEDF
+#from casescraper import CASEDF
+import asyncio
 
+lastcommand = "None"
 
 BOT_PREFIX = ("?", "!")
 
@@ -20,12 +21,6 @@ client = Bot(command_prefix=BOT_PREFIX)
 async def on_ready():
     print("Logged in as:\n{0} (ID: {0.id})".format(client.user))
 
-@client.command()
-async def bitcoin(ctx):
-    url = 'https://api.coindesk.com/v1/bpi/currentprice/BTC.json'
-    response = requests.get(url)
-    value = response.json()['bpi']['USD']['rate']
-    await ctx.send("Bitcoin price is: $" + value)
 
 @client.command()
 async def builds(ctx):
@@ -52,6 +47,14 @@ async def buildinfo(ctx):
         info = "Build not found, please try again! (Try copy/pasting!)"
     await ctx.send(info)
 
+'''
+@client.command()
+async def select(ctx):
+    input = str(ctx.message.content[6:])
+    if lastcommand == "None":
+        await ctx.send("No command has been used recently. Try ?help for help!")
+    elif lastcommand == "ram":
+'''
 
 @client.command()
 async def cpu(ctx):
@@ -74,16 +77,60 @@ async def cpu(ctx):
                 "**Integrated Graphics: **" + ig + "\n" +
                 "**Thermal Design Power: **" + tdp + "")
     except:
-        info = "Processor not found, please try again! (Try copy/pasting!)"
+        info = "Processor not found, please try again!"
     await ctx.send(info)
 
-
-'''
-#The command is being really wack but imma leave it for now and write scraping for the rest
 @client.command()
-async def ram(ctx):
+async def gpu(ctx):
     input = str(ctx.message.content[5:])
     await ctx.send("**" + input + "**")
+    try:
+        chip = GPUDF.loc[input, "Chip"]
+        release = GPUDF.loc[input, "Release"]
+        bus = GPUDF.loc[input, "Bus"]
+        memory = GPUDF.loc[input, "Memory"]
+        gpuclock = GPUDF.loc[input, "GPU Clock"]
+        memclock = GPUDF.loc[input, "Memory Clock"]
+        shtr = GPUDF.loc[input, "Shaders / TMUs / ROPs"]
+
+        info = ("**Release Date: **" + release + "\n" +
+                "**Chip: **" + chip + "\n" +
+                "**Memory: **" + memory + "\n" +
+                "**GPU Clock: **" + gpuclock + "\n" +
+                "**Memory Clock: **" + memclock + "\n" +
+                "**Shaders / TMUs / ROPs: **" + shtr + "")
+    except:
+      info = "GPU not found, please try again!"
+    await ctx.send(info)
+
+@client.command()
+async def mboard(ctx):
+    input = str(ctx.message.content[8:])
+    await ctx.send("**" + input + "**")
+    try:
+        price = MBOARDDF.loc[input, "Price"]
+        sockets = MBOARDDF.loc[input, "Sockets"]
+        formfactor = MBOARDDF.loc[input, "Form Factor"]
+        ramslots = MBOARDDF.loc[input, "RAM Slots"]
+        maxram = MBOARDDF.loc[input, "Max RAM"]
+
+        info = ("**Price: **" + price + "\n" +
+                "**Sockets: **" + sockets + "\n" +
+                "**Form Factor: **" + formfactor + "\n" +
+                "**RAM Slots: **" + ramslots + "\n" +
+                "**Max RAM: **" + maxram + "")
+    except:
+      info = "Motherboard not found, please try again!"
+    await ctx.send(info)
+
+'''
+@client.command()
+async def ram(ctx):
+    lastcommand = ram
+    input = str(ctx.message.content[5:])
+    mauthor = str(ctx.message.author)
+    await ctx.send("**" + input + "**")
+    
     try:
         price = RAMDF.loc[input, "Price"]
         rtype = RAMDF.loc[input, "Type"]
@@ -93,36 +140,36 @@ async def ram(ctx):
         caslat = RAMDF.loc[input, "CAS Latency"]
 
         info = ("**Price: **" + price + "\n" +
-                "**Cores: **" + rtype + "\n" +
-                "**Threads: **" + module + "\n" +
-                "**Base Clock: **" + speed + "\n" +
-                "**Boost Clock: **" + ppg + "\n" +
-                "**Integrated Graphics: **" + caslat + "")
+                "**Type: **" + rtype + "\n" +
+                "**Module: **" + module + "\n" +
+                "**Speed: **" + speed + "\n" +
+                "**Price per Gigabyte: **" + ppg + "\n" +
+                "**CAS Latency: **" + caslat + "")
     except:
-        info = "Processor not found, please try again! (Try copy/pasting!)"
+        info = "Memory not found, please try again! (Try copy/pasting!)"
+        
+    info = "Select the configuration you would like info on using !select (1-10)"
+
     await ctx.send(info)
-
 '''
 
-@client.command()
-async def cpudf(ctx):
-    print(CPUDF1.loc[0, "Name"])
 
 '''
-This doesn't work because i'm retarded or something
-enjoy
-
-async def list_servers():
-    await client.wait_until_ready()
-    while not client.is_closed:
-        print("Current servers: ")
-        for server in client.guilds:
-            print(server.name)
-        time.sleep(1)
-
-client.loop.create_task(list_servers())
+    @client.event
+    async def on_message(message):
+        if message.author.id != client.user.id and lastcommand == "ram":
+            channel = message.channel
+            await channel.send('Say hello!')
+            def check(m):
+                return m.content == '1' and m.channel == channel and message.author.id != client.user.id
+            msg = await client.wait_for('message', check=check)
+            await channel.send("You said 1!".format(msg))
+        elif message.author.id != client.user.id and lastcommand == "gpu":
+            print("Nothing")
+        else:
+            print("Yeet")
 '''
+
+
 
 client.run(TOKEN)
-
-#TOTO: Do the scraping with RAM first, then the rest.
