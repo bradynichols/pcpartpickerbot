@@ -71,7 +71,11 @@ newlinks = []
 for link in links:
     newlinks.append("https://pcpartpicker.com" + str(link))
 
-data = {'Name':names,
+lowernames = []
+for name in names:
+    lowernames.append(name.lower())
+
+data = {'Name':lowernames,
         'Price':rounded_prices,
         'CPU':cpus,
         'GPU':gpus,

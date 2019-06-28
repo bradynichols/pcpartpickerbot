@@ -43,4 +43,3 @@ data = {'Name':lowernames,
 
 CASEDF1 = pd.DataFrame(data)
 CASEDF = CASEDF1.set_index("Name", drop = True)
-print(CASEDF)
