@@ -43,7 +43,11 @@ for name in oldnames:
     del spl[-1]
     mbnames.append(' '.join(spl))
 
-data = {'Name': mbnames,
+lowernames = []
+for name in mbnames:
+    lowernames.append(name.lower())
+
+data = {'Name': lowernames,
         'Price': mbprices,
         'Sockets': sockets,
         'Form Factor': formfactors,

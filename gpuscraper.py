@@ -8,7 +8,7 @@ c = r.content
 
 soup = BeautifulSoup(c, "html.parser")
 
-ball = soup.find("table", {"class":"processors"})
+ball = soup.find("table", {"class": "processors"})
 all = ball.find_all("tr")
 
 tds = []
@@ -35,7 +35,11 @@ for item in tds:
     memclocks.append(itemyeet.find_all("td")[6].text.replace("\n", ""))
     strlist.append(itemyeet.find_all("td")[7].text.replace("\n", ""))
 
-data = {'Name': names,
+lowernames = []
+for name in names:
+    lowernames.append(name.lower())
+
+data = {'Name': lowernames,
         'Chip': chips,
         'Release': releases,
         'Bus': busses,

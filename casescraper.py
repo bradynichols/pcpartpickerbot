@@ -43,7 +43,11 @@ for name in oldnames:
     del spl[-1:]
     casenames.append(' '.join(spl))
 
-data = {'Name':casenames,
+lowernames = []
+for name in casenames:
+    lowernames.append(name.lower())
+
+data = {'Name':lowernames,
         'Price':caseprices,
         'Type':types,
         'Color':colors,

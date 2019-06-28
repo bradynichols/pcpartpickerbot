@@ -6,9 +6,9 @@ from settings import TOKEN
 from scraper import BUILDDF, builds_string
 #from cpuscraper import CPUDF
 #from ramscraper import RAMDF
-from mboardscraper import MBOARDDF
-from gpuscraper import GPUDF
-#from casescraper import CASEDF
+#from mboardscraper import MBOARDDF
+#from gpuscraper import GPUDF
+from casescraper import CASEDF
 import asyncio
 
 lastcommand = "None"
@@ -32,6 +32,7 @@ async def builds(ctx):
 async def buildinfo(ctx):
     input = str(ctx.message.content[11:])
     await ctx.send("**" + input + "**")
+    input = input.lower()
     try:
         cpu = BUILDDF.loc[input, "CPU"]
         gpu = BUILDDF.loc[input, "GPU"]
@@ -60,6 +61,7 @@ async def select(ctx):
 async def cpu(ctx):
     input = str(ctx.message.content[5:])
     await ctx.send("**" + input + "**")
+    input = input.lower()
     try:
         price = CPUDF.loc[input, "Price"]
         cores = CPUDF.loc[input, "Cores"]
@@ -84,6 +86,7 @@ async def cpu(ctx):
 async def gpu(ctx):
     input = str(ctx.message.content[5:])
     await ctx.send("**" + input + "**")
+    input = input.lower()
     try:
         chip = GPUDF.loc[input, "Chip"]
         release = GPUDF.loc[input, "Release"]
@@ -107,6 +110,7 @@ async def gpu(ctx):
 async def mboard(ctx):
     input = str(ctx.message.content[8:])
     await ctx.send("**" + input + "**")
+    input = input.lower()
     try:
         price = MBOARDDF.loc[input, "Price"]
         sockets = MBOARDDF.loc[input, "Sockets"]
@@ -122,6 +126,30 @@ async def mboard(ctx):
     except:
       info = "Motherboard not found, please try again!"
     await ctx.send(info)
+
+@client.command()
+async def case(ctx):
+    input = str(ctx.message.content[6:])
+    await ctx.send("**" + input + "**")
+    input = input.lower()
+    try:
+        price = CASEDF.loc[input, "Price"]
+        typee = CASEDF.loc[input, "Type"]
+        color = CASEDF.loc[input, "Color"]
+        window = CASEDF.loc[input, "Window?"]
+        externals = CASEDF.loc[input, 'External 5.25" Bays']
+        internals = CASEDF.loc[input, 'Internal 3.5" Bays']
+
+        info = ("**Price: **" + price + "\n" +
+                "**Type: **" + typee + "\n" +
+                "**Color: **" + color + "\n" +
+                "**Window?: **" + window + "\n" +
+                '**External 5.25" Bays: **' + externals + "\n" +
+                '**Internal 3.5" Bays: **' + internals + "")
+    except AttributeError:
+        info = "Case not found, please try again!"
+    await ctx.send(info)
+
 
 '''
 @client.command()

@@ -59,6 +59,10 @@ for name in oldnames:
     del spl[-1]
     names.append(' '.join(spl))
 
+lowernames = []
+for name in names:
+    lowernames.append(name.lower())
+
 threads = []
 for core, SMT in zip(cores, SMTs):
     if SMT:
@@ -66,7 +70,7 @@ for core, SMT in zip(cores, SMTs):
     else:
         threads.append(str(core))
 
-data = {'Name': names,
+data = {'Name': lowernames,
         'Price': CPUPrices,
         'Cores': cores,
         'Base Speed': basespeeds,
