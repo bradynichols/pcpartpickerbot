@@ -6,7 +6,7 @@ I will not post the bot's invite link as of now because I don't plan on hosting 
 
 Hello everyone, welcome to my bot! The goal for the week was to create a discord bot that could give out information about builds and components on the fly. This would help immensely when talking to my friends about building PCs becuase I would be able to simply show them stats and easily compare components.
 
-Some background about myself, I'm a 16-yo high school student who codes in his spare time. I decided to create this bot using python/discord.py because I'm most comfortable with python. I've always been interested in computers and my friend group helps each other build computers often, which is where I got the inspiration for this bot. Anyway, on to the bot!
+Some background about myself, I'm a 16-yo high school student who codes in his spare time. I decided to create this bot using python/discord.py because I'm most comfortable with python. I've always been interested in computers and my friend group helps each other build computers often, which is where I got the inspiration for this bot.
 
 The base of this is to gather data from different websites, mainly PCPartPicker, and store it in a place where it can then be accessed through various commands.
 The "datacollector.py" file collects all of the required data from various websites using requests and Selenium and stores it in the "storeddata" folder as a .txt file. Since it's a small-scale project, I opted not to use any databases or fancy file types for storage.
