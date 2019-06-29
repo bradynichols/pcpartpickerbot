@@ -18,6 +18,13 @@ In the case of the "case" command, some cases come in multiple colors. When this
 
 Here are some images of the bot in action. Enjoy!
 
-
+![CPU Command](http://u.cubeupload.com/bradyfish/9008ae7d1934077b7233.png)
+![GPU Command](http://u.cubeupload.com/bradyfish/4311573a9e4488eee02b.png)
+![CPU Command Mispelled](http://u.cubeupload.com/bradyfish/af2fc9e5f0fd44dcfc8e.png)
+![Builds Command](http://u.cubeupload.com/bradyfish/bb471017ad1edf358d12.png)
+![Case and Select Commands](http://u.cubeupload.com/bradyfish/3a673c1647cef615cf14.png)
+![Motherboard Command](http://u.cubeupload.com/bradyfish/756f9274909bbb4540a2.png)
 
 ![GitHub Hack Week Logo](https://u.cubeupload.com/bradyfish/hackbadgeblack.png)
+
+Thanks for checking my bot out, and have an awesome day!
