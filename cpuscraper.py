@@ -1,12 +1,10 @@
 from bs4 import BeautifulSoup
 import pandas as pd
 
-
 with open(r'.\storeddata\cpudata.txt', 'r') as f:
     text = f.read()
 data = BeautifulSoup(text, "html.parser")
 all = data.find_all("tr", {"class":"tr__product"})
-
 
 oldnames = []
 names = []

@@ -1,8 +1,7 @@
 from bs4 import BeautifulSoup
 import pandas as pd
 
-
-with open(r'.\storeddata\casedata.txt', 'r') as f:
+with open(r'.\storeddata\casedata.txt', 'r') as f: #Opens the data collected from datacollector.py
     text = f.read()
 data = BeautifulSoup(text, "html.parser")
 all = data.find_all("tr", {"class":"tr__product"})
@@ -33,7 +32,7 @@ lowernames = []
 for name in casenames:
     lowernames.append(name.lower())
 
-data = {'Name':lowernames,
+data = {'Name':lowernames, #Creates a dictionary of all the data
         'Price':caseprices,
         'Type':types,
         'Color':colors,
@@ -41,5 +40,5 @@ data = {'Name':lowernames,
         'External 5.25" Bays':extbays,
         'Internal 3.5" Bays':intbays}
 
-CASEDF1 = pd.DataFrame(data)
+CASEDF1 = pd.DataFrame(data) #Converts the dict into a pd DataFrame for easier importing
 CASEDF = CASEDF1.set_index("Name", drop = True)

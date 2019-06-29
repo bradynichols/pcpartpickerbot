@@ -1,8 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
-from selenium import webdriver
-from time import sleep
-
+from selenium import webdriver #Selenium is only needed in this file. If the .txt files exist, selenium is no longer needed
+from time import sleep #Needed to ensure that webpages load
 
 #BUILD DATA
 r = requests.get("https://pcpartpicker.com/guide/")
