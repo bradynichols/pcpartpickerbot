@@ -209,12 +209,12 @@ async def case(ctx):
     global lastcommand
     lastcommand = "case"
     input = str(ctx.message.content[6:])
-    await ctx.send("**" + input + "**")
     input = input.lower()
     names_list = CASEDF.index.values
     for value in names_list:
         if input in value:
             input = value
+    await ctx.send("**" + input + "**")
     if input not in names_list:
         await ctx.send("Case not found, finding closest match...")
         input = find_nearest(input, names_list)
@@ -253,7 +253,7 @@ async def case(ctx):
         global SELECTED_CASEDF
         SELECTED_CASEDF = pd.DataFrame(minidata)
         colors = minidata["Color"]
-        await ctx.send("__Select the color you would like with `!select (number)__")
+        await ctx.send("__Select the color you would like with '!select (number)'__")
         data = ""
         for color in colors:
             data = data + "\n" + str(colors.index(color) + 1) + ": " + color
