@@ -16,6 +16,8 @@ Each command basically picks out the row of the dataframe that contains the spec
 
 In the case of the "case" command, some cases come in multiple colors. When this happens, the bot sends a list that the user can choose from of colors. The user can then use !select to select a number corresponding to a color and get the stats from that color.
 
+NOTE: You do not need Selenium to run the bot, only if you wish to update the .txt files. Selenium is only used in datacollector.py.
+
 Here are some images of the bot in action. Enjoy!
 
 ![CPU Command](http://u.cubeupload.com/bradyfish/9008ae7d1934077b7233.png)
