@@ -6,9 +6,9 @@ from mboardscraper import MBOARDDF
 from gpuscraper import GPUDF
 from casescraper import CASEDF, CASEDF1
 import nltk
+import pandas as pd
 import asyncio
 
-lastcommand = "None"
 BOT_PREFIX = ("?", "!")
 client = Bot(command_prefix=BOT_PREFIX)
 
@@ -188,8 +188,10 @@ async def mboard(ctx):
 
 @client.command()
 async def case(ctx):
+    global lastcommand
     lastcommand = "case"
     input = str(ctx.message.content[6:])
+    await ctx.send("**" + input + "**")
     input = input.lower()
     my_list = CASEDF.index.values
     for value in my_list:
@@ -199,67 +201,73 @@ async def case(ctx):
         await ctx.send("Case not found, finding closest match...")
         input = find_nearest(input, my_list)
         await ctx.send("**Closest Match: " + input + "**")
+    caseindices = 0
+    my_list = list(my_list)
+    for value in my_list:
+        if value == input:
+            caseindices += 1
+    if caseindices == 1:
+        price = CASEDF.loc[input, "Price"]
+        typee = CASEDF.loc[input, "Type"]
+        color = CASEDF.loc[input, "Color"]
+        window = CASEDF.loc[input, "Window?"]
+        externals = CASEDF.loc[input, 'External 5.25" Bays']
+        internals = CASEDF.loc[input, 'Internal 3.5" Bays']
+        data = {'Price': price,
+                'Type': typee,
+                'Color': color,
+                'Window?': window,
+                'External 5.25" Bays': externals,
+                'Internal 3.5" Bays': internals}
     else:
-        caseindices = 0
-        my_list = list(my_list)
-        for value in my_list:
-            if value == input:
-                caseindices += 1
-        if caseindices == 1:
-            price = CASEDF.loc[input, "Price"]
-            typee = CASEDF.loc[input, "Type"]
-            color = CASEDF.loc[input, "Color"]
-            window = CASEDF.loc[input, "Window?"]
-            externals = CASEDF.loc[input, 'External 5.25" Bays']
-            internals = CASEDF.loc[input, 'Internal 3.5" Bays']
-            data = {'Price': price,
-                    'Type': typee,
-                    'Color': color,
-                    'Window?': window,
-                    'External 5.25" Bays': externals,
-                    'Internal 3.5" Bays': internals}
-            await ctx.send("Only one color")
-        else:
-            price = list(CASEDF.loc[input, "Price"])
-            typee = list(CASEDF.loc[input, "Type"])
-            color = list(CASEDF.loc[input, "Color"])
-            window = list(CASEDF.loc[input, "Window?"])
-            externals = list(CASEDF.loc[input, 'External 5.25" Bays'])
-            internals = list(CASEDF.loc[input, 'Internal 3.5" Bays'])
-            minidata = {'Price': price,
-                    'Type': typee,
-                    'Color': color,
-                    'Window?': window,
-                    'External 5.25" Bays': externals,
-                    'Internal 3.5" Bays': internals}
-            colors = minidata["Color"]
-            for color in colors:
-                await ctx.send(str(colors.index(color) + 1) + ": " + color)
-
-    await ctx.send("Done")
+        price = list(CASEDF.loc[input, "Price"])
+        typee = list(CASEDF.loc[input, "Type"])
+        color = list(CASEDF.loc[input, "Color"])
+        window = list(CASEDF.loc[input, "Window?"])
+        externals = list(CASEDF.loc[input, 'External 5.25" Bays'])
+        internals = list(CASEDF.loc[input, 'Internal 3.5" Bays'])
+        minidata = {'Price': price,
+                'Type': typee,
+                'Color': color,
+                'Window?': window,
+                'External 5.25" Bays': externals,
+                'Internal 3.5" Bays': internals}
+        global SELECTEDCASEDF
+        SELECTEDCASEDF = pd.DataFrame(minidata)
+        colors = minidata["Color"]
+        await ctx.send("__Select the color you would like with `!select (number)__")
+        data = ""
+        for color in colors:
+            data = data + "\n" + str(colors.index(color) + 1) + ": " + color
     try:
         await ctx.send(data)
     except:
-        await ctx.send("No data defined! Must have had multiple colors!")
+        pass
 
 
 @client.command()
 async def select(ctx):
-    input = str(ctx.message.content[6:])
+    input = int(ctx.message.content[8:])
     if lastcommand == "case":
-        inputindex = colors.index(input)
-        print(inputindex)
-        print("CASE")
-    else:
-        await ctx.send("There's nothing to select. Try using !case")
-
-        '''
+        inputindex = input - 1
+        price = SELECTEDCASEDF.loc[inputindex, "Price"]
+        typee = SELECTEDCASEDF.loc[inputindex, "Type"]
+        color = SELECTEDCASEDF.loc[inputindex, "Color"]
+        window = SELECTEDCASEDF.loc[inputindex, "Window?"]
+        externals = SELECTEDCASEDF.loc[inputindex, 'External 5.25" Bays']
+        internals = SELECTEDCASEDF.loc[inputindex, 'Internal 3.5" Bays']
         info = ("**Price: **" + price + "\n" +
                 "**Type: **" + typee + "\n" +
                 "**Color: **" + color + "\n" +
                 "**Window?: **" + window + "\n" +
                 '**External 5.25" Bays: **' + externals + "\n" +
                 '**Internal 3.5" Bays: **' + internals + "")
-        '''
+        await ctx.send(info)
+    else:
+        await ctx.send("There's nothing to select. Try using !case")
+
+
+
+
 
 client.run(TOKEN)
