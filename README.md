@@ -1,6 +1,8 @@
 # PCPartPickerBot
 ![PCPartPicker Logo](http://u.cubeupload.com/bradyfish/PCPartPickerLogo.png)
 
+NOTE: I am not affiliated with PCPartPicker in any way. This bot does not represent their competence in creating discord bots.
+
 Any questions about the bot or anything: Bradyfish#7396 on discord!
 I will not post the bot's invite link as of now because I don't plan on hosting it for the time being.
 
@@ -30,3 +32,4 @@ Here are some images of the bot in action. Enjoy!
 ![GitHub Hack Week Logo](https://u.cubeupload.com/bradyfish/hackbadgeblack.png)
 
 Thanks for checking my bot out, and have an awesome day!
+
