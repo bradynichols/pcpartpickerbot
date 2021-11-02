@@ -1,6 +1,8 @@
 # PCPartPickerBot
 ![PCPartPicker Logo](http://u.cubeupload.com/bradyfish/PCPartPickerLogo.png)
 
+## WARNING 11/2/2021: This program is very outdated and using it may result in triggering PCPartPicker's anti-script measures. I have no plans to update the bot. 
+
 NOTE: I am not affiliated with PCPartPicker in any way. This bot does not represent their competence in creating discord bots.
 
 Any questions about the bot or anything: Bradyfish#7396 on discord!
